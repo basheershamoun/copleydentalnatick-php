@@ -1,0 +1,283 @@
+{% extends 'base.html' %} 
+{% block titulo %}Invisalign - The Results{% endblock %} 
+{% block descripcion_pagina %}Invisalign has treated over 2.5 million people worldwide.{% endblock %} 
+
+{% block styles %}
+<style type="text/css">
+.fadeboxx {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 1780px;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+.overboxx,
+.overboxx1,
+.overboxx2 {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 25%;
+    width: 50%;
+    z-index: 1002;
+}
+#contentinvisax {
+    background: black;
+    width: 50%;
+    padding: 0px 80px;
+}
+@media (max-width: 600px) {
+    .overboxx,
+    .overboxx1,
+    .overboxx2 {
+        left: 0%;
+        width: 100%;
+    }
+}
+</style>
+
+<script type="text/javascript">
+function showLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'block';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'block';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'block';
+    }
+    document.getElementById('fadex').style.display = 'block';
+}
+
+function hideLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'none';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'none';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'none';
+    }
+    document.getElementById('fadex').style.display = 'none';
+}
+</script>
+{% endblock %} 
+
+{% block contenido_pagina %}
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/invisalign/breadcrumb.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('invisalign_results') }}" class="activate">The Results</a>
+            </li>
+        </ul>
+    </div>
+	{% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+		    <img src="{{ static }}images/invisalign-results.jpg" style="width:100%;margin-top:20px;" alt="invisalign - The Results" title="invisalign - The Results">
+            <h1>The Results</h1>
+            <p class="text-left">Invisalign has treated over 2.5 million people worldwide. That is over 2.5 million different Invisalign stories. Here are just some of them.</p>
+            <div class="smilemakeovergallerycontent">
+                <div class="results-left">
+                    <div class="gall-graph-invisalign-results">
+                        <img data-src="{{ static }}images/khadija.png" alt="khadija invisalign - The Results" title="khadija invisalign - The Results">
+                    </div>
+                    <div class="gall-text-invisalign-results">
+                        <h2 style="text-align:center;">Khadija’s story</h2>
+                        <p>
+                            I’d developed a complex about my teeth. My front teeth stuck out and my jaw was too small, which meant that I hated smiling. I looked into treatment options and decided Invisalign was the perfect choice for me. Because they’re nearly invisible, I was able to carry on living my life without being self-conscious – people didn’t even know I was wearing them.
+                        </p>
+                        <div class="divcrs">
+                            <div class="divcrs-left-results" onclick="ocultar(1)" style="cursor:pointer;"><a class="boton-r">Read More ></a>
+                            </div>
+                            <div class="divcrs-left-results" onclick="location.href='javascript:showLightboxx(1);'" style="width:50%;"><a class="boton-r" style="cursor:pointer;">Watch Interview</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="results-right">
+                    <div>
+                        <div class="smileleft-left-result">
+                            <img data-src="{{ static }}images/khadija-before-invisalign.jpg" alt="Khadija before Invisalign" title="Khadija before Invisalign">
+                            <br><span>Before</span><span></div>
+                                                <div class="smileleft-left-result">
+                                                    <img data-src="{{ static }}images/khadija-after-invisalign.jpg" alt="Khadija after Invisalign" title="Khadija after Invisalign" ><br><span>After</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="rm1" class="rm">
+                    <h2>" I got my smile back</h2>
+                    <p>From start to finish the treatment took 18 months. I wore the aligners every day, and just removed them to eat and drink. That is the beauty of Invisalign, they fit into your life. Thanks to the treatment I now feel so much more confident. Put simply, I got my smile back.</p>
+                </div>
+            </div>
+
+            <div class="smilemakeovergallerycontent">
+                <div class="results-left">
+                    <div class="gall-graph-invisalign-results">
+                        <img data-src="{{ static }}images/marie.png" alt="Marie invisalign - The Results" title="Marie invisalign - The Results">
+                    </div>
+                    <div class="gall-text-invisalign-results">
+                        <h2 style="text-align:center;">Marie’s story</h2>
+                        <p>
+                            I had been conscious of my gappy smile for as long I could remember and really wanted to do something about it. But, as a teacher, I’m under the constant scrutiny of young children, so as you can imagine, fixed braces just weren’t an option for me.
+                        </p>
+                        <div class="divcrs">
+                            <div class="divcrs-left-results" onclick="ocultar(2)" style="cursor:pointer;"><a class="boton-r">Read More ></a>
+                            </div>
+                            <div class="divcrs-left-results" onclick="location.href='javascript:showLightboxx(2);'" style="width:50%;"><a class="boton-r" style="cursor:pointer;">Watch Interview</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-right">
+                    <div>
+                        <div class="smileleft-left-result">
+                            <img data-src="{{ static }}images/marie-before-invisalign.png" alt="Marie before invisalign" title="Marie before invisalign">
+                            <br><span>Before</span><span></div>
+                                                <div class="smileleft-left-result">
+                                                    <img data-src="{{ static }}images/marie-after-invisalign.png" alt="Marie after invisalign" title="Marie after invisalign"><br><span>After</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="rm2" class="rm">
+                    <h2>As a teacher, confidence is everything</h2>
+                    <p>Since having the Invisalign treatment the changes to my teeth have brought me back to my old self again and I’m a happier person. At my age, I thought it was too late to fix my teeth, but Invisalign has helped give me a smile I can be proud of.</p>
+                </div>
+            </div>
+            <div class="smilemakeovergallerycontent">
+                <div class="results-left">
+                    <div class="gall-graph-invisalign-results">
+                        <img data-src="{{ static }}images/clare.png" alt="Clare invisalign - The Results" title="Clare invisalign - The Results">
+                    </div>
+                    <div class="gall-text-invisalign-results">
+                        <h2 style="text-align:center;">Clare’s story</h2>
+                        <p>
+                            When my sister told me she was getting married and asked me to be a bridesmaid I was equal parts thrilled and terrified. I was dreading the pictures – all those people looking at my crooked teeth. On such an important day, I really wanted to look my best and be able to smile with confidence, without worrying about my teeth.
+                        </p>
+                        <div class="divcrs">
+                            <div class="divcrs-left-results" onclick="ocultar(3)" style="cursor:pointer;"><a class="boton-r">Read More ></a>
+                            </div>
+                            <div class="divcrs-left-results" onclick="location.href='javascript:showLightboxx(3);'" style="width:50%;"><a class="boton-r" style="cursor:pointer;">Watch Interview</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-right">
+                    <div>
+                        <div class="smileleft-left-result">
+                            <img data-src="{{ static }}images/clare-before-invisalign.png" alt="Clare before invisalign" title="Clare before invisalign">
+                            <br><span>Before</span><span></div>
+                                                <div class="smileleft-left-result">
+                                                    <img data-src="{{ static }}images/clare-after-invisalign.png" alt="Clare after invisalign" title="Clare after invisalign"><br><span>After</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="rm3" class="rm">
+                    <p>In the past I’d considered having some treatment, but with my public facing job as a police officer, there was no way I was going to feel okay about having bulky, fixed metal braces in my mouth. I decided to look into the different treatment options available.</p>
+                    <h2>Now I smile for photos again</h2>
+                    <p>What impressed me most about the Invisalign treatment was how it easily fitted into my lifestyle. I could wear them at work and you could barely see them. This meant I could be confident in any given situation. And because the aligners were removable, I was able to take them out for my sister’s wedding day – which I never would have been able to do with other braces.</p>
+                    <p>Now the treatment is over I’m overjoyed with the results. I now smile for any photo that I’m in – birthdays, holidays and, yes, weddings.</p>
+                </div>
+            </div>
+            <div class="smilemakeovergallerycontent">
+                <div class="results-left">
+                    <div class="gall-graph-invisalign-results">
+                        <img data-src="{{ static }}images/davide.png" alt="Davide invisalign - The Results" title="Davide invisalign - The Results">
+                    </div>
+                    <div class="gall-text-invisalign-results">
+                        <h2 style="text-align:center;">Davide’s story</h2>
+                        <p>
+                            I wore metal braces as a child. I found they were really uncomfortable, made me very self-conscious and I don’t believe they made much difference to my teeth. The turning point was when my aunt introduced me to Invisalign – it was amazing to see how, with Invisalign’s computer treatment software (ClinCheck), my teeth would be expected to straighten over time.
+                        </p>
+                        <div class="divcrs">
+                            <div class="divcrs-left-results" onclick="ocultar(4)" style="cursor:pointer;"><a class="boton-r">Read More ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-right">
+                    <div>
+                        <div class="smileleft-left-result">
+                            <img data-src="{{ static }}images/davide-before-invisalign.png" alt="Davide before invisalign" title="Davide before invisalign">
+                            <br><span>Before</span><span></div>
+                                                <div class="smileleft-left-result">
+                                                    <img data-src="{{ static }}images/davide-after-invisalign.png" alt="Davide after invisalign" title="Davide after invisalign"><br><span>After</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="rm4" class="rm">
+                    <h2>" The results have been beyond my expectations</h2>
+                    <p>My teeth are now much straighter [and I love my new smile]; the Invisalign treatment exceeded all of my expectations.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-photo-right" style="margin-top:0px;">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+
+             <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Invisalign</p>
+                    <ul>
+                        {% include 'services/invisalign/list_invisalign.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overx" class="overboxx">
+
+    <div style="width:98.5%;padding-top:10px;">
+        <a href="javascript:hideLightboxx(1);" style="text-align:right;display:block;background:#98CAED;padding:10px;"><img src="{{ static }}images/x.png">
+        </a>
+        <iframe width="100%" height="400" src="//www.youtube.com/embed/hxooPDtqHCo" frameborder="0" allowfullscreen="" style="max-width: 100%;"></iframe>
+    </div>
+
+</div>
+<div id="overx1" class="overboxx1">
+
+    <div style="width:98.5%;padding-top:10px;">
+        <a href="javascript:hideLightboxx(2);" style="text-align:right;display:block;background:#98CAED;padding:10px;"><img src="{{ static }}images/x.png">
+        </a>
+        <iframe width="100%" height="400" src="//www.youtube.com/embed/O3N6s-L_USs" frameborder="0" allowfullscreen="" style="max-width: 100%;"></iframe>
+    </div>
+
+</div>
+<div id="overx2" class="overboxx2">
+
+    <div style="width:98.5%;padding-top:10px;">
+        <a href="javascript:hideLightboxx(3);" style="text-align:right;display:block;background:#98CAED;padding:10px;"><img src="{{ static }}images/x.png">
+        </a>
+        <iframe width="100%" height="400" src="//www.youtube.com/embed/3cEnmdF4vb0" frameborder="0" allowfullscreen="" style="max-width: 100%;"></iframe>
+    </div>
+
+</div>
+
+<div id="fadex" class="fadeboxx">&nbsp;</div>
+<script type="text/javascript">
+function ocultar(nd) {
+    var divt2 = document.getElementById("rm" + nd);
+    if (divt2.style.display == "block") {
+        divt2.style.display = "none";
+    } else {
+        divt2.style.display = "block";
+    }
+
+}
+</script>
+{% endblock %}

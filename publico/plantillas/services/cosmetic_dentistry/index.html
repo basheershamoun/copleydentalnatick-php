@@ -1,0 +1,404 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ title }}{% endblock %}
+{% block descripcion_pagina %}{{ description }}{% endblock %}
+
+
+{% block javascript %} 
+<script type="text/javascript">
+function showLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'block';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'block';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'block';
+    }
+    if (num == 4) {
+        document.getElementById('overx3').style.display = 'block';
+    }
+    if (num == 5) {
+        document.getElementById('overx4').style.display = 'block';
+    }
+    if (num == 6) {
+        document.getElementById('overx5').style.display = 'block';
+    }
+    if (num == 7) {
+        document.getElementById('overx6').style.display = 'block';
+    }
+    if (num == 8) {
+        document.getElementById('overx7').style.display = 'block';
+    }
+    if (num == 9) {
+        document.getElementById('overx8').style.display = 'block';
+    }
+    if (num == 10) {
+        document.getElementById('overx9').style.display = 'block';
+    }
+    if (num == 11) {
+        document.getElementById('overx10').style.display = 'block';
+    }
+    if (num == 12) {
+        document.getElementById('overx11').style.display = 'block';
+    }
+    if (num == 13) {
+        document.getElementById('overx12').style.display = 'block';
+    }
+    if (num == 14) {
+        document.getElementById('overx13').style.display = 'block';
+    }
+    if (num == 15) {
+        document.getElementById('overx14').style.display = 'block';
+    }
+    if (num == 16) {
+        document.getElementById('overx15').style.display = 'block';
+    }
+    if (num == 17) {
+        document.getElementById('overx16').style.display = 'block';
+    }
+    if (num == 18) {
+        document.getElementById('overx17').style.display = 'block';
+    }
+    document.getElementById('fadex').style.display = 'block';
+}
+
+function hideLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'none';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'none';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'none';
+    }
+    if (num == 4) {
+        document.getElementById('overx3').style.display = 'none';
+    }
+    if (num == 5) {
+        document.getElementById('overx4').style.display = 'none';
+    }
+    if (num == 6) {
+        document.getElementById('overx5').style.display = 'none';
+    }
+    if (num == 7) {
+        document.getElementById('overx6').style.display = 'none';
+    }
+    if (num == 8) {
+        document.getElementById('overx7').style.display = 'none';
+    }
+    if (num == 9) {
+        document.getElementById('overx8').style.display = 'none';
+    }
+    if (num == 10) {
+        document.getElementById('overx9').style.display = 'none';
+    }
+    if (num == 11) {
+        document.getElementById('overx10').style.display = 'none';
+    }
+    if (num == 12) {
+        document.getElementById('overx11').style.display = 'none';
+    }
+    if (num == 13) {
+        document.getElementById('overx12').style.display = 'none';
+    }
+    if (num == 14) {
+        document.getElementById('overx13').style.display = 'none';
+    }
+    if (num == 15) {
+        document.getElementById('overx14').style.display = 'none';
+    }
+    if (num == 16) {
+        document.getElementById('overx15').style.display = 'none';
+    }
+    if (num == 17) {
+        document.getElementById('overx16').style.display = 'none';
+    }
+    if (num == 18) {
+        document.getElementById('overx17').style.display = 'none';
+    }
+    document.getElementById('fadex').style.display = 'none';
+}
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    //$("#main-menu-links li a[href='/Services/']").css("background", "#A1D783");
+    //$("#main-menu-links li a[href='/Services/']").css("color", "white");
+    $("#menu-active-services").addClass("active");
+
+});
+</script>
+{% endblock %} 
+
+{% block styles %}
+<style type="text/css">
+.fadeboxx {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 4780px;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+.overboxx,
+.overboxx1,
+.overboxx2,
+.overboxx3,
+.overboxx4,
+.overboxx5,
+.overboxx6,
+.overboxx7,
+.overboxx8,
+.overboxx9,
+.overboxx10,
+.overboxx11,
+.overboxx12,
+.overboxx13,
+.overboxx14,
+.overboxx15,
+.overboxx16,
+.overboxx17 {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 25%;
+    width: 50%;
+    z-index: 1002;
+}
+@media (max-width: 600px) {
+    .overboxx,
+    .overboxx1,
+    .overboxx2,
+    .overboxx3,
+    .overboxx4,
+    .overboxx5,
+    .overboxx6,
+    .overboxx7,
+    .overboxx8,
+    .overboxx9,
+    .overboxx10,
+    .overboxx11,
+    .overboxx12,
+    .overboxx13,
+    .overboxx14,
+    .overboxx15,
+    .overboxx16,
+    .overboxx17 {
+        left: 0%;
+        width: 100%;
+    }
+ }
+ </style>
+
+{% endblock %} 
+
+{% block contenido_pagina %} 
+
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html'%}
+            <li> > </li>
+            <li>
+                <a href="{{ path_for('service', {'service': slug }) }}" style="color:#A3D483;">General & Cosmetic Dentistry</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+             <h1>General and Cosmetic Dentistry</h1>
+            <p class="text-left">Dentistry is the art and science of improving the appearance, function and health of the teeth and associated structures. Cosmetic dentistry is dental work that improves the appearance and function of a person's teeth. The experts at Copley Dental Associates P.C., through cosmetic dentistry, improve the appearance of the teeth to create the beautiful smile you want.</p>
+            <p class="text-left"><a href="{{ path_for('our_team') }}#DrCharlesBadaoui" style="color: #5f6062;font-weight: bold;">Dr. Charles Badaoui</a> is our general and cosmetic dental expert at Copley Dental Associates.</p>
+            <a href="{{ path_for('video_copley') }}" class="boton">PLAY VIDEO</a>
+            <h2>Materials Used in General and Cosmetic Dentistry Treatments</h2>
+            <p class="text-left">In the past, dental tooth fillings and other tooth restorations were made of gold, amalgam and other metals. Today, fillings and restorations can be made entirely of porcelain or composite materials that closely match the appearance of natural teeth, improving their cosmetic appearance. These tooth-colored materials are bonded to the underlying tooth structure with resin adhesives.</p>
+            <h2>Treatments</h2>
+            <ul>
+                {% include 'services/list_treatments.html'%}
+            </ul>
+             <h2>Common Cosmetic Dental Treatments include:</h2>
+            <ul style="text-align:left;">
+			<li>Whitening, or "tooth bleaching" treatment, is the most common cosmetic dental procedure. While many teeth whitening options are available, dentist - supervised whitening treatments are recommended for lightening or whitening discolored teeth.</li>
+            <li>Enamel shaping removes parts of the contouring enamel, improving the appearance of the tooth. It may be used to correct a small tooth chip. It is also known as enameloplasty, odontoplasty, recontouring, reshaping, slenderizingand and stripping.</li>
+            <li>Bonding is an option for chipped or cracked teeth. An enamel-like dental composite material is applied to a tooth's surface, sculpted into shape, hardened and then polished, giving you a beautiful smile.</li>
+            <li>Veneers are ultra-thin, custom-made laminates affixed directly to the teeth. Veneer application is an increasingly popular procedure in dentistry. Veneers are used for closing gaps between teeth or disguising discolored teeth that did not respond to tooth-whitening procedures.</li>
+             </ul>
+             {% set url_lummineers = path_for('service', {'service':slug_lumineers}) %}
+             {% set url_dental_veneers = path_for('service', {'service':slug_dental_veneers}) %}
+
+			 <div class="smilemakeovergallerycontent">
+              <div class="smilemakeovergallerycontent-left" style=" min-width: 200px;">
+                <h2 onclick="location.href='{{ url_lummineers }}'" style="cursor:pointer;text-align:center;">
+								Lumineers
+								</h2>
+                <div>
+                    <div class="smileleft-left"><img data-src="{{ static }}images/lumineers-before.jpg" alt="Lumineers before" onclick="location.href='javascript:showLightboxx(1);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(1);'" style="cursor:pointer;">Before</span>
+                    </div>
+                    <div class="smileleft-right"><img data-src="{{ static }}images/lumineers-before.jpg" alt="Lumineers after" onclick="location.href='javascript:showLightboxx(1);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(1);'" alt="Lumineers" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+             <div class="smilemakeovergallerycontent-right" style=" min-width: 200px;">
+                <h2  style="text-align:center;margin-left: 0px;">
+								Cleaning - Teeth Whitening
+								</h2>
+                <div>
+                    <div class="smileleft-left"><img data-src="{{ static }}images/teeth-cleaning-before.jpg" alt="Cleaning - Teeth Whitening before" onclick="location.href='javascript:showLightboxx(3);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(3);'" style="cursor:pointer;">Before</span>
+                    </div>
+                    <div class="smileleft-right"><img data-src="{{ static }}images/teeth-cleaning-after.jpg" alt="Cleaning - Teeth Whitening after" onclick="location.href='javascript:showLightboxx(3);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(3);'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			<div class="smilemakeovergallerycontent-left" style=" min-width: 200px;">
+                <h2  style="text-align:center;">
+								Teeth Whitening
+								</h2>
+                <div>
+                    <div class="smileleft-left"><img data-src="{{ static }}images/teeth-whitening-before.jpg" alt="Teeth Whitening before" onclick="location.href='javascript:showLightboxx(4);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(4);'" style="cursor:pointer;">Before</span><span></div>
+								    <div class="smileleft-right"><img data-src="{{ static }}images/teeth-whitening-after.jpg" alt="Teeth Whitening after" onclick="location.href='javascript:showLightboxx(4);'" style="cursor:pointer;"><br><span onclick="location.href='javascript:showLightboxx(4);'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			<div class="smilemakeovergallerycontent-right" style=" min-width: 200px; ">
+                <h2 onclick="location.href='{{url_dental_veneers}}'" style="cursor:pointer;text-align:center;margin-left: 0px;">
+								Veneers - Stained Teeth
+								</h2>
+                <div>
+                    <div class="smileleft-left"><img src="{{ static }}images/stained-teeth-before.jpg" alt="Veneers - Stained Teeth before" onclick="location.href='javascript:showLightboxx(12);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(12);'" style="cursor:pointer;">Before</span>
+                    </div>
+                    <div class="smileleft-right"><img src="{{ static }}images/stained-teeth-after.jpg" alt="Veneers - Stained Teeth before" onclick="location.href='javascript:showLightboxx(12);'" style="cursor:pointer;">
+                        <br><span onclick="location.href='javascript:showLightboxx(12);'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		<div id="overx" class="overboxx">
+
+    <div class="popup-smile">
+        <a href="javascript:hideLightboxx(1);" style="text-align:right;display:block;background:#98CAED;padding: 5px;"><img src="{{ static }}images/x.png">
+        </a>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">BEFORE</div>
+            <div><img src="{{ static }}images/lumineers-before.jpg" alt="Lumineers before">
+            </div>
+        </div>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">AFTER</div>
+            <div><img src="{{ static }}images/lumineers-after.jpg" alt="Lumineers after">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="overx2" class="overboxx2">
+
+    <div class="popup-smile">
+        <a href="javascript:hideLightboxx(3);" style="text-align:right;display:block;background:#98CAED;padding: 5px;"><img src="{{ static }}images/x.png">
+        </a>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">BEFORE</div>
+            <div><img src="{{ static }}images/teeth-cleaning-before.jpg" alt="Cleaning - Teeth Whitening before" title="Cleaning - Teeth Whitening before">
+            </div>
+        </div>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">AFTER</div>
+            <div><img src="{{ static }}images/teeth-cleaning-after.jpg" alt="Cleaning - Teeth Whitening after" title="Cleaning - Teeth Whitening after">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="overx3" class="overboxx3">
+
+    <div class="popup-smile">
+        <a href="javascript:hideLightboxx(4);" style="text-align:right;display:block;background:#98CAED;padding: 5px;"><img src="{{ static }}images/x.png">
+        </a>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">BEFORE</div>
+            <div><img src="{{ static }}images/teeth-whitening-before.jpg" alt="Teeth Whitening before" title="Teeth Whitening before">
+            </div>
+        </div>
+        <div class="popup-smile-div">
+            <div class="popup-smile-div-title">AFTER</div>
+            <div><img src="{{ static }}images/teeth-whitening-after.jpg" alt="Teeth Whitening after" title="Teeth Whitening after">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="overx11" class="overboxx11">
+
+    <div class="popup-smile ">
+        <a href="javascript:hideLightboxx(12); " style="text-align:right;display:block;background:#98CAED;padding: 5px; "><img src="{{ static }}images/x.png ">
+        </a>
+        <div class="popup-smile-div ">
+            <div class="popup-smile-div-title ">BEFORE</div>
+            <div><img src="{{ static }}images/stained-teeth-before.jpg" alt="Veneers - Stained Teeth before" title="Veneers - Stained Teeth before">
+            </div>
+        </div>
+        <div class="popup-smile-div ">
+            <div class="popup-smile-div-title ">AFTER</div>
+            <div><img src="{{ static }}images/stained-teeth-after.jpg" alt="Veneers - Stained Teeth after" title="Veneers - Stained Teeth after">
+            </div>
+        </div>
+    </div>
+
+</div>
+{#
+<div id="overx12" class="overboxx12">
+
+    <div class="popup-smile ">
+        <a href="javascript:hideLightboxx(13); " style="text-align:right;display:block;background:#98CAED;padding: 5px; "><img src="images/x.png ">
+        </a>
+        <div class="popup-smile-div ">
+            <div class="popup-smile-div-title ">BEFORE</div>
+            <div><img src="{{ static }}images/pho_13B_before-veneers.jpg" alt="pho_13B_before veneers" title="pho_13B_before veneers">
+            </div>
+        </div>
+        <div class="popup-smile-div ">
+            <div class="popup-smile-div-title ">AFTER</div>
+            <div><img src="{{ static }}images/pho_13B_after-veneers.jpg" alt="pho_13B_after veneers" title="pho_13B_after veneers">
+            </div>
+        </div>
+    </div>
+
+</div>#}
+<br>
+			<a href="{{ path_for('gallery') }}" class="linksmilemake" style="margin-top:10px;">See Our Smile Make-over Gallery:Cosmetic Dental Procedures, Teeth Whitening and More</a>
+
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/generalcosmeticdentistry.png" alt="General and Cosmetic Dentistry" title="General and Cosmetic Dentistry">
+           
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}                
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    <ul>
+						{% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fadex" class="fadeboxx ">&nbsp;</div>
+{% endblock %}
+

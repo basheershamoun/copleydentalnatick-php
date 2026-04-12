@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ title }}{% endblock %}
+{% block descripcion_pagina %} {{ description }} {% endblock %}
+
+{% block javascript %} 
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-services").addClass("active");
+
+    });
+    </script>
+{% endblock %} 
+{% block contenido_pagina %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html' %}
+            <li>></li>
+            <li>
+		        <a href="{{ path_for('service',{'service':slug}) }}" class="activate">Sleep Apnea</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+        <h1>Sleep Apnea Treatment</h1>
+        <p class="text-left"><b>Sleep apnea</b> is a sleep disorder characterized by pauses in breathing or instances of shallow or infrequent breathing during sleep. Each pause in breathing, called an apnea, can last for several seconds to several minutes and may occur five to 30 times or more in an hour.Similarly, each abnormally shallow breathing event is called a hypopnea. Sleep apnea is classified as a dyssomnia, meaning an abnormal behavior or psychological event that occurs during sleep.</p>
+        <h2>What Is Obstructive Sleep Apnea?</h2>
+		<p class="text-left">Obstructive sleep apnea is a potentially serious sleep disorder in which breathing repeatedly stops and starts during sleep. Is a serious and lifelong medical condition that affects between 18 and 30 million adults over 18 in the United States, with approximately 90 percent of them undiagnosed. OSA is a chronic, lifelong medical condition that can affect your sleep, health and quality of life.  It has been linked to hypertension, diabetes, heart disease, work and driving-related accidents, and stroke</p>
+		<p class="text-left">It can have a significant impact on quality of life, placing unnecessary strain on relationships between bed partners, among family members and in the workplace.</p>
+		<h2>What Causes OSA?</h2>
+		<p class="text-left">During sleep, muscles relax, including those that control the tongue and throat.  Snoring is often a symptom of OSA and is caused by changes in your upper airway while you sleep. Your soft tissue may vibrate (commonly known as snoring) or it may completely collapse causing you to stop breathing. The soft tissue at the back of throat can sag, narrowing and constricting the airway. Collapsing of the soft tissue is called an obstructive apnea  and may last for 10 seconds or more.</p>
+	    <h2>Symptoms and Risk Factors of OSA</h2>
+		<p class="text-left">One of the most common signs and symptoms of OSA is loud and chronic ongoing snoring. Pauses may occur in the snoring. Choking or gasping may follow the pauses. These brief periods of breathing cessation don’t trigger full alertness but disrupt sleep enough to leave sufferers groggy in the mornings — and at risk for a number of more serious health problems — often without even realizing there’s a problem. You likely won’t know that you’re having problems breathing or be able to judge how severe the problem is. A family member or bed partner often will notice these problems before you do.</p>
+	    <ul>
+		<li>Waking up with a very sore or dry throat.</li>
+        <li>Loud snoring</li>
+        <li>Occasionally waking up with a choking or gasping sensation</li>
+        <li>Sleepiness or lack of energy during the day</li>
+        <li>Sleepiness while driving</li>
+        <li>Morning headaches</li>
+        <li>Restless sleep</li>
+        <li>Forgetfulness, mood changes, and a decreased interest in sex</li>
+        <li>Recurrent awakenings or insomnia</li>
+        <li>Diabetes or other health problems.</li>
+		</ul>
+		<h2>Living With Sleep Apnea</h2>
+		<p class="text-left">How you feel during your waking hours hinges greatly on how well you sleep. Similarly, the cure for sleep difficulties can often be found in your daily routine. Your sleep schedule, bedtime habits and day-to-day lifestyle choices can make an enormous difference in the quality of your nightly rest. The following tips to sleep better will help you optimize your sleep, so you can be productive, mentally sharp, emotionally balanced, and full of energy all day long.</p>
+	    <p class="text-left"><b>Create a bedtime routine and schedule:</b> One practice that can really help is setting a sleep schedule. If you’re getting enough sleep, you should wake up naturally without an alarm. If you need an alarm clock to wake up on time, you may need to set an earlier bedtime. As with your bedtime, try to maintain your regular wake-time even on weekends. A regular schedule like this will help your body wind down faster and wake up feeling more refreshed.</p>
+		<p class="text-left"><b>Relax or meditate daily:</b> If you can manage it, give yourself an hour before bed to slow down and relax. Make sure to avoid electronics and get your body into a relaxed state. Spend the last 20 minutes or so in bed, and start preparing to fall asleep with meditation, reading or even just deep breathing. Meditation is a great activity that, when performed daily, can naturally relax both your mind and body allowing you to fall into a deeper, more relaxing sleep.</p>
+		<p class="text-left"><b>Bath Time:</b> A hot bath or shower before bed has a soothing effect on your body and helps to relax your muscles before you sleep. Not only will the warm water relax you, the rise and fall in body temperature also induces sleepiness and helps you fall asleep faster.</p>
+		<p class="text-left"><b>Regulate the light:</b> Even the smallest amount of light can have a big impact on your sleep quality. Keep your room as dark as possible by eliminating all lights, TV screens or electronics when you are heading to bed. With that said, be sure to increase light exposure during the day by taking work breaks and walks outside in the sunlight. Melatonin is a naturally occurring hormone controlled by light exposure that helps regulate your sleep-wake cycle, and your brain should produce more during the evenings, when it’s dark, and less during the day, when it’s light, to keep you awake and alert.</p>
+		<p class="text-left"><b>Make the bed:</b> It may seem like a simple chore, but surprisingly, it can affect your sleep quality. Make your bed appealing by washing the covers, freshening the sheets and fluffing the pillows. By doing this you will be more inclined to look forward to crawling into a cozy, clean bed.</p>
+		<p class="text-left"><b>Eating rules:</b> Try to make dinnertime earlier in the evening, and avoid heavy, rich foods within three hours of bed. Fatty foods take a lot of work for your stomach to digest and may keep you up. Also, be cautious when it comes to spicy or acidic foods in the evening, as they can cause stomach trouble and heartburn. If you need a light snack, try to have some protein, such as nuts or cheese, to hold you over until breakfast.</p>
+		<p class="text-left"><b>Exercise regularly:</b> You will also sleep more deeply if you exercise regularly. You don’t have to be a star athlete to reap the benefits — as little as 20 to 30 minutes of daily activity helps. And you don’t need to do all 30 minutes in one session. You can break it up into five minutes here and 10 minutes there and still get the benefits. Try a brisk walk, a bicycle ride, or even gardening or housework. Some people prefer to schedule exercise in the morning or early afternoon, as exercising too late in the day can stimulate the body, raising its temperature. Even if you prefer not to exercise vigorously at night, don’t feel glued to the couch, though. Relaxing exercises such as yoga or gentle stretching can help promote sleep.</p>
+		<p class="text-left"><b>Limit your caffeine intake:</b> You might be surprised to know that caffeine can cause sleep problems up to 10 to 12 hours after drinking it! Consider eliminating caffeine after lunch or cutting back on your overall intake.</p>
+		<p class="text-left"><b>De-stress:</b> One of the most common reasons for not sleeping involves stress. Find what relaxes you at night, and stick with it. Maybe it’s deep breathing, meditation, yoga or a good book. Whatever it is, use it to relax your body and mind, so you’re able to find a few hours of restful sleep. If the stress of managing work, family or school is keeping you awake, you may need help with stress management. By learning how to manage your time effectively, handle stress in a productive way, and maintain a calm, positive outlook, you’ll be able to sleep better at night.</p>
+		<p class="text-left"><b>Know when to see a sleep physician:</b> If you have tried these tips to sleep better and are still struggling with sleep problems, you may have a sleep disorder that requires professional treatment. Consider scheduling a visit with a sleep doctor if, despite your best efforts at self–help, you are still troubled by any of the following symptoms:</p>
+		   <ul>
+		     <li>Persistent daytime sleepiness or fatigue</li>
+			 <li>Loud snoring accompanied by pauses in breathing</li>
+			 <li>Difficulty falling asleep or staying asleep</li>
+			 <li>Unrefreshing sleep</li>
+			 <li>Frequent morning headaches</li>
+			 <li>Day-time drowsiness</li>
+			 <li>Falling asleep at inappropriate times</li>
+		   </ul>
+		</p>
+		
+	  </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/sleep-apnea.jpg" alt="Sleep Apnea Treatment" title="Sleep Apnea Treatment">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    <ul>
+                        {% include 'services/list_services.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,328 @@
+{% extends 'base.html' %} 
+{% block titulo %}Meet The Copley Dental Team{% endblock %} 
+{% block descripcion_pagina %}Meet The Copley Dental Team{% endblock %}
+{% block javascript %}
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $("#menu-active-our-team").addClass("active");
+            $("#side-bar-button").css("display", "none");
+        });
+    </script>
+{% endblock %}
+{% block styles %}
+
+<script type="text/javascript">
+function showLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'block';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'block';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'block';
+    }
+    if (num == 4) {
+        document.getElementById('overx3').style.display = 'block';
+    }
+    if (num == 5) {
+        document.getElementById('overx4').style.display = 'block';
+    }
+    if (num == 6) {
+        document.getElementById('overx5').style.display = 'block';
+    }
+    if (num == 7) {
+        document.getElementById('overx6').style.display = 'block';
+    }
+    if (num == 8) {
+        document.getElementById('overx7').style.display = 'block';
+    }
+    if (num == 9) {
+        document.getElementById('overx8').style.display = 'block';
+    }
+    if (num == 10) {
+        document.getElementById('overx9').style.display = 'block';
+    }
+    if (num == 11) {
+        document.getElementById('overx10').style.display = 'block';
+    }
+	 if (num == 12) {
+        document.getElementById('overx11').style.display = 'block';
+    }
+    if (num == 13) {
+        document.getElementById('overx12').style.display = 'block';
+    }
+	if (num == 14) {
+        document.getElementById('overx13').style.display = 'block';
+    }
+	if (num == 15) {
+        document.getElementById('overx14').style.display = 'block';
+    }
+	if (num == 16) {
+        document.getElementById('overx15').style.display = 'block';
+    }
+	document.getElementById('fadex').style.display = 'block';
+	//window.location.href="/OurTeam/#";
+}
+
+function hideLightboxx(num) {
+    if (num == 1) {
+        document.getElementById('overx').style.display = 'none';
+    }
+    if (num == 2) {
+        document.getElementById('overx1').style.display = 'none';
+    }
+    if (num == 3) {
+        document.getElementById('overx2').style.display = 'none';
+    }
+    if (num == 4) {
+        document.getElementById('overx3').style.display = 'none';
+    }
+    if (num == 5) {
+        document.getElementById('overx4').style.display = 'none';
+    }
+    if (num == 6) {
+        document.getElementById('overx5').style.display = 'none';
+    }
+    if (num == 7) {
+        document.getElementById('overx6').style.display = 'none';
+    }
+    if (num == 8) {
+        document.getElementById('overx7').style.display = 'none';
+    }
+    if (num == 9) {
+        document.getElementById('overx8').style.display = 'none';
+    }
+    if (num == 10) {
+        document.getElementById('overx9').style.display = 'none';
+    }
+	if (num == 11) {
+        document.getElementById('overx10').style.display = 'none';
+    }
+    if (num == 12) {
+        document.getElementById('overx11').style.display = 'none';
+    }
+    if (num == 13) {
+        document.getElementById('overx12').style.display = 'none';
+    }
+	 if (num == 14) {
+        document.getElementById('overx13').style.display = 'none';
+    }
+	 if (num == 15) {
+        document.getElementById('overx14').style.display = 'none';
+    }
+	 if (num == 16) {
+        document.getElementById('overx15').style.display = 'none';
+    }
+    document.getElementById('fadex').style.display = 'none';
+}
+</script>
+<style type="text/css">
+    #menu-active-our-team{
+
+    }
+.fadeboxx {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 4300px;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.80;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+.overboxx,
+.overboxx1,
+.overboxx2 {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 7.6%;
+    width: 84.5%;
+    z-index: 1002;
+}
+#contentinvisax {
+    background: black;
+    width: 50%;
+    padding: 0px 80px;
+}
+@media (max-width: 1100px) {
+    .overboxx,
+    .overboxx1,
+    .overboxx2 {
+        position: absolute;
+    }
+}
+@media (max-width: 680px) {
+    .overboxx,
+    .overboxx1,
+    .overboxx2 {
+        left: 0%;
+        width: 100%;
+		
+    }
+}
+</style>
+
+{% endblock %} 
+
+{% block contenido_pagina %}
+
+<div id="main-content">
+    <!--<div onclick="location.href='javascript:showLightboxx(1);'" onmouseover="this.style.background='#3F69B7'" onmouseout="this.style.background='#003366'">Watch Interview</div>	-->
+    <h1 id="our-team-title" style="text-align:center">Meet The Copley Dental Team!</h1>
+    <div id="team-content">
+        <div class="team-member" onclick="location.href='javascript:showLightboxx(1);'"><img data-src="{{ static }}images/charles-badaoui.png" alt="Dr. Charles Badaoui" title="Dr. Charles Badaoui">
+		<a href="javascript:showLightboxx(1);" style="color:#98CAED;font-size:20px;margin-top:20px;">Dr. Charles Badaoui</a>
+        </div>
+        <div class="team-member" onclick="location.href='javascript:showLightboxx(2);'"><img data-src="{{ static }}images/andrew-chase.jpg" alt="Dr. Andrew Chase" title="Dr. Andrew Chase">
+            <br>
+            <br><a href="javascript:showLightboxx(2);" style="color:#98CAED;font-size:20px;">Dr. Andrew Chase</a>
+        </div>
+		
+        <div class="team-member" onclick="location.href='javascript:showLightboxx(3);'"><img data-src="{{ static }}images/hidetada-moroi.png" alt="Dr. Hidetada Moroi(Periodontist)" title="Dr. Hidetada Moroi(Periodontist)">
+            <br>
+            <br><a href="javascript:showLightboxx(3);" style="color:#98CAED;font-size:20px;">Dr. Hidetada Moroi(Periodontist)</a>
+        </div>
+        <div class="team-member" onclick="location.href='javascript:showLightboxx(4);'"><img data-src="{{ static }}images/veena-vaidyanathan.jpg" alt="Dr. Veena Vaidyanathan" title="Dr. Veena Vaidyanathan">
+            <br>
+            <br><a href="javascript:showLightboxx(4);" style="color:#98CAED;font-size:20px;">Dr. Veena Vaidyanathan</a>
+        </div>
+    </div>
+    <div id="overx" class="overboxx">
+
+        <div class="popup-windows">
+            <div class="popup-windows-content">
+                <a href="javascript:hideLightboxx(1);" style="text-align:right;display:block;"><img src="{{ static }}images/x.png" style="margin:5px 5px 0 0">
+                </a>
+                <div class="popup-windows-content-sup">
+                    <div class="popupsupleft"><img src="{{ static }}images/charles-badaoui.png" alt="Dr. Charles Badaoui">
+                    </div>
+                    <div class="popupsupright">
+                        <h2>Dr. Charles Badaoui<br>
+						Cosmetic and Restorative Dentistry</h2>
+						<p style="font-size:16px;">
+                        Dr. Badaoui is a graduate of Boston University School of Dental Medicine, and Massachusetts College of Pharmacy.
+                        He is committed to providing his patients with only the best care possible and offers a variety of restorative and preventative dental services. He enjoys all aspects of general dentistry, but his passion is cosmetic dentistry. Creating smiles that give his patients much-deserved self-confidence and joy is why Dr. Badaoui loves his profession. 
+                        Dr. Badaoui is the proud founder of and serves on the board of directors for Medical Missions for Children, an organization that provides quality surgical and dental services to poor and under-privileged children and young adults in various countries throughout the World. The organization also facilitates the transfer of education, knowledge and recent innovations to the local medical and dental communities.
+                    </p>
+                    <p style="font-size:16px;">
+                        He is a member of many organizations, including:
+                    </p>
+                    <ul style="font-size:16px;">
+                        <li>Massachusetts Dental Society</li>
+                        <li>American Dental Association</li>
+                    </ul>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+	 <div id="overx1" class="overboxx">
+
+        <div class="popup-windows">
+            <div class="popup-windows-content">
+                <a href="javascript:hideLightboxx(2);" style="text-align:right;display:block;"><img src="{{ static }}images/x.png" style="margin:5px 5px 0 0">
+                </a>
+                <div class="popup-windows-content-sup">
+                    <div class="popupsupleft"><img src="{{ static }}images/andrew-chase.jpg" alt="Dr. Andrew Chase - Orthodontics" title="Dr. Andrew Chase - Orthodontics">
+                    </div>
+                    <div class="popupsupright" style="float:right;">
+                        <h2>Dr. Andrew Chase<br>Orthodontics</h2>
+				        <p>Dr. Andrew Chase is continuing a great legacy in orthodontics that started over thirty years ago with his father, Dr. Robert Chavez. Together, with a wonderful team of highly experienced and caring staff members, they are ARCH Orthodontics.</p>
+						<p>Dr. Chase attended State University of New York at Albany for his undergraduate studies. He was accepted into dental school a year early and continued his professional education at Boston University earning his Doctorate in Dentistry. He accepted a one year General Dental Residency at Saint Barnabas Hospital and was asked to stay on for a second year as Chief Dental Resident. He then continued to simultaneously earn two degrees, a Master's Degree in Oral Biology and a Post Doctorate Degree in Orthodontics. Dr. Chase was awarded his Certificate of Orthodontics in September 1998.</p>
+					    <p>Dr. Chase is an active member of the American Association of Orthodontics and the Massachusetts Association of Orthodontics along with the American Dental Association and the South Shore Dental Society. He has participated in Operation Smile on their World Journey of Hope and their Inaugural Mission to Peru. This organization helps disadvantaged children with Cleft Palate and other oral deformities by providing them with free surgeries and dental care that they may not otherwise receive. Just one more way Dr. Chase is working to spread Generations of Beautiful Smiles not only in his own community, but around the world.</p>
+					</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div id="overx2" class="overboxx">
+
+        <div class="popup-windows">
+            <div class="popup-windows-content">
+                <a href="javascript:hideLightboxx(3);" style="text-align:right;display:block;"><img src="{{ static }}images/x.png" style="margin:5px 5px 0 0">
+                </a>
+                <div class="popup-windows-content-sup">
+                    <div class="popupsupleft"><img src="{{ static }}images/hidetada-moroi.png" alt="Dr. Hidetada Moroi - Periodontics and Dental Implants" title="Dr.Hidetada Moroi - Periodontics and Dental Implants">
+                    </div>
+                    <div class="popupsupright">
+                        <h2>Dr.Hidetada Moroi<br>Periodontics and Dental Implants</h2>
+						<p>Dr. Moroi is a graduate of Tufts University School of Dental Medicine and holds a Certificate in Advanced Education from the Program in Periodontology at Tufts University</p>
+                       <p>Dr. Moroi holds a dental degree from the Osaka Dental College in Osaka, Japan, he also holds the teaching position of Assitant Clinical Professor in Periodontics at The Tufts UniversitySchoold of Dental Medicine.</p> 
+                       <p>He is actively involved in continuing dental education giving lectures across the globe.</p>
+                       <p>Dr.Moroi joined Copley Dental in 2004 providing placement of dental implants,dental surguries and periodontal treatment.</p>
+					   <p>Dr.Moroi is a member of the ADA & AAP.</p>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+
+    </div>
+	<div id="overx3" class="overboxx">
+
+        <div class="popup-windows">
+            <div class="popup-windows-content">
+                <a href="javascript:hideLightboxx(4);" style="text-align:right;display:block;"><img src="{{ static }}images/x.png" style="margin:5px 5px 0 0">
+                </a>
+                <div class="popup-windows-content-sup">
+                    <div class="popupsupleft"><img src="{{ static }}images/veena-vaidyanathan.jpg" alt="Dr. Veena Vaidyanathan" title="Dr. Veena Vaidyanathan">
+                    </div>
+                    <div class="popupsupright">
+                        <h2>Dr. Veena Vaidyanathan</h2>
+						<p>Dr. Veena Vaidyanathan is a pediatric dentist with a passion for helping children maintain healthy and happy smiles.  Dr. Veena’s academic credentials include a Bachelor of Science Degree from the University of the Pacific and a Doctor of Dental Surgery degree from the University of the Pacific Arthur A. Dugoni School of Dentistry in San Francisco.  She completed her Advanced Education in General Dentistry residency with Lutheran Medical Center in Jackson, Michigan, followed by her Master’s degree, as well as residency in Pediatric Dentistry, from the University of Michigan. Her goal is for every child to have a wonderful dental experience from start to finish, and understands that every child is different and will apply individual-based behavioral and educational techniques to every child that visits Copley Dental Associates.</p>
+                        <p>She is an active member of the American Academy of Pediatric Dentistry, the American Dental Association and the Massachusetts Academy of Pediatric Dentists. She is also Board Certified with the American Board of Pediatric Dentistry. Dr. Veena spends most of her free time traveling, eating, and watching a variety of sports. Her most recent adventure includes wine tasting in Chile and exploring glaciers and wildlife in Antarctica.</p>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="fadex" class="fadeboxx">&nbsp;</div>
+</div>
+<script type="text/javascript">
+function ocultar(nd) {
+    var divt2 = document.getElementById("rm" + nd);
+    if (divt2.style.display == "block") {
+        divt2.style.display = "none";
+    } else {
+        divt2.style.display = "block";
+    }
+
+}
+var doctor = location.href.split("#")[1];
+if (doctor) {
+    switch (doctor) {
+        case "DrGraceJotikabhukkana":
+            showLightboxx(3);
+            break;
+		case "DrCharlesBadaoui":
+            showLightboxx(1);
+            break;
+        case "DrHidetadaMoroi":
+            showLightboxx(5);
+            break;  
+          case "DrAndrewChase":
+            showLightboxx(2);
+            break;
+        default:
+            console.log("nothing")
+
+    }
+}
+</script>
+{% endblock %}

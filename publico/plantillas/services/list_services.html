@@ -1,0 +1,5 @@
+{% for service in services %}
+    <li>
+        <a href="{{ path_for('service', {"service": service.slug })}}">{{ service.name }}</a>
+    </li>   
+{% endfor  %}

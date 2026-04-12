@@ -1,0 +1,178 @@
+{% extends 'base.html' %} 
+
+{% block styles %}
+
+<style type="text/css">
+#main-contents-inf,
+#main-contents-sup {
+    width: 100%;
+    display: inline-block;
+    margin-top: 40px;
+    color: #5f6062;
+    padding: 0px;
+}
+#main-contents-inf {
+    text-align: left;
+}
+.content-photo-right img {
+    max-width: 100%;
+}
+#main-contents-inf h2 {
+    color: #A3D483;
+}
+.content-text-left {
+    width: 56%;
+    float: left;
+}
+.content-text-left ul {
+    text-align: left;
+    padding-left: 2.5%;
+    line-height: 26px;
+}
+.content-text-left ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5f6062;
+}
+.content-photo-right {
+    width: 40%;
+    float: right;
+}
+.text-left {
+    text-align: left;
+    width: 98%;
+}
+.telf-inf {
+    text-align: left;
+}
+.content-text-left h2 {
+    color: #a3d483;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left
+}
+.content-text-left h1 {
+    text-align: left;
+    font-size: 40px;
+    color: #A3D483;
+    font-weight: bold;
+    margin-top: 0px;
+    width: 100%;
+}
+.boton {
+    display: block;
+    width: 150px;
+    margin: 0px;
+    background: #98CAED;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.boton:hover {
+    background: #A3D483;
+}
+#form-contact-page {
+    width: 100%;
+    margin: auto;
+    diplay: inline-block;
+    background: #98CAED;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#form-contact-page h2 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 20px 0px 0px 4%;
+}
+#form-contact-page input,
+#form-contact-page textarea {
+    width: 85%;
+    margin-top: 8px;
+    border: none;
+    padding: 15px;
+}
+@media (max-width: 800px) {
+    .content-text-left ul {
+        padding-left: 6%;
+    }
+    .boton {
+        text-align: center;
+        margin: 0px auto;
+    }
+    .telf-inf {
+        text-align: center;
+    }
+    .content-text-left h2 {
+        text-align: center
+    }
+    .content-text-left h1 {
+        text-align: center
+    }
+    .content-photo-right img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .content-text-left {
+        width: 100%;
+        float: none;
+    }
+    #main-contents-inf,
+    #main-contents-sup {
+        width: 95%;
+    }
+    #main-contents-sup {
+        margin-top: 0px
+    }
+    #main-contents-sup p {
+        padding: 0 0 0 10px;
+    }
+    #main-contents-inf h2 {
+        text-align: center;
+    }
+    .content-photo-right {
+        width: 100%;
+        float: none;
+    }
+}
+</style>
+
+{% endblock %} 
+
+{% block titulo %}Video {% endblock %} 
+
+{% block contenido_pagina %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('video_copley')}}" class="activate">Video</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Video</h1>
+            <iframe width="700" height="400" style="max-width:100%;" src="//www.youtube.com/embed/CtWfGhEw75Q" frameborder="0" allowfullscreen></iframe>
+
+            <h2>Treatments</h2>
+            <ul>
+                {% include 'services/list_treatments.html' %}
+            </ul>
+            <a href="{{ path_for('gallery') }}" style="text-align:left;" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening & more</a>
+
+        </div>
+        <div class="content-photo-right">
+            <img src="{{static }}images/generalcosmeticdentistry.png" alt="General Cosmetic Dentistry - Video - Copley" title="General Cosmetic Dentistry">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

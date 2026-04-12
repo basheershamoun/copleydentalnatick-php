@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ title }}{% endblock %}
+{% block descripcion_pagina %} {{ description }} {% endblock %}
+
+{% block javascript %} 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+			$("#menu-active-services").addClass("active");
+            
+        });
+    </script>
+{% endblock %}
+
+{% block contenido_pagina %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html' %}
+            <li> > </li>
+            <li>
+                <a href="{{ path_for('service',{'service':slug}) }}" class="activate">Invisalign</a>
+            </li>
+        </ul>
+    </div>
+    {% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+       
+		   
+					<div id="imagefullwidth">
+					<img src="{{ static }}images/invisalign.jpg" style="width:100%;" alt="invisalign" title="invisalign">
+					</div>
+					
+					 <div id="contactos-section">
+						 <div id="contactos-text-content" style="color:#FE5212;">
+						  <b>17 Worcester St, Rt 9W<br>Natick, MA 01760</b>
+						 </div>
+						 <div id="contactos-secs">
+						
+							   <div class="contactos-section">
+								  <a href="tel://{{ phone_natick }}" style="text-decoration:none;"><p style="height:10px;color:#4A6783;font-size:14px;font-weight:bold;color: #FE5212;font-size: 19px;margin-bottom:25px;">{{ phone_natick }}</p></a>
+								  <p style="height:10px;color:#fe5212;margin-bottom:20px;font-weight:bold;">For dental emergencies during regular business hours</p>
+								  <p style="color:#5f6062;font-weight:bold;">Our goal is to provide you with the highest standard<br> of dental care in Boston, while maintaining<br> a relaxing and friendly environment.</p>
+								  
+							   </div>
+							   <div class="contactos-section">
+								   <a href="tel://781-958-2161" style="text-decoration:none;"><p style="height:10px;color:#4A6783;font-size:14px;font-weight:bold;color: #FE5212;font-size: 19px;margin-bottom:25px;">781-958-2161</p></a>
+								   <p style="color:#fe5212;font-weight:bold;">For dental emergencies during after hours, weekends and holidays *Pager</p>
+								   <a href="{{ path_for('request_appointment') }}"><div style="font-size:16px;color:white;display:inline-block;background: #FE5212;display: inline-block;padding: 6px 10px;border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px;"><div style="border:2px solid white;border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px;padding: 15px 40px;">Make your appointment today</div></div></a>
+							   </div>
+						 </div>
+			         </div>
+					 <div id="menu-content-section">
+					    <div class="sectionm">
+						  <div class="section-head"><a href="{{ path_for('can_invisalign_work_for_you') }}" style="color:white;">Can Invisalign Work for you</a></div></a>
+						  <div class="section-image"><img data-src="{{ static }}images/invisalign-work for-you.png" alt="Can Invisalign Work for you" title="Can Invisalign Work for you"></div>
+						</div>
+						<div class="sectionm">
+						  <div class="section-head"><a href="{{ path_for('stories_about_smiles') }}" style="color:white;">Stories about Smiles</a></div>
+						  <div class="section-image"><img data-src="{{ static }}images/stories-about-smiles.png" alt="Stories about Smiles" title="Stories about Smiles"></div>
+						</div>
+						<div class="sectionm">
+						  <div class="section-head"><a href="https://www.google.es/maps/place/17+Worcester+St,+Natick,+MA+01760,+EE.+UU./@42.3044626,-71.3295418,17z/data=!3m1!4b1!4m5!3m4!1s0x89e3868cecfd927f:0x3083c1a3842fd882!8m2!3d42.3044626!4d-71.3273531" target="_blank" style="color:white;">Go to Map</a></div>
+						  <div class="section-image"><img data-src="{{ static }}images/copley-dental-go-to-map.png" alt="Copley Dental - Go to Map" title="Copley Dental - Go to Map"></div>
+						</div>
+				    </div>
+
+        
+       
+    </div>
+</div>
+
+{% endblock %}

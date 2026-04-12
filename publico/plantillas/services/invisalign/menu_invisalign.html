@@ -1,0 +1,182 @@
+<script type="text/javascript">
+    function showLightbox() {
+        document.getElementById('over').style.display='block';
+        document.getElementById('fade').style.display='block';
+    }
+    function hideLightbox() {
+        document.getElementById('over').style.display='none';
+        document.getElementById('fade').style.display='none';
+    }
+</script>
+<style type="text/css">
+    .fadebox {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 1020px;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+        
+    }
+    .overbox {
+        display: none;
+        position: absolute;
+        top: 5%;
+        left: 25%;
+        width: 100%;
+        
+        z-index:1002;
+        
+    }
+    #contentinvisa {
+        background: #FFFFFF;
+        width:50%;
+        padding: 0px 80px;
+    }
+    .field{width:100%;display:inline-block;text-align:center;margin-bottom:10px;}
+    .textbox{width:100%;}
+    .label{text-align:left;width:100%;}
+</style>
+    <div id="inva-head">
+                            <div id="logoinvi"><a href="http://www.invisalign.es/en/Pages/Home.aspx" target="_blank"><img src="{{ static }}images/logo-invisalign.jpg" alt="Invisalign" title="Invisalign"></a></div>
+                            <ul id="menuinvi">
+                                         <li class="list-text"><a style="height:30px;cursor:pointer;">Invisalign</a>
+                                         <ul style="border-radius:6px;-moz-border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;">
+                                              <li style="border-bottom: 1px solid #EFF3FF;"><a href="{{ path_for('what_is_invisalign') }}">What is Invisalign?</a></li>
+                                              <li style="border-bottom: 1px solid #EFF3FF;"><a href="{{ path_for('treatment_process') }}">Treatment process</a></li>
+                                              <li style="border-bottom: 1px solid #EFF3FF;"><a href="{{ path_for('treatment_comparison') }}">Treatment comparison</a></li>
+                                              <li style="border-bottom: 1px solid #EFF3FF;"><a href="{{ path_for('invisalign_for_teenagers') }}">Invisalign for teenagers</a></li>
+                                              <li style="border-bottom: 1px solid #EFF3FF;"><a href="{{ path_for('viviera_retainers') }}">Vivera retainers</a></li>
+                                              <li style="border-bottom: none;"><a href="{{ path_for('can_invisalign_work_for_you') }}">Can Invisalign work for you?</a></li>
+                                         </ul>
+                                  </li>
+                                  <li class="list-text"><a href="{{ path_for('invisalign_results') }}">The Results</a></li>
+                            </ul>
+    </div>
+     
+    <div id="over" class="overbox">
+        <div id="contentinvisa" style="color:#003366;">
+                        <div style="width:100%;padding-top:10px;"><a href="javascript:hideLightbox();" style="text-align:right;display:block;"><img src="{{ static }}images/x.png"></a></div>
+                        <h1 style="color:#f60;">Dowload info kit</h1>
+                        <h2>Start smiling with Invisalign</h2> 
+                        <p>Please complete the fields below and receive your personal online Info kit. It will give you access to valuable information to help you on your way to the smile you've always wanted. Fields with * are compulsory</p>
+                         <div class="field">
+                              <div class="label">First name*:</div><div class="textbox"><input type="text" name="Fname"></div>
+                         </div><br>
+                         <div class="field">
+                             <div class="label">Last name*:</div><div class="textbox"><input type="text" name="Fname"></div>
+                         </div><br>
+                         <div class="field">
+                             <div class="label">Email address*:</div><div class="textbox"><input type="text" name="Fname"></div>
+                         </div>
+                         <br>
+                         <div class="field">
+                             <div class="label">Postcode*:</div><div class="textbox"><input type="text" name="Fname"></div>
+                         </div>
+                         <br>
+                         <div class="field">
+                            <div class="label">
+                            Country:
+                            </div>
+                             <div class="textbox">
+                             <select>
+                                                                    <option selected="selected" value="NONE">Country*:</option>
+                                                                    <option value="">Please select</option>
+                                                                    <option value="Austria">Austria</option>
+                                                                    <option value="Czech Republic">Czech Republic</option>
+                                                                    <option value="Denmark">Denmark</option>
+                                                                    <option value="Finland">Finland</option>
+                                                                    <option value="France">France</option>
+                                                                    <option value="Germany">Germany</option>
+                                                                    <option value="Greece">Greece</option>
+                                                                    <option value="Hungary">Hungary</option>
+                                                                    <option value="Iceland">Iceland</option>
+                                                                    <option value="Ireland">Ireland</option>
+                                                                    <option value="Italy">Italy</option>
+                                                                    <option value="Norway">Norway</option>
+                                                                    <option value="Poland">Poland</option>
+                                                                    <option value="Portugal">Portugal</option>
+                                                                    <option value="Romania">Romania</option>
+                                                                    <option value="Slovakia">Slovakia</option>
+                                                                    <option selected="selected" value="Spain">Spain</option>
+                                                                    <option value="Sweden">Sweden</option>
+                                                                    <option value="Switzerland">Switzerland</option>
+                                                                    <option value="United Kingdom">United Kingdom</option>
+                             </select>
+                             
+                             </div>
+                        </div>
+                        <br>
+                        <div class="field">
+                                                        <div class="label">
+                                                             Where did you hear about Invisalign?*
+                                                        </div>
+                                                        <div class="textbox">
+                                                        
+                                                        <select>
+                                                                    <option selected="selected" value="NONE">Where did you hear about Invisalign?*</option>
+                                                                    <option value="" selected="selected">Please select</option>
+                                                                    <option value="Friends & family">Friends & family</option>
+                                                                    <option value="My dentist">My dentist</option>
+                                                                    <option value="Magazine advertisement">Magazine advertisement</option>
+                                                                    <option value="Internet">Internet</option>
+                                                                    <option value="Facebook">Facebook</option>
+                                                                    <option value="Twitter">Twitter</option>
+                                                                    <option value="Event">Event</option>
+                                                                    <option value="Radio">Radio</option>
+                                                                    <option value="Television">Television</option>
+                                                                    <option value="Other">Other</option>
+                                                        </select></div>
+                        </div>
+                        <br>	 
+                        <div class="field">
+                               <div class="label" style="width:3%;"><input type="checkbox"></div>
+                               <div style="text-align:left;width:100%;">I would like to receive special offers, product updates, and other information about Invisalign from AlignTechnology or from an Invisalign provider.</div>
+                        </div>
+                        <br>
+                        <div class="field">
+                             <div class="label">
+                                Gender:                            
+                             </div>
+                             <div class="textbox">
+                             <select>
+                                                                    <option selected="selected" value="NONE">Gender?</option>
+                                                                    <option value="" selected="selected">Please select</option>
+                                                                    <option value="Male">Male</option>
+                                                                    <option value="Female">Female</option>
+                             </select></div>
+                        </div>
+                        <br>
+                        <div class="field">
+                                                          <div class="label">
+                                                          Age range?
+                                                          </div>
+                                                          <div class="textbox">
+                                                          <select>
+                                                                    <option selected="selected" value="NONE">Age range?</option>
+                                                                    <option value="" selected="selected">Please select</option>
+                                                                    <option value="<11"><11</option>
+                                                                    <option value="11-15">11-15</option>
+                                                                    <option value="16-18">16-18</option>
+                                                                    <option value="19-24">19-24</option>
+                                                                    <option value="25-34">25-34</option>
+                                                                    <option value="35-44">35-44</option>
+                                                                    <option value="45-54">45-54</option>
+                                                                    <option value=">54">>54</option>
+                                                           </select></div>
+                        </div>
+                        
+                        <br>
+                        <p>Thank you for providing your information. By clicking submit, you are requesting to receive the online Info Kit.</p>
+                        <br>
+                        <div style="text-align:center;width:100%;margin:20px 0px 10px;"><input type="submit" value="Submit" style="padding:15px 30px;background:#406989;color:white;-moz-border-radius:8px;border-radius:8px;-o-border-radius:8px;-webkit-border-radius:8px;cursor:pointer;margin-bottom:20px;"></div>
+                        
+        
+        </div>
+    </div>
+    <div id="fade" class="fadebox">&nbsp;</div>

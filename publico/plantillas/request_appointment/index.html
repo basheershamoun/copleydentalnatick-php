@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block titulo %}Request Appointment {% endblock %}
+{% block javascript %}
+<link rel="stylesheet" href="{{ static }}js/datepicker/jquery-ui.min.css">
+<link rel="stylesheet" href="{{ static }}js/datepicker/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="{{ static }}js/datepicker/jquery-ui.theme.min.css">
+<script type="text/javascript" src="{{ static }}js/datepicker/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		$("#rapp").css("background","#A1D783");
+		$("#rapp").css("color","white");
+		$("#side-bar-button").css("display", "none");
+		$("#desired_date" ).datepicker({dateFormat : "yy-mm-dd",changeMonth: true,changeYear:true,
+			beforeShow: function(){$('#desired_date').removeClass("hasDatepicker");},
+		});
+		$("#date_of_birth" ).datepicker({dateFormat : "yy-mm-dd",changeMonth: true,changeYear:true,
+			beforeShow: function(){$('#date_of_birth').removeClass("hasDatepicker");},
+		});
+		
+
+	});
+</script>
+{% endblock %}
+{% block styles %}
+
+<style type="text/css">
+.textbox{width:60%;float:left;}
+.textbox input,textarea{width:100%;background:none repeat scroll 0 0 #fafafa;border:1px solid #ddd;padding:0.15em;}
+.textbox input{height:25px;font-size: 16px;}
+.textbox select{height:35px;background:none repeat scroll 0 0 #fafafa;border:1px solid #ddd;padding:0.15em;}
+.textbox select{width:102%;font-size:16px;}
+</style>
+{% endblock %}
+
+
+{% block contenido_pagina %}
+
+<div id="main-content">
+	<div id="breadcrumb">
+			<ul>    
+				{% include 'breadcrumb_inicio.html' %}
+				<li> > </li>
+				<li>
+					<a href="{{ path_for('request_appointment') }}" class="activate">Request Appointment </a>
+				</li>
+			</ul>
+	</div>
+	<div id="main-contents-sup">
+		<div id="form-container-request-appointment" data-redirect-to="/request_appointment/thank-you/">
+			<span id="status-request-appointment" class="hidden"></span>
+			<form id="form-request-appointment" class="contact-form" data-form-name="Request Appointment" method="POST">
+				<h1 style="color:#a2d884;font-weight:bold;">Request Appointment</h1>
+				<div style="margin-top:10px;"><font style="color:red;">(*)</font> Required fields</div>
+				<div class="divform">
+					<div style="color:#98CAED;font-size:16px;font-weight:bold;">Patient Information</div>
+					<div>
+						<div class="label">First Name <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="text" name="firstName" class="form-input" maxlength="50" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">Last Name <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="text" name="lastName" class="form-input" maxlength="50" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">Date of Birth:</div>
+						<div class="textbox">
+							<input type="text" name="dateBirth" class="form-input" placeholder='yyyy-mm-dd' id="date_of_birth">
+						</div>
+					</div>
+					<div>
+						<div class="label">Address:</div>
+						<div class="textbox">
+							<input type="text" name="address" class="form-input" maxlength="200">
+						</div>
+					</div>
+					<div>
+						<div class="label">City <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="text" name="city" class="form-input" maxlength="40" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">State:</div>
+						<div class="textbox">
+							<select name="state" class="form-input">
+								<option value="">Select a State</option>
+								{% for choice in form.state.choices %}
+									<option value="{{ choice.value }}">{{ choice.label }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div>
+						<div class="label">Zip <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="text" name="zip" class="form-input" maxlength="5" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">Email <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="email" name="email" class="form-input" maxlength="60" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">Home Phone:</div>
+						<div class="textbox">
+							<input type="tel" name="homePhone" class="form-input" maxlength="20">
+						</div>
+					</div>
+					<div>
+						<div class="label">Mobile <font style="color:red;">*</font>:</div>
+						<div class="textbox">
+							<input type="tel" name="phone" class="form-input" maxlength="20" required/>
+						</div>
+					</div>
+					<div>
+						<div class="label">Dental Insurance:</div>
+						<div class="textbox">
+							<input type="text" name="dentalInsurance" class="form-input" maxlength="50">
+						</div>
+					</div>
+					<div>
+						<div class="label">Insurance ID:</div>
+						<div class="textbox">
+							<input type="text" name="insuranceId" class="form-input" maxlength="51">
+						</div>
+					</div>
+					<div>
+						<div class="label">Employer:</div>
+						<div class="textbox">
+							<input type="text" name="employer" class="form-input" maxlength="60">
+						</div>
+					</div>
+				</div>
+				<div class="divform">
+					<div style="color:#98CAED;font-size:14px;font-size:16px;font-weight:bold;">
+					Appointment Information
+					</div>
+					<div>
+						<div class="label">Desired Date:</div>
+						<div class="textbox">
+							<input type="text" name="desiredDate" class="form-input" placeholder="yyyy-mm-dd" id="desired_date">
+						</div>
+					</div>
+					<div>
+						<div class="label">Desired Hour:</div>
+						<div class="textbox">
+							<select name="desiredHour" class="form-input">
+								<option value="">hour</option>
+								{% for choice in form.desired_hour.choices %}
+									<option value="{{ choice.value }}">{{ choice.label }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div>
+						<div class="label">Second Option:</div>
+						<div class="textbox">
+							<select name="secondOption" class="form-input">
+								<option value="">hour</option>
+								{% for choice in form.second_option.choices %}
+									<option value="{{ choice.value }}">{{ choice.label }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div>
+						<div class="label">Are you a current Patient?</div>
+						<div class="textbox" style="text-align:left;">
+							{% for choice in form.current_patient.choices %}
+								<div style="display:inline-block; vertical-align: middle;min-height: 35px;">
+									<input id="current_patient{{ choice.value }}" type="radio" name="currentPatient" value="{{ choice.value }}" style="width:70%;">
+								</div>
+								<label for="current_patient{{ choice.value }}" style="display:inline-block;vertical-align: middle">{{ choice.label}}</label>
+							{% endfor %}
+						</div>
+					</div>
+					<div>
+						<div class="label">How did you hear about us:</div>
+						<div class="textbox" style="text-align:left;">
+							<textarea name="hearAboutUs" class="form-input" style="height: 155px;width:100%;font-size:16px;"></textarea>
+						</div>
+					</div>
+					<div>
+						<div class="label">Purpose of Visit:</div>
+						<div class="textbox" style="text-align:left;">
+							<textarea name="purposeVisit" class="form-input" style="height: 155px;width:100%;font-size:16px;"></textarea>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="botform"><input type="submit" style="width:100px;padding:10px;display:block;background:#98CAED;border:1px solid white;text-decoration:none;color:white;font-weight:bold;margin:auto;" onmouseover="this.style.background='rgb(162, 216, 132)'" onmouseout="this.style.background='#98CAED'" value="SEND"></div>
+			</form>
+		</div>
+	</div>
+</div>	
+{% endblock %}

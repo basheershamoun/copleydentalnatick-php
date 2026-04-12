@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: copleydental-dev
+    ports:
+      - "8090:80"
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html

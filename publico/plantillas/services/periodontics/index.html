@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ title }}{% endblock %}
+{% block descripcion_pagina %} {{ description }} {% endblock %}
+
+{% block javascript %} 
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-services").addClass("active");
+
+    });
+    </script>
+{% endblock %} 
+
+
+
+{% block contenido_pagina %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('service', {'service':slug}) }}" class="activate">Periodontics/Implants</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+
+            <h1>Periodontics/Implants</h1>
+            <h2>Periodontics</h2>
+            <p class="text-left">Periodontics is the study of clinical aspects of the supporting structures of the teeth (i.e., the periodontium), which includes the gingiva (gums), alveolar bone (jaw), root cementum, and the periodontal ligament. The word comes from the Greek words peri, meaning "around" and odons, meaning "tooth". Literally, it means the study of that which is around the tooth.</p>
+            <h2>Periodontal diseases</h2>
+            <p class="text-left">Periodontal disease takes on many different forms but is usually the result of a bacterial infection of the gums.Untreated, it often leads to tooth loss and alveolar bone loss.</p>
+            <p class="text-left">Our periodontic expert is <a href="{{ path_for('our_team') }}#DrHidetadaMoroi" style="color: #5f6062;font-weight: bold;">Dr. Hidetada Moroi, D.M.D.</a></p>
+            <h2>Basic Periodontal Treatment</h2>
+            <p class="text-left">Periodontal disease is a bacterial infection that gets under the gums and into the bone around your teeth. This infectious material must be removed and the area given a chance to heal. There are two generally accepted treatments for this - depending upon the severity of your infection.</p>
+            <h2>Upper Level Infection Removal</h2>
+            <p class="text-left">Bacterial infection in the upper levels of the pockets around your teeth can be removed using specialized instruments. This procedure is called tooth scaling and root planing. It is done under local anesthesia and is quite different from routine, or deep, cleaning which is traditionally done in the general dentist’s office.</p>
+            <h2>Lower Level Infection Removal</h2>
+            <p class="text-left">If your infection has gotten into the bone that supports your teeth and is below the level that can be reached with specialized instruments, then a minor surgical procedure must be done to pull back the gums and remove the lower-level infectious bacteria.</p>
+            <h2 class="title">Other Procedures</h2>
+            <h2>Crown Lengthening</h2>
+            <p class="text-left">When getting a crown, the general dentist must prepare your tooth to receive the crown. Sometimes there is not enough tooth surface above the gumline to accomplish this. Crown lengthening provides more tooth for your crown. This ensures a more stable crown with less gum irritation afterwards. Also, if you have a "gummy" smile or an uneven gum line, crown lengthening can help your teeth to look longer and more even. In this procedure the periodontist gives you a local anesthetic and gently removes excess gum and bone tissue to expose more of your natural teeth.
+            </p>
+            <h2>Bone Grafting</h2>
+            <p class="text-left">Your jawbone is what supports your teeth and gums. Unfortunately, periodontal disease can eat away at your jawbone, giving it a depressed or shrunken appearance in places. In many cases, this lost bone can be partially grown back using various bone-grafting techniques. In this procedure, the periodontist gives you a local anesthetic and gently opens the area, filling in the missing section with bone-grafting material.</p>
+
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/periodontics.png" alt="Periodontics/Implants" title="Periodontics/Implants">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    <ul>
+                        {% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="main-contents-inf" style="margin-top:0px;">
+        <h2>Soft Tissue Grafting</h2>
+        <p class="text-left">Longer teeth or exposed tooth roots can look unsightly. They can also increase your sensitivity to heat, cold or sweets. In some cases, gum tissue can be placed in these areas. In this procedure, the periodontist gives you a local anesthetic and gently places a gum tissue graft over the area.</p>
+        <h2>Antibiotic Treatment</h2>
+        <p class="text-left">Some oral antibiotics can enhance the periodontal treatment you have received. Antibiotic treatment can also be beneficial in certain other select situations. The procedure involves the prescription of oral antibiotics with frequent dental check-ups to monitor your progress. </p>
+        <h2>Ridge Augmentation</h2>
+        <p class="text-left">Sometimes, after an extraction, there will be a sunken in spot in your gumline. This looks unsightly and can jeopardize the appearance of the bridge that will go over this area. Bone-grafting material can be inserted to fill out this depression. In this procedure, the periodontist gives you a local anesthetic and gently opens the area, filling the sunken area with bone-grafting material.</p>
+        <h2 class="title">Dental Implants</h2>
+        <h2>What Are Dental Implants?</h2>
+        <p class="text-left">Quite simply, dental implants are artificial replacements for natural tooth roots. They attach firmly into the gum and jawbone, becoming quite solid. Your general dentist then places a crown onto this artificial tooth root, which looks, feels and functions like a natural tooth. Implants can also be used to anchor partial and full dentures.</p>
+        <h2>When Are Dental Implants Appropriate?</h2>
+        <p class="text-left">Dental implants are one method of tooth replacement. Other methods are bridges, partial dentures and full dentures. Your general dentist is the judge of which method is most appropriate.</p>
+        <h2>What Are Some of Advantages of Dental Implants?</h2>
+        <ul>
+            <li>More attractive appearance.</li>
+            <li>Speech improvement.</li>
+            <li>Greater comfort.</li>
+            <li>Greater ability to chew food naturally.</li>
+        </ul>
+        <h2>Why Is a Fixed Restoration Better?</h2>
+        <p class="text-left">Implants look and feel like natural teeth. As dental implants are fixed in the jaw, they present none of the problems that can be associated with removable appliances such as dentures and partial denture, including:</p>
+        <ul>
+            <li>The slipping, irritation and pain that can accompany dentures.</li>
+            <li>The tedious removal for overnight soaking and cleaning.</li>
+            <li>Family members seeing you without teeth.</li>
+            <li>Reattachment with adhesives.</li>
+        </ul>
+        <h2>What Is the Success Rate of Implants?</h2>
+        <p class="text-left">The success rate of osseointegrated dental implants is between 94 and 98 percent. If you are a non-smoker with good oral hygiene habits, the success rate is closer to 100 percent.</p>
+        <h2>How Long Do Implants Last?</h2>
+        <p class="text-left">Dental implants integrate into the jawbone. Implants have been in patients' mouths for 25 years. With excellent oral hygiene and regular cleanings, your implant should last a lifetime.</p>
+        <h2>How Are Implants Placed?</h2>
+        <p class="text-left">First, a detailed, clinical examination will be done to ensure that you are a good candidate for implants. If so, planning will be done in conjunction with your general dentist to ensure that your implant is placed safely and in the right location. Then, your dental implant will be placed by us during a routine office visit. The procedure can be done under a local anesthetic.</p>
+        <h2>Are Dental Implants Expensive?</h2>
+        <p class="text-left">Dental implants do cost more than conventional dentures, but they will last longer than dentures.</p>
+        <h2>How Predictable Is the Procedure?</h2>
+        <p class="text-left">The success rate of dental implants is between 94 and 98 percent. If patients practice good oral care and maintenance of their implants and receive periodic periodontal care if needed, dental implants can be their friends for life.</p>
+        <h2>Am I a Candidate for Implants?</h2>
+        <p class="text-left">Implants begin with an evaluation by your general dentist, who will decide if you are a good candidate for the procedure. If your dentist feels implants might be possible, he or she will send you to us for a placement evaluation.</p>
+    </div>
+
+</div>
+{% endblock %}

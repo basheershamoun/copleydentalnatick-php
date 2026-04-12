@@ -1,0 +1,140 @@
+{
+    "services":[
+        {
+            "name":"Cosmetic Dentistry",
+            "slug":"cosmetic-dentistry",
+            "template":"services/cosmetic_dentistry/index.html",
+            "title":"High Quality Cosmetic Dentistry ",
+            "description":"Cosmetic dentistry is dental work that improves the appearance and function of a person's teeth.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Pediatric Dentistry",
+            "slug":"pediatric-dentistry",
+            "template":"services/pediatric_dentistry/index.html",
+            "title":"Copley Dental Natick - Pediatric Dentistry",
+            "description":"Pediatric dentistry is an age-defined specialty that provides both primary and comprehensive preventive and therapeutic.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Periodontics/Implants",
+            "slug":"periodontics-implants",
+            "template":"services/periodontics/index.html",
+            "title":"Copley Dental  Natick Periodontics",
+            "description":"Periodontics is the study of clinical aspects of the supporting structures of the teeth, which includes the gingiva, alveolar bone, root cementum, and the periodontal ligament.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Porcelain Dental Veneers‏",
+            "slug":"dental-veneers",
+            "template":"services/dental_veneers/index.html",
+            "title":"Expert Dental Veneers Procedure",
+            "description":"Porcelain dental veneers are one of the most effective and aesthetically gratifying remedies for teeth that are chipped, stained or even misaligned.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Lumineers",
+            "slug":"lumineers",
+            "template":"services/lumineers/index.html",
+            "title":"Lumineers, whiter, perfectly aligned teeth without pain",
+            "description":"Lumineers by Cerinate are porcelain veneers that offer a painless way to a whiter and perfectly aligned smile.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Restorative Dentistry‏",
+            "slug":"restorative-dentistry",
+            "template":"services/restorative_dentistry/index.html",
+            "title":"Copley Dental Natick Restorative Dentistry",
+            "description":"Restorative dentistry deals with the restoration or fixing of diseased, injured or abnormal teeth to normal function.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Root Canal",
+            "slug":"",
+            "template":"",
+            "title":"",
+            "description":"",
+            "other_service":true,
+            "slug_other_service":"restorative-dentistry"
+        },
+        {
+            "name":"Wisdom Tooth Extractions",
+            "slug":"",
+            "template":"",
+            "title":"",
+            "description":"",
+            "other_service":true,
+            "slug_other_service":"cosmetic-dentistry"
+        },
+        {
+            "name":"Dental Implant Procedures",
+            "slug":"",
+            "template":"",
+            "title":"",
+            "description":"",
+            "other_service":true,
+            "slug_other_service":"periodontics-implants"
+        },
+        {
+            "name":"Invisalign‏",
+            "slug":"invisalign",
+            "template":"services/invisalign/index.html",
+            "title":"Invisalign",
+            "description":"Invisalign straightens teeth using a series of nearly invisible, removable aligners that are custom-made specifically for your teeth.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Orthodontics/Braces",
+            "slug":"orthodontics-braces",
+            "template":"services/orthodontics/index.html",
+            "title":"Copley Dental Natick - Orthodontics / Braces",
+            "description":"Looking for Braces in Natick? Copley Dental Associates provides you with the best options.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Teeth Whitening",
+            "slug":"",
+            "template":"",
+            "title":"",
+            "description":"",
+            "other_service":true,
+            "slug_other_service":"cosmetic-dentistry"
+        },
+        {
+            "name":"Sleep Apnea",
+            "slug":"sleep-apnea",
+            "template":"services/sleep_apnea/index.html",
+            "title":"Copley Dental Natick - Sleep Apnea",
+            "description":"Sleep apnea is a sleep disorder characterized by pauses in breathing or instances of shallow or infrequent breathing during sleep.",
+            "other_service":false,
+            "slug_other_service":""
+        },
+        {
+            "name":"Tooth Extractions",
+            "slug":"",
+            "template":"",
+            "title":"",
+            "description":"",
+            "other_service":true,
+            "slug_other_service":"cosmetic-dentistry"
+        },
+        {
+            "name":"Dental Emergencies",
+            "slug":"emergency-dentist",
+            "template":"services/dental-emergencies/index.html",
+            "title":"Natick Emergency Dentist for Toothache and Pain Relief",
+            "description":"If you have a dental emergency, contact our office at:617-536-4020.",
+            "other_service":false,
+            "slug_other_service":""
+        }
+
+    ]
+}

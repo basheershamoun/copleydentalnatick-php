@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block titulo %}Home Teeth Whitening Treatment{% endblock %}
+{% block descripcion_pagina %}Your smile is a big part of the image you reflect, it’s noticed before you even speak a word.{% endblock %}
+{% block javascript %}
+
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        $("#menu-active-services").addClass("active");
+
+    });
+    </script>
+{% endblock %}
+
+
+{% block contenido_pagina %}
+
+			<div id="main-content">
+			 <div id="breadcrumb">
+						<ul>
+							{% include 'services/breadcrumb_services.html'%}
+							<li> > </li>
+							<li>
+								<a href="{{ path_for('home_teeth_whitening_treatment') }}" class="activate">Home Teeth Whitening Treatment</a>
+							</li>
+						</ul>
+                </div>
+            	<div id="main-contents-sup">
+					  <div class="content-text-left">
+						<h1>Home Teeth Whitening Treatment</h1>
+						<p class="text-left">Your smile is a big part of the image you reflect, it’s noticed before you even speak a word. If your teeth are stained or yellowed with age, they may have a negative impact on people around you and you may not realize it. Advances in cosmetic dentistry have made it possible to offer several whitening treatment alternatives.</p>
+					    <h2>COSMETIC WHITENING ENHANCES YOUR SMILE</h2>
+						<p class="text-left">Cosmetic whitening, also referred to as “bleaching”, is one of the most requested treatments to remove stains and improve the overall appearance of your smile. There are several treatment options you can choose from.</p>
+						<p class="text-left">Home Teeth Whitening system (Bleaching) This type of tr eatment involves wearing a custom-fitted plastic tray . Care is taken in creating the tray to ensure the whitening material stays in contact with tooth surfaces being treated. The custom tray is made of clear plastic, so you can wear it comfortably. The duration of each whitening treatment and how long you continue at-home treatments will vary according to the results you wish to achieve.he trays can be worn from 3 minutes up 3 hours depending on the bleaching system used.</p>
+						  <h2>Treatments</h2>
+                        <ul>
+                            {% include 'services/list_treatments.html'%}
+                            
+                        </ul>
+						 </ul>
+						 <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening & more</a>
+						  
+					  </div>
+				       <div class="content-photo-right">
+								 <img data-src="{{ static }}images/generalcosmeticdentistry.png" alt="Home Teeth Whitening Treatment">
+								 <div id="form-contact-page" >
+									{% include 'services/contact_form.html'%}
+                                </div>
+				                  <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    <ul>
+                       {% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+							
+					  </div>
+				</div>
+			</div>
+{% endblock %}

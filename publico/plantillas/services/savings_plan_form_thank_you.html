@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+{% block titulo %} Thank you for contacting Copley Dental {% endblock %} 
+{% block styles %}
+
+<style type="text/css">
+@media (max-width: 680px) {
+#header-sup{display:none;}
+}
+</style>
+{% endblock %} 
+{% block contenido_pagina %} 
+<div id="slider">
+    <div id="wrapper">
+        <!-- Slideshow 2 -->
+        <ul class="rslides" id="slider2">
+            <li>
+                <a href="#"><img src="{{ static }}images/thaks-contact-us.jpg" alt="Copley Dental - Contact Us" title="Copley Dental - Contact Us">
+                </a>
+            </li>
+
+        </ul>
+		 
+    </div>
+</div>
+<div id="main-content">
+    <div id="main-contents-inf">
+        <div id="form-contact-page" >
+            <div style='width:100%;display:inline-block;text-align:center;margin-top: 50px;color:white;'>
+                <div>
+                    <img src='{{ static }}images/email.jpg'  alt="Thank you for contacting Copley Dental"/>
+                </div>
+                <div style='font-family:Arial;font-size:18px;margin:20px 0%;width:100%;text-align:center;color:white;font-weight:bold;'>Thank you for contacting Copley Dental.<br>We are processing your request and will contact you soon.</div>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}

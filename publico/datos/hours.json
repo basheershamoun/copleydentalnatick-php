@@ -1,0 +1,15 @@
+{
+    "hours":[
+        {"value":"8_am", "label":"8 am"},
+        {"value":"9_am", "label":"9 am"},
+        {"value":"10_am", "label":"10 am"},
+        {"value":"11_am", "label":"11 am"},
+        {"value":"12_noon", "label":"12 Noon"},
+        {"value":"1_pm", "label":"1 pm"},
+        {"value":"2_pm", "label":"2 pm"},
+        {"value":"3_pm", "label":"3 pm"},
+        {"value":"4_pm", "label":"4 pm"},
+        {"value":"5_pm", "label":"5 pm"},
+        {"value":"6_pm", "label":"6 pm"}
+    ]
+}

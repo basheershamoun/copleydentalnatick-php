@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block titulo %}Thank you for contacting Copley Dental{% endblock %} 
+{% block javascript %} 
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+
+});
+</script>
+{% endblock %} 
+{% block styles %}
+
+<style type="text/css">
+.fadeboxx {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 1780px;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+.overboxx,
+.overboxx1,
+.overboxx2,
+.overboxx3,
+.overboxx4,
+.overboxx5 {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 25%;
+    width: 50%;
+    z-index: 1002;
+}
+#contentinvisax {
+    background: black;
+    width: 50%;
+    padding: 0px 80px;
+}
+@media (max-width: 600px) {
+    .overboxx,
+    .overboxx1,
+    .overboxx2,
+    .overboxx3,
+    .overboxx4,
+    .overboxx5 {
+        left: 0%;
+        width: 100%;
+    }
+}
+</style>
+
+{% endblock %}
+{% block contenido_pagina %}
+  <div id="slider">
+			<div id="wrapper">
+				<!-- Slideshow 2 -->
+				<ul class="rslides" id="slider2">
+					<li>
+						<a href="#"><img src="{{ static }}images/thaks-contact-us.jpg" alt="">
+						</a>
+					</li>
+
+				</ul>
+			</div>
+    </div>      
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul> 
+                {% include 'breadcrumb_inicio.html' %}
+				<li> > </li>
+				<li>
+					<a href="{{ path_for('request_appointment') }}" class="activate">Request Appointment</a>
+				</li>
+        </ul>
+    </div>
+    <div id="main-contents-inf">
+	     <div id="form-contact-page" >
+            <div style='width:100%;display:inline-block;text-align:center;margin-top: 50px;color:white;'>
+                <div>
+                    <img src='{{ static }}images/email.jpg'  alt="Thank you for contacting Copley Dental"/>
+                </div>
+                <div style='font-family:Arial;font-size:18px;margin:20px 0%;width:100%;text-align:center;color:white;font-weight:bold;'>Thank you for contacting Copley Dental.<br>We are processing your request and will contact you soon.</div>
+            </div>
+		 </div>
+	</div>
+</div>
+
+
+{% endblock %}

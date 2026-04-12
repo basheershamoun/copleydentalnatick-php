@@ -1,0 +1,142 @@
+{% extends 'base.html' %} 
+{% block titulo %}Contact Us{% endblock %} 
+{% block descripcion_pagina %}Our goal is to provide you white with the highest standard of dental care of Natick.{% endblock %} 
+{% block javascript %} 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $("#menu-active-contact-us").addClass("active");
+            
+
+        });
+    </script>
+{% endblock %} 
+
+{% block contenido_pagina %}
+<style type="text/css">
+     div#form-contact form{
+        background: #98CAED;
+        padding-bottom: 35px;
+     }
+     #tmessage{
+        margin-right: 0px !important;
+        width: 94% !important;
+     }
+</style>
+<div id="main-content" >
+    <div id="breadcrumb">
+        <ul>
+            {% include 'breadcrumb_inicio.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('contact_us') }}" class="activate">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div id="services-section">
+        <div id="services-section-left">
+            <p id="main-description">Our goal is to provide you white with the highest standard of dental care of Natick, while maintaining a relaxing and friendly environment.</p>
+        </div>
+        <div id="services-section-right">
+            <div>
+                <div>
+                    <div id="class24-7">24/7</div>
+                    <div id="classemser">EMERGENCY SERVICES</div>
+                </div>
+                <div>
+                    <div id="service-number">
+                        <p>
+                            <font style="font-size:25px;font-weight:bold;">{{ phone_natick }}</font>
+                            <br>
+                            <font style="font-size:18px;color:#5F6062;">Dental Emergency during regular business hours</font>
+                            <br>
+                        </p>
+                        
+                    </div>
+                    <div id="imgdent">
+                        <img data-src="{{ static }}images/dent.png" alt="Dental Emergency" title="Dental Emergency">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content-inf">
+        <br>
+        <div id="form-container-contact-us" data-redirect-to="/contact-us/thank_you/">
+            <span id="status-contact-us" class="hidden"></span>
+            <div id="form-contact">
+                <form id="form-contact-us" class="contact-form" data-form-name="Contact Us" method="post">
+                    <div style="text-align:left;color:white;font-weight:bold;height:50px;padding:5px 0 2% 2%;margin-top:40px;">
+                        <h1>Contact Us Today!</h1>
+                    </div>
+                    <div style="color:white;margin-top:10px;margin-bottom:10px;margin-left: 2%;text-align:left;"><font style="color:red;">(*)</font> Required fields</div>
+                    <div>
+                        <div class="row-field">
+                            <div class="column-two">
+                                <input type="text" class="input-contact-us form-input" name="firstName" placeholder="FIRST NAME(*)" required>
+                            </div>
+                            <div class="column-two">
+                                <input type="text" class="input-contact-us form-input" name="lastName" placeholder="LAST NAME(*)" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-field">
+                        <div class="column-two">
+                            <input type="email" class="input-contact-us form-input" name="email" placeholder="EMAIL(*)" required>
+                        </div>
+                        <div class="column-two">
+                            <input type="tel" class="input-contact-us form-input" name="phone" placeholder="PHONE(*)" required>
+                        </div>
+                    </div>
+                    <div class="row-field">
+                        <textarea rows="8" class="input-contact-us text-area form-input" name="message" placeholder="MESSAGE" required></textarea>
+                    </div>
+                    <div class="form-section-fields">
+                       <br>
+                    </div>
+                    <div style="display:inline-block;width:100%;text-align:center;margin-top:20px;">
+                        <input type="submit" style="width:100px;padding:10px;display:block;background:#98CAED;border:1px solid white;text-decoration:none;color:white;font-weight:bold;margin:auto;" onmouseover="this.style.background='rgb(162, 216, 132)'" onmouseout="this.style.background='#98CAED'" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="main-content-inf-inf">
+            <div class="main-content-inf-inf-section" style="border-top:1px solid #c2c2c2;">
+                <div class="class-main-content-inf-inf-section-1"><img data-src="{{ static }}images/quality-dental-care.png" alt="QUALITY DENTAL CARE" title="QUALITY DENTAL CARE">
+                </div>
+                <div class="class-main-content-inf-inf-section-2">QUALITY DENTAL CARE</div>
+                <div class="class-main-content-inf-inf-section-3">
+                    <p>Our goal is to provide you a high standard of dental care,while maintaining a relaxing and friendly environment. For questions, emergency services, or appointments, please call Copley Dental at: {{ phone_natick}} and let us assist you today!</p>
+                </div>
+            </div>
+            <div class="main-content-inf-inf-section">
+                <div class="class-main-content-inf-inf-section-1"><img data-src="{{ static }}images/expert-dentist.png" alt="EXPERT DENTISTS" title="EXPERT DENTISTS">
+                </div>
+                <div class="class-main-content-inf-inf-section-2">EXPERT DENTISTS</div>
+                <div class="class-main-content-inf-inf-section-3">
+                    <p>Our goal is to provide you a high standard of dental care,while maintaining a relaxing and friendly environment. For questions, emergency services, or appointments, please call Copley Dental at: {{ phone_natick}} and let us assist you today!</p>
+                </div>
+            </div>
+            <div class="main-content-inf-inf-section">
+                <div class="class-main-content-inf-inf-section-1"><img data-src="{{ static }}images/the-copley-Commitment.png" alt="THE COPLEY COMMITMENT" title="THE COPLEY COMMITMENT">
+                </div>
+                <div class="class-main-content-inf-inf-section-2">THE COPLEY COMMITMENT</div>
+                <div class="class-main-content-inf-inf-section-3">
+                    <p>Our goal is to provide you a high standard of dental care,while maintaining a relaxing and friendly environment. For questions, emergency services, or appointments, please call Copley Dental at: {{ phone_natick}} and let us assist you today!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+resize();
+window.onresize = resize;
+
+function resize() {
+    if (document.body.clientWidth < 1000) {
+        $(".fix-width").removeClass("fix-width");
+    }
+}
+</script>
+{% endblock %}

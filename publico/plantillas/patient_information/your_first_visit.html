@@ -1,0 +1,56 @@
+{% extends 'base.html' %}  
+{% block titulo %}Your First Visit{% endblock %} 
+{% block descripcion_pagina %}We are devoted to making your first visit to Copley Dental Associates P.C. as comfortable and hassle-free  as possible.{% endblock %} 
+
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-patient_information").addClass("active")
+
+    });
+</script>
+{% endblock %}
+
+{% block contenido_pagina %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'patient_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('your_first_visit') }}" class="activate">Your First Visit</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>YOUR FIRST VISIT</h1>
+            <p class="text-left">We are devoted to making your first visit to Copley Dental Associates P.C. as comfortable and hassle-free  as possible.</p>
+            <h2>Our Goal</h2>
+            <p class="text-left">Our goal is to provide you with the highest quality of care in a caring and safe environment.  In order to do this, we use the most current procedures, instruments, medications and sterilization techniques.</p>
+            <h2>Sterilization</h2>
+            <p class="text-left">We know that preventing the spread of infectious diseases such as AIDS, herpes, hepatitis and even the cold virus is critical, and we take sterilization very seriously.  For this reason, we use extensive sterilization procedures, going well beyond those recommended by the American Dental Association and the Centers for Disease Control and Prevention.</p>
+            <p class="text-left">We use barrier techniques, such as disposable masks and gloves, and we change them for every patient. Every piece of equipment is wiped down with antibacterial solution prior to every operatory procedure.  Water lines and evacuation hoses are cleaned per the guidelines of the American Dental Association. We use autoclave sterilization for all instruments prior to dental examination and treatment.  You can be assured that our staff has been specifically trained on sterilization procedures and their importance. </p>
+            <h2>Patient Comfort</h2>
+            <p class="text-left">While no dental procedure is 100 percent comfortable, we go to great lengths to minimize any discomfort you might feel.  Many of our patients remark, "This was not even painful!  How did you do that?"  The following are some of the latest techniques we use to provide you with the most comfortable experience possible.</p>
+            <h2>Premedication</h2>
+            <p class="text-left">Patient comfort is one of the most important aspects of care.  Different patients have different needs for pain control medication. Depending upon the procedure and your wishes, there are many medications we can prescribe.</p>
+            
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/your-first-visit.jpg" alt="Copley Dental - YOUR FIRST VISIT" title="YOUR FIRST VISIT">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Patient Information</p>
+                   <ul>
+                        {% include 'patient_information/list_patient_information.html' %}                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}

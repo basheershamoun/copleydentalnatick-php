@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ title }}{% endblock %}
+{% block descripcion_pagina %} {{ description }} {% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            $("#menu-active-services").addClass("active");
+
+        });
+    </script>
+{% endblock %}
+{% block contenido_pagina %}
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html'%}
+            <li> > </li>
+            <li>
+                <a href="{{ path_for('service',{'service':slug}) }}" class="activate">Dental Veneers</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Dental Veneers</h1>
+            <p class="text-left">Porcelain dental veneers are one of the most effective and aesthetically gratifying remedies for teeth that are chipped, stained or even misaligned. Porcelain dental veneer application is the most common procedure in <a href="{{ path_for('gallery') }}" style="color:#5f6062;"><b>smile makeovers</b></a> and can also be an option for patients who are simply looking to have a gorgeous smile. Cosmetic dentist Dr. Charles Badaoui can correct a range of dental issues with this popular treatment and achieve a natural-looking solution to common problems that can affect the appearance and function of your teeth.</p>
+            <p class="text-left">Porcelain veneers are known to also have astounding aesthetic results for patients who have this treatment performed. Please contact <a href="{{ path_for('our_team') }}#DrCharlesBadaoui" style="color: #5f6062;font-weight: bold;">Dr.Badaoui</a> to schedule a smile makeover or porcelain dental veneer consultation.</p>
+            <h2>DENTAL VENEERS PROCEDURE</h2>
+            <p class="text-left">Porcelain - dental veneers are thin, ceramic shells that are placed over damaged, misaligned, or stained teeth that are showing the effects of years of coffee or wine-drinking, tobacco use and other issues. Treatment with porcelain - dental veneers begins with an impression made from your teeth. This impression will allow porcelain veneers to be custom-made for the affected teeth, ensuring a comfortable fit. After the veneer is designed, it is color-tinted to match the surrounding teeth and attached to the teeth with a durable cement. The damaged teeth are  now concealed with a healthy-looking porcelain veneer that can last decades.</p>
+            <p class="text-left">Porcelain - dental veneers can be an excellent way of addressing common problems with your teeth and creating a beautiful new smile with results that look and feel natural. If you have more questions feel free to <a href="{{ path_for('contact_us') }}" style="color:#5f6062;" target="_blank"><b>contact us</b></a> or visit our dental <a href="{{ path_for('denta_veneers_faq') }}" style="color:#5f6062;"><b>veneers Frequently Asked Questions page</b></a></p>
+            <h2>Treatments</h2>
+            <ul>
+                {% include 'services/list_treatments.html' %}                
+            </ul>
+            <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening and More</a>
+                
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/generalcosmeticdentistry.png" alt="Dental Veneers" title="Dental Veneers">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    <ul>
+                        {% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+</div>
+{% endblock %}

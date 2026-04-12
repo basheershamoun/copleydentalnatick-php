@@ -1,0 +1,33 @@
+# Build output
+dist/
+
+# Audit artifacts
+_audit/
+
+# PHP error log (57MB+ on production)
+error_log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# cPanel artifacts
+.ftpquota
+.user.ini
+public_html/
+cgi-bin/
+scctmp/
+ssfm/
+
+# SSL certs (sensitive)
+ssl/
+
+# Docker volumes (if any)
+.docker/

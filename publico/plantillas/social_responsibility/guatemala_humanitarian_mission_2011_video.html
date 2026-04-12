@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block titulo %}Medical Missions for Children Guatemala 2011{% endblock %} 
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-social-responsibility").addClass("active")
+
+    });
+</script>
+{% endblock %} 
+
+{% block contenido_pagina %} 
+<div id="main-content">
+     <div id="breadcrumb">
+        <ul>
+            {% include 'social_responsibility/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('guatemala_humanitarian_mission_2011_video') }}" class="activate">Medical Missions for Children Guatemala 2011</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Medical Missions for Children Guatemala 2011</h1>
+            <div>
+                <iframe width="700" height="400" style="max-width:100%;" src="//www.youtube.com/embed/LyOHkDLOHmo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="text-left" style="margin-top:40px;">To learn more, please visit the <b><a href="http://mmfc.org/" target="_blank" style="color:#5f6062;">Medical Missions for Children website.</a></b></p>
+        </div>
+        <div class="content-photo-right">
+            <div><img src="{{ static }}images/social-responsibility.png" alt="Corporate Social Responsibility" title="Corporate Social Responsibility">
+            </div>
+            <div style="margin:auto; width:100%; margin-top:20px;">
+                <iframe width="700" height="400" style="max-width:100%;" src="https://www.youtube.com/embed/vx9v7-uHpe8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+{% block titulo %}Bad Breath{% endblock %} 
+{% block descripcion_pagina %}Bad breath is an extremely embarrassing problem that detracts from a person's confidence. {% endblock %} 
+{% block javascript %} 
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-dental-information").addClass("active");
+
+    });
+    </script>
+{% endblock %} 
+
+{% block contenido_pagina %} 
+
+<div id="main-content">
+     <div id="breadcrumb">
+        <ul>
+            {% include 'dental_information/breadcrumb.html' %}
+            <li>></li>
+           <li>
+		        <a href="{{ path_for('bad_breath') }}" class="activate">Bad Breath</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Bad Breath</h1>
+            <p class="text-left">Bad breath is an extremely embarrassing problem that detracts from a person's confidence. This condition can be a temporary or chronic problem. Regardless of how severe it is, there are important facts you should know. Treatments are available that can eliminate bad breath.</p>
+            <h2>How Bad Breath Occurs</h2>
+            <p class="text-left">Bad breath occurs when sulfur compounds are produced in the body and released into the air. The most common source of this sulfur is anaerobic bacteria that live in the grooves or fibers at the back of the tongue. These bacteria produce the sulfur, which gives off an unpleasant smell. This frequently occurs when the mouth is dry because it creates an ideal environment for anaerobic bacteria to thrive. Sulfur compounds are also produced when certain types of food are consumed. They make their way into the bloodstream and then to the lungs where it is excreted into the air we exhale.</p>
+            <h2>Causes of Bad Breath</h2>
+            <p class="text-left">Bad breath is caused by many factors. Normally, saliva helps wash away the natural buildup of bacteria in the mouth and on the tongue. But when saliva sits on the back of the tongue and is digested by bacteria, it shows up as a white film on the tongue. This is a major source of bad breath. Bad breath is also caused by postnasal drip, a condition where the back of the tongue and throat accumulate high amounts of protein, which bacteria thrive on. Foods that are high in protein or acidity also cause bad breath - foods such as fish, milk, cheese and coffee. Dieting or fasting, which involve a low intake of calories, causes bad breath by reducing the saliva in the mouth. Contrary to popular belief, the stomach does not cause bad breath.</p>
+            <h2>More Serious Causes</h2>
+            <p class="text-left">More persistent problems with unpleasant breath can indicate diseases such as diabetes, liver dysfunction, pulmonary disease and respiratory disease. Periodontal pockets, the spaces that form between the teeth and gums, are another source of bad breath. These pockets, which occur in the latter stage of periodontal disease, create spaces for bacteria to grow and give off a chronic unpleasant odor. Dental work may be required in order to remove these pockets of bacteria. Periodontal disease is detected by the presence of bleeding gums, loose teeth, receding gums or pain when chewing.</p>
+            <h2>Prevention</h2>
+            <p class="text-left">Proper oral hygiene eliminates many cases of bad breath. Daily brushing and flossing removes the plaque and bacteria that often cause bad breath. While brushing, take special care to thoroughly brush the back of the tongue where bacteria normally collects. Mints and mouthwashes can hide bad breath but do not eliminate the condition. Avoid foods that have powerful odors and drink lots of water to ensure that your mouth is cleansed and full of oxygen, an environment in which bacteria do not thrive. For information on current treatments, contact a dentist in your area regarding current products on the market that can eliminate bad breath.</p>
+            <h2>Supplements</h2>
+            <p class="text-left">This regimen of supplements has been shown to actively promote well-being during extensive dental treatment and speed removal of toxins following removal of mercury-containing amalgam fillings.</p>
+            <ul>
+                <li>Glutathione – 50 milligrams three times per day</li>
+                <li>N-acetyl-L-cysteine (NAC) – 250 mg two times per day</li>
+                <li>Methionine - 1000 milligrams per day divided into two or three doses</li>
+                <li>Vitamin B6 - 50 milligrams per day</li>
+                <li>Vitamin C - 500 milligrams three times per day</li>
+                <li>Zinc - 15-30 milligrams per day</li>
+                <li>Magnesium - 200 milligrams per day</li>
+                <li>Selenium - 50 micrograms per day</li>
+                <li>Garlic</li>
+            </ul>
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/bad-breath.jpg" alt="Copley Dental - Dental Information -  Bad Breath" title="Bad Breath">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                      <p>Dental Information</p>
+                    <ul>
+                        {% include 'dental_information/list_dental_information.html'%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block titulo %}Invisalign - Treatment Process{% endblock %}
+{% block descripcion_pagina %}An Invisalign Treatment Plan that is made for you{% endblock %}
+
+
+ {% block contenido_pagina %} 
+ 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/invisalign/breadcrumb.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('treatment_process') }}" class="activate">Treatment Process</a>
+            </li>
+        </ul>
+    </div>
+	{% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+		    <img data-src="{{ static }}images/invisalign-treatment-process.jpg" style="width:100%;margin-top:20px;" alt="Invisalign - Treatment Process" title="Invisalign - Treatment Process">
+            <h1>Treatment Process</h1>
+            <h2>An Invisalign Treatment Plan that is made for you</h2>
+            <p class="text-left">Before a treatment plan can be created, your Invisalign Provider will take an impression of your teeth to check whether they can be straightened using the Invisalign System. Once confirmed, a detailed treatment plan will then be developed using ClinCheck®, our virtual 3D treatment plan. ClinCheck shows the series of movements your teeth are projected to go through over the course of the treatment – so you can see how your teeth are expected to look at the end of your Invisalign treatment before it even begins.</p>
+            <h2>Smiling every step of the way</h2>
+            <p class="text-left">When you begin your Invisalign treatment, you will wear each set of custom-made aligners in two-week increments. As you progress through the series of aligners, your teeth will begin moving, little by little, gradually moving towards the projected final position.</p>
+            <p class="text-left">During this time you will have occasional check-ups with your Invisalign Provider in order to monitor your progress and ensure you are comfortable with the treatment.</p>
+            <h2>Designed to fit your lifestyle</h2>
+            <p class="text-left">The time it takes to complete the treatment varies from person to person, depending on the complexity of each straightening issue. It is important to speak with your Invisalign Provider to determine how Invisalign best suits your situation and goals, and to agree the best way forward for you.</p>
+            <p class="text-left">To find out how you can achieve the smile you always wanted with Invisalign, book a consultation with an Invisalign Provider near you today.</p>
+
+            
+
+        </div>
+        <div class="content-photo-right" style="margin-top:0px;">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}         
+            </div>
+             <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Invisalign</p>
+                    <ul>
+                       {% include 'services/invisalign/list_invisalign.html' %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

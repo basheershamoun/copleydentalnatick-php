@@ -1,0 +1,99 @@
+{% extends 'base.html' %} 
+
+{% block titulo %}Invisalign - Can Invisalign Work For You{% endblock %} 
+{% block contenido_pagina %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/invisalign/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('can_invisalign_work_for_you') }}" class="activate">Can Invisalign Work For You</a>
+            </li>
+        </ul>
+    </div>
+	{% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+		    <img data-src="{{ static }}images/can-invisalign-work-for-you.jpg" style="width:100%;margin-top:20px;" alt="Can Invisalign Work For You" title="Can Invisalign Work For You">
+            <h1>Can Invisalign Work For You</h1>
+            <p class="text-left">Invisalign® treats a range of straightening issues, ranging from minor tooth movements to more complex cases. Whatever the issue, the result is a new, more even smile that you will want everyone to see.</p>
+            <p class="text-left">Here are some of the straightening issues that can be treated with Invisalign.</p>
+            <div class="gall">
+                <div class="gall-graph-invisalign">
+                    <img data-src="{{ static }}images/overcrowded-teeth.png" alt="Overcrowded teeth" title="Overcrowded teeth">
+                </div>
+                <div class="gall-text-invisalign">
+                    <p>
+                        <b>Overcrowded teeth</b> occur when there is a lack of room within your jaw for all of your teeth to fit normally.
+                    </p>
+                </div>
+
+            </div>
+            <div class="gall">
+                <div class="gall-graph-invisalign">
+                    <img data-src="{{ static }}images/widely-spaced.png" alt="Widely spaced" title="Widely spaced">
+                </div>
+                <div class="gall-text-invisalign">
+                    <p>
+                        <b>Widely spaced</b> teeth occur when you have extra space within your jaw.
+                    </p>
+                </div>
+
+            </div>
+            <div class="gall">
+                <div class="gall-graph-invisalign">
+                    <img data-src="{{ static }}images/cross-bites.png" alt="Cross bites" title="Cross bites">
+                </div>
+                <div class="gall-text-invisalign">
+                    <p>
+                        <b>Cross bites</b> occur when the upper and lower jaws are both misaligned. It usually causes one or more upper teeth to bite on the inside of the lower teeth, and can happen on both the front and/or the sides of the mouth.
+                    </p>
+                </div>
+
+            </div>
+            <div class="gall">
+                <div class="gall-graph-invisalign">
+                    <img data-src="{{ static }}images/deep-bites.png" alt="Deep bites" title="Deep bites">
+                </div>
+                <div class="gall-text-invisalign">
+                    <p>
+                        <b>Deep bites</b> occur when the upper teeth overlap significantly with the lower teeth.
+                    </p>
+                </div>
+
+            </div>
+            <div class="gall">
+                <div class="gall-graph-invisalign">
+                    <img data-src="{{ static }}images/under-bites.png" alt="Under bites" title="Under bites">
+                </div>
+                <div class="gall-text-invisalign">
+                    <p>
+                        <b>Under bites</b> occur when the lower teeth protrude past the front teeth, usually caused by undergrowth of the upper jaw, overgrowth of the lower jaw, or both.
+                    </p>
+                </div>
+
+            </div>
+
+           
+        </div>
+        <div class="content-photo-right" style="margin-top:0px;">
+            
+           <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+             <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Invisalign</p>
+                    <ul>
+                        {% include 'services/invisalign/list_invisalign.html'%}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

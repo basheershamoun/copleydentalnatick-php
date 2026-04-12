@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% block titulo %}Oral Cancer{% endblock %} 
+{% block descripcion_pagina %}We now know that oral cancer claims one life every hour in the U.S.{% endblock %} 
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-dental-information").addClass("active");
+    });
+</script>
+{% endblock %} 
+
+{% block contenido_pagina %}
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'dental_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+		        <a href="{{ path_for('oral_cancer') }}" class="activate">Oral Cancer</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+             <h1>Oral Cancer</h1>
+        <p class="text-left">We now know that <b>oral cancer claims one life every hour in the U.S.</b>
+        </p>
+        <p class="text-left">— more than the  than the number of lives lost to skin cancer, cervical cancer or Hodgkin’s disease — and it is of great concern to our doctors at Copley Dental.</p>
+        <p class="text-left">Because <b>early detection is the key to successful outcomes,</b> this practice has incorporated ViziLite Plus, a technology cleared by the U.S. Food and Drug Administration, into the standard of care of the practice, to ensure that you receive<b> the most comprehensive oral cancer screening possible.</b>
+        </p>
+        <p class="text-left">ViziLite Plus is a simple, <b>painless and non-invasive technology</b> that improves the doctor's ability to visualize, mark, evaluate and monitor suspicious areas at their earliest stages, before they can progress to something far more serious, and potentially life-threatening. ViziLite Plus <b> helps the doctor see what he or she can't see with the unaided eye.</b>
+        </p>
+        <img data-src="{{ static }}images/oral-cancer.jpg" alt="Copley Dental - Dental Information - Oral Cancer" title="Oral Cancer" style="text-align:center;">
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/banner-oral-cancer.jpg" alt="Copley Dental - Dental Information - Oral Cancer" title="Oral Cancer">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Dental Information</p>
+                    <ul>
+                        {% include 'dental_information/list_dental_information.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

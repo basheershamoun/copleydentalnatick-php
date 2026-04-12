@@ -1,0 +1,417 @@
+{
+    "cases":[
+        {
+            "nro":1,
+            "label":"CASE # 1: Emergency Treatment - Fractured Tooth",
+            "image_before":"case1-fractured-tooth-before.jpg",
+            "image_after":"case1-fractured-tooth-after.jpg",
+            "image_both":"case1-fractured-tooth.png",
+            "slug":"case1-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":2,
+            "label":"CASE # 2: Cosmetic Dentistry - Lumineers",
+            "image_before":"case2-lumineers-before.jpg",
+            "image_after":"case2-lumineers-after.jpg",
+            "image_both":"case2-lumineers.png",
+            "slug":"case2-cosmetic-dentistry-lumineers",
+            "slug_service":"lumineers",
+            "name_url":null
+        },
+        {
+            "nro":3,
+            "label":"CASE # 3: Emergency Treatment - Fractured or Broken Tooth",
+            "image_before":"case3-fractured-or-broken-tooth-before.jpg",
+            "image_after":"case3-fractured-or-broken-tooth-after.jpg",
+            "image_both":"case3-fractured-or-broken-tooth.png",
+            "slug":"case3-emergency-treatment-fractured-or-broken-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":4,
+            "label":"CASE # 4: General and Cosmetic Dentistry - Cleaning - Teeth Whitening",
+            "image_before":"case4-cleaning-teeth-whitening-before.jpg",
+            "image_after":"case4-cleaning-teeth-whitening-after.jpg",
+            "image_both":"case4-cleaning-teeth-whitening.png",
+            "slug":"case4-general-and-cosmetic-dentistry-cleaning-teeth-whitening",
+            "slug_service":"cosmetic-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":5,
+            "label":"CASE # 5: Emergency Treatment - Fractured or Broken Tooth",
+            "image_before":"case5-fractured-or-broken-tooth-before.jpg",
+            "image_after":"case5-fractured-or-broken-tooth-after.jpg",
+            "image_both":"case5-fractured-or-broken-tooth.png",
+            "slug":"case5-emergency-treatment-fractured-or-broken-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":6,
+            "label":"CASE # 6: Cosmetic Dentistry - All-Porcelain Crowns",
+            "image_before":"case6-all-porcelain-crowns-before.jpg",
+            "image_after":"case6-all-porcelain-crowns-after.jpg",
+            "image_both":"case6-all-porcelain-crowns.png",
+            "slug":"case6-cosmetic-dentistry-all-porcelain-crowns",
+            "slug_service":null,
+            "name_url":"all_porcelain_dental_crowns"
+        },
+        {
+            "nro":7,
+            "label":"CASE #7: Emergency Treatment - Fractured Tooth",
+            "image_before":"case7-fractured-tooth-before.jpg",
+            "image_after":"case7-fractured-tooth-after.jpg",
+            "image_both":"case7-fractured-tooth.png",
+            "slug":"case7-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":8,
+            "label":"CASE #8: Cosmetic Dentistry - Teeth Whitening",
+            "image_before":"case8-teeth-whitening-before.jpg",
+            "image_after":"case8-teeth-whitening-after.jpg",
+            "image_both":"case8-teeth-whitening.png",
+            "slug":"case8-cosmetic-dentistry-teeth-whitening",
+            "slug_service":"cosmetic-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":9,
+            "label":"CASE #9: Emergency Treatment - Fractured Tooth",
+            "image_before":"case9-fractured-tooth-before.jpg",
+            "image_after":"case9-fractured-tooth-after.jpg",
+            "image_both":"case9-fractured-tooth.png",
+            "slug":"case9-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":10,
+            "label":"CASE #10: Cosmetic Restoration - White Filling",
+            "image_before":"case10-white-filling-before.jpg",
+            "image_after":"case10-white-filling-after.jpg",
+            "image_both":"case10-white-filling.png",
+            "slug":"case10-cosmetic-restoration-white-filling",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":11,
+            "label":"CASE #11: Emergency Treatment - Broken/Chipped Teeth",
+            "image_before":"case11-broken-chipped-teeth-before.jpg",
+            "image_after":"case11-broken-chipped-teeth-after.jpg",
+            "image_both":"case11-broken-chipped-teeth.png",
+            "slug":"case11-emergency-treatment-broken-chipped-teeth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":12,
+            "label":"CASE #12: Veneers - Stained Teeth",
+            "image_before":"case12-stained-teeth-before.jpg",
+            "image_after":"case12-stained-teeth-after.jpg",
+            "image_both":"case12-stained-teeth.png",
+            "slug":"case12-veneers-stained-teeth",
+            "slug_service":"dental-veneers",
+            "name_url":null
+        },
+        {
+            "nro":13,
+            "label":"CASE #13: Emergency Treatment - Fractured Tooth",
+            "image_before":"case13-fractured-tooth-before.jpg",
+            "image_after":"case13-fractured-tooth-after.jpg",
+            "image_both":"case13-fractured-tooth.png",
+            "slug":"case13-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":14,
+            "label":"CASE #14: Trauma",
+            "image_before":"case14-trauma-before.jpg",
+            "image_after":"case14-trauma-after.jpg",
+            "image_both":"case14-trauma.png",
+            "slug":"case14-trauma",
+            "slug_service":"restorative-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":15,
+            "label":"CASE #15: Emergency Treatment - Fractured Tooth",
+            "image_before":"case15-fractured-tooth-before.jpg",
+            "image_after":"case15-fractured-tooth-after.jpg",
+            "image_both":"case15-fractured-tooth.png",
+            "slug":"case15-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":16,
+            "label":"CASE #16: Broken/Fractured Tooth",
+            "image_before":"case16-broken-fractured-tooth-before.jpg",
+            "image_after":"case16-broken-fractured-tooth-after.jpg",
+            "image_both":"case16-broken-fractured-tooth.png",
+            "slug":"case16-broken-fractured-tooth",
+            "slug_service":"restorative-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":17,
+            "label":"CASE #17: Emergency Treatment - Broken Teeth",
+            "image_before":"case17-broken-teeth-before.jpg",
+            "image_after":"case17-broken-teeth-after.jpg",
+            "image_both":"case17-broken-teeth.png",
+            "slug":"case17-emergency-treatment-broken-teeth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":18,
+            "label":"CASE #18: Broken/Fractured",
+            "image_before":"case18-broken-fractured-before.jpg",
+            "image_after":"case18-broken-fractured-after.jpg",
+            "image_both":"case18-broken-fractured.png",
+            "slug":"case18-broken-fractured",
+            "slug_service":"restorative-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":19,
+            "label":"CASE #19:  Emergency Treatment - Fractured Tooth",
+            "image_before":"case19-fractured-tooth-before.jpg",
+            "image_after":"case19-fractured-tooth-after.jpg",
+            "image_both":"case19-fractured-tooth.png",
+            "slug":"case19-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":20,
+            "label":"CASE #20: Broken/Fractured",
+            "image_before":"case20-broken-fractured-before.jpg",
+            "image_after":"case20-broken-fractured-after.jpg",
+            "image_both":"case20-broken-fractured.png",
+            "slug":"case20-broken-fractured",
+            "slug_service":"restorative-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":21,
+            "label":"CASE #21: Emergency Treatment - Fractured Tooth",
+            "image_before":"case21-fractured-tooth-before.jpg",
+            "image_after":"case21-fractured-tooth-after.jpg",
+            "image_both":"case21-fractured-tooth.png",
+            "slug":"case21-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":22,
+            "label":"CASE #22:  Cosmetic Restoration",
+            "image_before":"case22-cosmetic-restoration-before.jpg",
+            "image_after":"case22-cosmetic-restoration-after.jpg",
+            "image_both":"case22-cosmetic-restoration.png",
+            "slug":"case22-cosmetic-restoration",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":23,
+            "label":"CASE #23: Emergency Treatment - Fractured Tooth",
+            "image_before":"case23-fractured-tooth-before.jpg",
+            "image_after":"case23-fractured-tooth-after.jpg",
+            "image_both":"case23-fractured-tooth.png",
+            "slug":"case23-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":24,
+            "label":"CASE #24: Broken / fractured tooth",
+            "image_before":"case24-broken-fractured-tooth-before.jpg",
+            "image_after":"case24-broken-fractured-tooth-after.jpg",
+            "image_both":"case24-broken-fractured-tooth.png",
+            "slug":"case24-broken-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":25,
+            "label":"CASE #25: Emergency Treatment - Fractured Tooth",
+            "image_before":"case25-fractured-tooth-before.jpg",
+            "image_after":"case25-fractured-tooth-after.jpg",
+            "image_both":"case25-fractured-tooth.png",
+            "slug":"case25-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":26,
+            "label":"CASE #26:  Broken / fractured Tooth",
+            "image_before":"case26-broken-fractured-tooth-before.jpg",
+            "image_after":"case26-broken-fractured-tooth-after.jpg",
+            "image_both":"case26-broken-fractured-tooth.png",
+            "slug":"case26-broken-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":27,
+            "label":"CASE #27: Emergency Treatment - Fractured Tooth",
+            "image_before":"case27-fractured-tooth-before.jpg",
+            "image_after":"case27-fractured-tooth-after.jpg",
+            "image_both":"case27-fractured-tooth.png",
+            "slug":"case27-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":28,
+            "label":"CASE #28: Broken / fractured tooth",
+            "image_before":"case28-broken-fractured-tooth-before.jpg",
+            "image_after":"case28-broken-fractured-tooth-after.jpg",
+            "image_both":"case28-broken-fractured-tooth.png",
+            "slug":"case28-broken-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":29,
+            "label":"CASE #29: Emergency Treatment - Broken Teeth",
+            "image_before":"case29-broken-teeth-before.jpg",
+            "image_after":"case29-broken-teeth-after.jpg",
+            "image_both":"case29-broken-teeth.png",
+            "slug":"case29-emergency-treatment-broken-teeth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":30,
+            "label":"CASE #30: Cosmetic Lengthening",
+            "image_before":"case30-cosmetic-lengthening-before.jpg",
+            "image_after":"case30-cosmetic-lengthening-after.jpg",
+            "image_both":"case30-cosmetic-lengthening.png",
+            "slug":"case30-cosmetic-lengthening",
+            "slug_service":"cosmetic-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":31,
+            "label":"CASE #31: Cosmetic Restoration",
+            "image_before":"case31-cosmetic-restoration-before.jpg",
+            "image_after":"case31-cosmetic-restoration-after.jpg",
+            "image_both":"case31-cosmetic-restoration.png",
+            "slug":"case31-cosmetic-restoration",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":32,
+            "label":"CASE #32: Broken/Fractured",
+            "image_before":"case32-broken-fractured-before.jpg",
+            "image_after":"case32-broken-fractured-after.jpg",
+            "image_both":"case32-broken-fractured.png",
+            "slug":"case32-broken-fractured",
+            "slug_service":"restorative-dentistry",
+            "name_url":null
+        },
+        {
+            "nro":33,
+            "label":"CASE #33: Emergency Treatment - Fractured Tooth",
+            "image_before":"case33-fractured-tooth-before.jpg",
+            "image_after":"case33-fractured-tooth-after.jpg",
+            "image_both":"case33-fractured-tooth.jpg",
+            "slug":"case33-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":34,
+            "label":"CASE #34: Emergency Treatment - Fractured Tooth",
+            "image_before":"case34-fractured-tooth-before.jpg",
+            "image_after":"case34-fractured-tooth-after.jpg",
+            "image_both":"case34-fractured-tooth.jpg",
+            "slug":"case34-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":35,
+            "label":"CASE #35: Broken / fractured tooth",
+            "image_before":"case35-broken-fractured-tooth-before.jpg",
+            "image_after":"case35-broken-fractured-tooth-after.jpg",
+            "image_both":"case35-broken-fractured-tooth.jpg",
+            "slug":"case35-broken-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":36,
+            "label":"CASE #36: Emergency Treatment - Broken tooth",
+            "image_before":"case36-broken-tooth-before.jpg",
+            "image_after":"case36-broken-tooth-after.jpg",
+            "image_both":"case36-broken-tooth.png",
+            "slug":"case36-emergency-treatment-broken-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":37,
+            "label":"CASE #37: Broken / fractured tooth",
+            "image_before":"case37-fractured-tooth-before.jpg",
+            "image_after":"case37-fractured-tooth-after.jpg",
+            "image_both":"case37-fractured-tooth.jpg",
+            "slug":"case37-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":38,
+            "label":"CASE #38: Emergency Treatment - Fractured tooth",
+            "image_before":"case38-fractured-tooth-before.jpg",
+            "image_after":"case38-fractured-tooth-after.jpg",
+            "image_both":"case38-fractured-tooth.png",
+            "slug":"case38-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":39,
+            "label":"CASE #39: Emergency Treatment - Broken tooth",
+            "image_before":"case39-broken-tooth-before.jpg",
+            "image_after":"case39-broken-tooth-after.jpg",
+            "image_both":"case39-broken-tooth.png",
+            "slug":"case39-emergency-treatment-broken-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":40,
+            "label":"CASE #40: Emergency Treatment - Fractured Tooth",
+            "image_before":"case40-fractured-tooth-before.jpg",
+            "image_after":"case40-fractured-tooth-after.jpg",
+            "image_both":"case40-fractured-tooth.png",
+            "slug":"case40-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        },
+        {
+            "nro":41,
+            "label":"CASE #41: Emergency Treatment - Fractured Tooth",
+            "image_before":"case41-fractured-tooth-before.jpg",
+            "image_after":"case41-fractured-tooth-after.jpg",
+            "image_both":"case41-fractured-tooth.png",
+            "slug":"case41-emergency-treatment-fractured-tooth",
+            "slug_service":"emergency-dentist",
+            "name_url":null
+        }
+
+
+
+    ]
+}
