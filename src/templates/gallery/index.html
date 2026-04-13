@@ -1,0 +1,133 @@
+{% extends 'base.html' %} 
+{% block title %}Gallery{% endblock %}
+{% block styles %}
+
+<style type="text/css">
+#contentinvisax {
+    background: black;
+    width: 50%;
+    padding: 0px 80px;
+}
+.smilemakeovergallerycontent-left h2,
+.smilemakeovergallerycontent-right h2 {
+    text-align: center;
+}
+#galeria_portada {
+    position: relative;
+    width: 100%;
+    height: auto;
+	margin-top:0px;
+}
+#galeria_portada h1 {
+    padding-left: 2em;
+    padding-top: 0.8em;
+    text-align: left;
+    position: absolute;
+    font-size: 70px;
+}
+#galeria_portada img {
+    left: 0;
+    top: 0;
+    height: auto;
+    z-index: -1;
+}
+@media (max-width: 960px) {
+    #galeria_portada h1 {
+        padding-left: 0.5em;
+        padding-top: 0em;
+    }
+}
+@media (max-width: 800px) {
+#galeria_portada {
+    margin-top:20px;
+}
+}
+@media (max-width: 600px) {
+  
+    #galeria_portada h1 {
+        padding: 0;
+        margin: 10px;
+        font-size: 30px;
+    }
+	
+    #main-contents-sup {
+        padding-bottom: 20px !important;
+    }
+}
+</style>
+{% endblock %} 
+{% block javascript %}
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-gallery").addClass("active")
+    });
+</script>
+
+{% endblock %}  
+{% block page_content %}
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'breadcrumb_inicio.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('gallery')}}" class="activate">Gallery</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup" style="border-bottom:1px solid #c2c2c2;padding-bottom:40px;">
+        <div id="galeria_portada" class="content-text-left">
+            <h1>Gallery</h1>
+            <img src="{{ static }}images/banner-gallery.jpg" alt="Gallery" width="100%">
+        </div>
+        <!-- <div class="content-photo-right"><img src="images/smilemakeover.png"></div> -->
+    </div>
+    <div id="main-contents-inf" style="margin-top:0px;">
+            <div style="text-align:center;color:;font-weight:bold;color:#A3D483;margin-top:20px;font-size:25px;"><div style="width:50%;display:inline-block;">Emergency Treatments</div><div style="width:50%;display:inline-block;">Cosmetic Dentistry</div></div>
+        {% for list_cases in cases %}
+            <div class="smilemakeovergallerycontent">
+                {% for case in list_cases %}
+                    {% set url_case = path_for('view_case',{'case':case.slug }) %}
+                    {# Verifcar si el slug_service es null #}
+                    {% if case.slug_service is null %}
+                        {# SI es null usar el nombre de la URL #}
+                        {% set url_service = path_for(case.name_url) %}
+                    {% else %}
+                        {# Si no es null usar el slug de servicio  #}
+                        {% set url_service = path_for('service',{'service':case.slug_service }) %}
+                    {% endif %}
+                    
+                    <div class="smilemakeovergallerycontent-left">
+                        <h2 onclick="location.href='{{ url_service }}'" style="cursor:pointer;">{{ case.label}}</h2>
+                        <div>
+                            <div class="smileleft-left">
+                                <img 
+                                    data-src="{{ static }}images/gallery/{{ case.image_before}}"
+                                    alt="{{ case.label }} (before)" 
+                                    title="{{ case.label }} (before)" 
+                                    onclick="location.href='{{ url_case }}#main-contents-inf'" 
+                                    style="cursor:pointer;">
+                                <br>
+                                <span onclick="location.href='{{ url_case }}#main-contents-inf'" style="cursor:pointer;">Before</span>
+                                
+                            </div>
+                            <div class="smileleft-right">
+                                <img 
+                                    data-src="{{ static }}images/gallery/{{ case.image_after}}" 
+                                    alt="{{ case.label }} (after)" 
+                                    title="{{ case.label }} (after)" 
+                                    onclick="location.href='{{ url_case }}#main-contents-inf'" 
+                                    style="cursor:pointer;">
+                                <br>
+                                <span onclick="location.href='{{ url_case }}#main-contents-inf'" style="cursor:pointer;">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                {% endfor %}    
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

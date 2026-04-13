@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% block title %}Terms and Conditions{% endblock %} 
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-patient_information").addClass("active")
+
+    });
+</script>
+{% endblock %} 
+
+{% block page_content %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'patient_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('terms_and_conditions') }}" class="activate">Terms and Conditions</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Terms and Conditions</h1>
+            <p class="text-left">At Copley Dental Associates P.C., our main concern is you, and the purpose of our work is your dental health.</p>
+            <p class="text-left">This section has been created to provide you with useful information and tools to facilitate and expedite your experience at Copley Dental Associates P.C.</p>
+			<p class="text-left">We always look forward to providing you with excellent service in a friendly atmosphere and to making your visit to our practice a pleasant experience.</p>
+        </div>
+        <div class="content-photo-right">
+            <img src="{{ static }}images/terms-and-conditions.jpg" alt="Copley Dental - Terms & Conditions" alt="Terms & Conditions">
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Patient Information</p>
+                    <ul>
+                        {% include 'patient_information/list_patient_information.html' %}    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}

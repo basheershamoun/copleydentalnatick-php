@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}What is Invisalign{% endblock %}
+{% block page_description %} With Invisalign, achieving the smile you always dreamed of doesn’t have to be a big deal.{% endblock %}
+
+
+
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/invisalign/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('what_is_invisalign') }}" class="activate">What is Invisalign?</a>
+            </li>
+
+        </ul>
+    </div>
+    {% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+		   
+			<img data-src="{{ static }}images/invisalign-banner.jpg" style="width:100%;margin-top:20px;" alt="What is Invisalign?" title="What is Invisalign?">
+            <h1>What is Invisalign?</h1>
+            <p class="text-left">Your confidence. Your outlook. Your life. With Invisalign, achieving the smile you always dreamed of doesn’t have to be a big deal. In fact, it barely has to impact your day-to-day life at all.</p>
+            <p class="text-left">Invisalign straightens teeth using a series of nearly invisible, removable aligners that are custom-made specifically for your teeth. As you replace each aligner every two weeks, your teeth will move – little by little, week by week, gradually moving towards the projected final position.</p>
+            <p class="text-left">Comfortable, clear and removable – Invisalign transforms your smile without disrupting your life something that more than 2.5 million people worldwide have already discovered.</p>
+            <p class="text-left">Are you ready for your new smile?</p>
+            
+			<div id="cont-inv">
+                <div id="cont-inv1" onmouseover="hidePopupElement(6)" onmouseout="doHidePopup(6)">Comfort through technology<span id="p6">Vivera retainers are made with the same state-of-the-art technology as Invisalign.</span>
+                </div>
+                <div id="cont-inv2" onmouseover="hidePopupElement(7)" onmouseout="doHidePopup(7)">Removable<span id="p7">Vivera retainers are removable, helping you to maintain your overall oral hygiene and function.</span>
+                </div> 
+                <div id="cont-inv3" onmouseover="hidePopupElement(8)" onmouseout="doHidePopup(8)">Superior Strength<span id="p8">Lab tests show that Vivera retainers are up to 30% stronger* when compared to other leading clear retainer Materials. This is a critical quality for keeping your smile in its final position.</span>
+                </div>
+                <div id="cont-inv4" onmouseover="hidePopupElement(9)" onmouseout="doHidePopup(9)">Clean & Clear<span id="p9">Clear retainers can get dull and dirty over time. With Vivera retainers you receive three sets of retainers so you can switch to a clean and fresh one every few months.</span>
+                </div>
+            </div>
+            
+			<div style="background:url({{ static }}images/blue-button.png) no-repeat;display:block;padding:0px 10px;height:40px;width:200px;">Roll over for more information</div>
+          
+        </div>
+        <div class="content-photo-right" style="margin-top:0px;">
+            
+           
+                    
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}        
+            </div>
+			 <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Invisalign</p>
+                    <ul>
+                        {% include 'services/invisalign/list_invisalign.html'%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

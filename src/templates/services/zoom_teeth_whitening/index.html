@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Zoom!® Teeth Whitening Treatment{% endblock %}
+{% block page_description %}Take a first step in feeling good and looking great with brighter, whiter teeth in less than an hour.{% endblock %}
+
+{% block javascript %}
+
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        $("#menu-active-services").addClass("active");
+
+    });
+    </script>
+{% endblock %}
+
+
+{% block page_content %}
+
+
+			<div id="main-content">
+            	   <div id="breadcrumb">
+						<ul>
+							{% include 'services/breadcrumb_services.html'%}
+							<li> > </li>
+							<li>
+								<a href="{{ path_for('zoom_teeth_whitening_treatment') }}" class="activate">Zoom Teeth Whitening Treatment</a>
+							</li>
+						</ul>
+                </div>
+				<div id="main-contents-sup">
+					  <div class="content-text-left">
+						<h1>Zoom!® Teeth Whitening Treatment</h1>
+						<img data-src="{{ static }}images/logo_zoom.gif" alt="Zoom Teeth Whitening Treatment" title="Zoom Teeth Whitening Treatment">
+						<p class="text-left">Take a first step in feeling good and looking great with brighter, whiter teeth in less than an hour. <a href="http://www.zoomnow.com/about.php" style="text-decoration:none;color:#5f6062;" target="_blank"><b>Zoom!</b></a> teeth whitening is safe, effective and very fast, and performed only by a dental professional.</p>
+					    <p class="text-left">Extensive research and clinical studies indicate that whitening teeth under the supervision of a dentist is safe. In fact many dentists consider whitening the safest cosmetic dental procedure available.</p>
+						<h2>Treatments</h2>	
+						 <ul>
+                             {% include 'services/list_treatments.html' %}
+                        </ul>
+						 <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening & more</a>
+						  
+					  </div>
+				      <div class="content-photo-right">
+								 <img data-src="{{ static }}images/generalcosmeticdentistry.png" alt="Zoom Teeth Whitening Treatment" img="Zoom Teeth Whitening Treatment">
+								 <div id="form-contact-page" >
+                                    {% include 'services/contact_form.html'%}
+							    </div>
+								  <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    
+                      <ul>
+						{% include 'services/list_services.html' %}
+                    </ul>
+                </div>
+            </div>
+				
+							
+					  </div>
+				</div>
+			</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block page_description %} {{ description }} {% endblock %}
+
+{% block javascript %} 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $("#menu-active-services").addClass("active");
+        });
+    </script>
+{% endblock %}
+
+{% block page_content %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('service', {'service':slug }) }}" class="activate">Pediatric Dentistry</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Pediatric Dentistry</h1>
+            <p class="text-left">Pediatric dentistry is an age-defined specialty that provides both primary and comprehensive preventive and therapeutic dental services for infants and children through adolescence, including those with special dental care needs.</p>
+            <h2>When should parents begin to clean their baby’s teeth?</h2>
+            <p class="text-left">The sooner, the better! The American Academy of Pediatric Dentistry <a href="http://aapd.org" target="_blank" style="font-weight:bold;color:#5f6062;">(http://aapd.org)</a> states that parents should begin dental cleaning at birth, by cleaning their child’s gums with a soft infant toothbrush and water. Unless it is advised by your child’s pediatric dentist, fluoridated toothpaste is not recommended until 2 to 3 years of age.</p>
+            <h2>When should children first visit a dentist?</h2>
+            <p class="text-left">Children should have their first visit by their first birthday. According to the American Academy of Pediatric Dentistry(http://aapd.org) children should first visit the dentist when they receive their first tooth or by their first birthday. Early dental care is important for dental prevention in the future. However, dental problems can begin early. A major dental concern for young children is early childhood caries, also known as baby bottle tooth decay or nursing caries.</p>
+            <h2>How can I prevent tooth decay from a bottle or nursing?</h2>
+            <p class="text-left">To prevent tooth decay in young children, the American Academy of Pediatric Dentistry(http://aapd.org) recommends that children be encouraged to begin drinking from a cup as they approach their first birthday. At nap times or at night, children should not fall asleep with a bottle. It is recommended that nighttime breast-feeding be avoided after the first primary (baby) teeth begin to erupt. Drinking juice or other sugary drinks from a bottle should always be avoided. When such drinks are offered, they should be served in a cup.</p>
+            <h2>General Anesthesia</h2>
+            <p class="text-left">Dr.Baloul is a pediatric dentist on staff at the Franciscan Hospital for Children.Patients requiring general anesthesia can been seen by him. Our facility is approved for general anesthesia (deep sleep) sedation. For more involved surgical procedures, we offer general anesthesia, which is administered by a certified anesthesiologist. The anesthesiologist will stay throughout the procedure and until your child is completely awake afterwards.</p>
+            
+            
+
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/pediatric-dentistry.png" alt="Pediatric Dentistry" title="Pediatric Dentistry">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                       <ul>
+                           {% include 'services/list_services.html'%}
+                    
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

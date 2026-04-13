@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% block title %}Privacy Policy{% endblock %} 
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-patient_information").addClass("active")
+
+    });
+</script>
+{% endblock %} 
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'patient_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('privacy_policy') }}" class="activate">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Privacy Policy</h1>
+            <h2>HIPAA Privacy Form</h2>
+			<a href="{{ static}}pdf/hippa.pdf" style="text-align:left;color:#5f6062;font-weight:bold;" target="_blank"><img src="{{ static }}images/pdficon_small.gif" alt="Form Privacy Policy" title="Form Privacy Policy"> For Printable Form Click Here</a>
+            <h2>Notice of Privacy Practices</h2>
+			<p class="text-left"><b>Purpose: </b>This form, Notice of Privacy Practices, presents the information that federal law requires us to give our patients regarding our privacy practices. (Note: This form may need to be changed to reflect the dental practice’s particular privacy policies and/or stricter state laws.)</p>
+            <p class="text-left">We must provide this notice to each patient beginning no later than the date of our first service delivery to the patient, including service delivered electronically, after April 14, 2003.  We must make a good-faith attempt to obtain written acknowledgement of receipt of the notice from the patient.  We must also have the notice available at the office for patients to request to take with them.  We must post the notice in our office in a clear and prominent location where it is reasonable to expect any patients seeking service from us to be able to read the notice.  Whenever the notice is revised, we must make the notice available upon request on or after the effective date of the revision in a manner consistent with the above instructions.  Thereafter, we must distribute the notice to each new patient at the time of service delivery and to any person requesting a Notice.  We must also post the revised notice in our office as discussed above.</p>
+            <p class="text-left">© 2002 American Dental Association<br>All Rights Reserved</p>
+			<p class="text-left">Reproduction and use of this form by dentists and their staff is permitted.  Any other use, duplication or distribution of this form by any other party requires the prior written approval of the American Dental Association.</p>
+			<p class="text-left"><b>This form is educational only, does not constitute legal advice, and covers only federal, not state, law (August 14, 2002).</b></p>
+		</div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/Privacy-Policy.jpg" alt="Copley Dental - Privacy Policy" title="Privacy Policy">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                     <p>Patient Information</p>
+                     <ul>
+                        {% include 'patient_information/list_patient_information.html' %}
+                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -26,7 +26,7 @@ foreach ($app->getContainer()->get('router')->getRoutes() as $route) {
     $pattern = $route->getPattern();
 
     if (strpos($pattern, '{service}') !== false) {
-        $services = (new ServiceModel('publico/datos/services.json'))->get_services();
+        $services = (new ServiceModel('src/data/services.json'))->get_services();
         foreach ($services as $s) {
             $urls[str_replace('{service}', $s['slug'], $pattern)] = true;
         }
@@ -34,7 +34,7 @@ foreach ($app->getContainer()->get('router')->getRoutes() as $route) {
     }
 
     if (strpos($pattern, '{case}') !== false) {
-        $cases = (new GalleryModel('publico/datos/gallery.json'))->get_cases();
+        $cases = (new GalleryModel('src/data/gallery.json'))->get_cases();
         foreach ($cases as $c) {
             $urls[str_replace('{case}', $c['slug'], $pattern)] = true;
         }

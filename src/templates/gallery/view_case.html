@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title  %}{{ case.label}} {% endblock %} 
+{% block styles %}
+
+<style type="text/css">
+#contentinvisax {
+    background: black;
+    width: 50%;
+    padding: 0px 80px;
+}
+#main-contents-inf.text-center{text-align:center;}
+#main-contents-inf img{max-width:100%;}
+#main-contents-inf.text-center h1{text-align:center;margin-top:20px;}
+.smilemakeovergallerycontent-left h2,
+.smilemakeovergallerycontent-right h2 {
+    text-align: center;
+}
+#galeria_portada {
+    position: relative;
+    width: 100%;
+    height: auto;
+	margin-top:0px;
+}
+#galeria_portada h1 {
+    padding-left: 2em;
+    padding-top: 0.8em;
+    text-align: left;
+    position: absolute;
+    font-size: 70px;
+}
+#galeria_portada img {
+    left: 0;
+    top: 0;
+    height: auto;
+    z-index: -1;
+}
+@media (max-width: 960px) {
+    #galeria_portada h1 {
+        padding-left: 0.5em;
+        padding-top: 0em;
+    }
+}
+@media (max-width: 800px) {
+#galeria_portada {
+    margin-top:20px;
+}
+}
+@media (max-width: 600px) {
+  
+    #galeria_portada h1 {
+        padding: 0;
+        margin: 10px;
+        font-size: 30px;
+    }
+	
+    #main-contents-sup {
+        padding-bottom: 20px !important;
+    }
+}
+</style>
+{% endblock %} 
+
+{% block javascript %}
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-gallery").addClass("active")
+
+    });
+</script>
+<script src="//load.sumome.com/" data-sumo-site-id="c166ea90344320e7b05386c186b8afedcb0ffc0437dec0e18aadf23e51d60421" async="async"></script>
+{% endblock %} 
+{% block page_content %}
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'breadcrumb_inicio.html'%}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('gallery')}}" >Gallery</a>
+            </li>
+            <li>></li> 
+			<li><a href="{{ path_for('view_case',{'case':case.slug}) }}" class="activate">{{ case.label}}</a>
+			</li>
+			
+        </ul>
+		
+    </div>
+    <div id="main-contents-inf" class="text-center" style="margin-top:0px; ">
+        <h1>{{ case.label}}</h1>
+		<img src="{{ static }}images/gallery/{{ case.image_both }}" alt="{{ case.label}}" title="{{ case.label}}">
+	</div>
+</div>
+{% endblock %}

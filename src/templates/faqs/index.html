@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}Frequently Asked Questions{% endblock %}
+
+{% block javascript %}
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        $("#menu-active-faqs").addClass("active")        
+
+    });
+</script>
+{% endblock %}
+
+{% block page_content %}
+			<div id="main-content">
+            	<div id="breadcrumb">
+						<ul>
+							{% include 'breadcrumb_inicio.html'%}
+                            <li> > </li>
+                            <li>
+                                <a href="{{ path_for('faqs') }}" class="activate">Frequently Asked Questions</a>
+                            </li>
+						</ul>
+                </div>
+				<div id="main-contents-sup">
+				  <div class="content-text-left">
+					  <h1>Frequently Asked Questions</h1>
+					  <h2 style="font-size:1.5em;color:#A3D483;">What should I do before surgery?</h2>
+					  <p class="text-left">1. Eat a well-balanced meal prior to the appointment.</p>
+					  <p class="text-left"><b>2. DO NOT SKIP YOUR MEAL UNLESS OTHERWISE ADVISED.</b></p>
+					  <p class="text-left"><b>3. DO NOT USE ASPIRIN for 10 days</b> prior to the appointment. Aspirin is a blood-thinner and will hinder your body's clotting mechanism. Use Tylenol (acetaminophen) if pain reliever is necessary.</p>
+					  <p class="text-left">4. Wear loose clothing, so your blood pressure can be monitored throughout surgery.</p>
+					  
+					 
+				  </div>
+				  <div class="content-photo-right"><img data-src="{{ static }}images/FAQs.png" alt="Frequently Asked Questions" title="Frequently Asked Questions"></div>
+				</div>
+				<div id="main-contents-inf" style="margin-top:0px;">				
+					  <h2>Why is brushing and flossing important?</h2>
+					  <p class="text-left">The best way to remove decay-causing plaque is by brushing and cleaning between your teeth every day. Brushing removes plaque from the tooth surfaces.</p>
+					  <h2>Important Tips for Brushing</h2>
+					  <ul style="text-align:left;">
+					  <li>Use a toothbrush with soft bristles and a small strip of fluoride toothpaste.</li>
+					  <li>When you brush your teeth, move the brush in small, circular motions to reach food particles that may be under your gum line. Hold the toothbrush at an angle and brush slowly and carefully, covering all areas between teeth, between braces, and on the surface of each tooth. It will take you several minutes to thoroughly brush your teeth. Brush up on the lower teeth and down on the upper teeth, and brush the outside, inside, and chewing surface of your front and back teeth.</li>
+					  <li>Brush your tongue and the roof of your mouth before you rinse.</li>
+					  </ul>
+					  <h2>Important Tips for Flossing</h2>
+					  <ul style="text-align:left;">
+					  <li>Use dental floss regularly to remove food particles and plaque from areas between the teeth that a toothbrush can’t reach. Flossing takes more time and patience when you are wearing braces, but it is important to floss your teeth every day.</li>
+					  <li>Use care around your archwire and do not floss too forcefully around it or put too much pressure on it. After you floss between your archwire and braces, floss between your other teeth and gums.</li>
+					  <li>Take a small length of floss and slide it up and down between your teeth. You will be able to feel when the tooth is clean and hear the squeak of the floss against your clean teeth.</li>
+					  </ul>
+					  <h2>What about cosmetic dentistry?</h2>
+					  <ul style="text-align:left;">
+					  <li>A smile can be the most eye-catching feature of a face. With dentistry's many advances, you no longer have to settle for stained, chipped or misshapen teeth. You now have choices that can help you smile with confidence.</li>
+					  <li>Even the most subtle change in your smile can make a dramatic difference in the way you look and feel about yourself. Talk to your dentist about the options most suitable for you, what your expectations are, and the dental fees involved.</li>
+					  <li>Tooth whitening (bleaching) brightens teeth that are discolored or stained. Bleaching may be done completely in the dental office, or the dentist may dispense a system for you to use at home.</li>
+					  <li>Bonding can improve the appearance of teeth that are chipped, broken, cracked, stained or have spaces between them. With bonding, tooth-colored materials are applied, or bonded, to the tooth surface.</li>
+					  <li>Enamel shaping involves modifying teeth to improve their appearance by removing or contouring the enamel. The process, which often is combined with bonding, usually is quick and comfortable, and the results can be seen immediately.</li>
+					  <li>Veneers are thin, custom-made shells designed to cover the front of your teeth. Made of tooth-colored materials, veneers are used to treat spaces between teeth and teeth that are chipped or worn, permanently stained, poorly shaped or slightly crooked.</li>
+					  <li>Braces are not just for kids. Orthodontics may be needed if teeth are crooked, crowded or do not meet properly. If your dentist thinks you should see a specialist for treatment, he or she will refer you to an orthodontist.</li>
+					  </ul>
+					  <h2>What is plaque?</h2>
+					  <p class="text-left">Many of the foods you eat cause the bacteria in your mouth to produce acids. Sugared foods, such as candy and cookies, are not the only culprits. Starches, such as bread, crackers and cereal, also cause acids to form. If you snack often, you could be having acid attacks all day long. After many acid attacks, your teeth may decay.</p>
+					  <p class="text-left">Plaque also produces substances that irritate the gums, making them red, tender or prone to bleeding. After a while, the gums may pull away from the teeth. Pockets form and fill with more bacteria and pus. If the gums are not treated, the bone around the teeth can be destroyed. The teeth may become loose or have to be removed. In fact, periodontal (gum) disease is a main cause of tooth loss in adults.</p>
+					  <p class="text-left">One way to prevent tooth decay and periodontal disease is by eating a balanced diet and limiting the number of between-meal snacks. If you need a snack, choose nutritious foods such as raw vegetables, plain yogurt, cheese or a piece of fruit.</p>
+					  <h2>What should I do in a dental emergency?</h2>
+					  <p class="text-left">There are a number of simple precautions you can take to avoid accidents and injuries to your teeth. One way to reduce the chances of damage to your teeth, lips, cheeks and tongue is to wear a mouth guard when participating in sports or recreational activities that may pose a risk. Avoid chewing ice, popcorn kernels and hard candy, all of which can crack a tooth. Cut tape using scissors rather than your teeth.</p>
+					  <p class="text-left">Accidents do happen, and knowing what to do when one occurs can mean the difference between saving and losing a tooth.</p>
+                      <h2>Tips for Dealing with Dental Emergencies</h2>
+					  <p class="text-left"><b>Bitten Lip or Tongue</b><br> Clean the area gently with a cloth and apply cold compresses to reduce any swelling. If the bleeding doesn’t stop, go to a hospital emergency room immediately.</p>
+					  <p class="text-left"><b>Broken Tooth</b><br>  Rinse your mouth with warm water to clean the area. Use cold compresses on the area to keep any swelling down. Call your dentist immediately.</p>  
+					  <p class="text-left"><b>Knocked-Out Tooth</b><br>  Hold the tooth by the crown and rinse off the root of the tooth in water if it’s dirty. Do not scrub it or remove any attached tissue fragments. If possible, gently insert and hold the tooth in its socket. If that isn’t possible, put the tooth in a cup of milk, and get to the dentist as quickly as possible. Remember to take the tooth with you!</p>
+					  <p class="text-left"><b>Objects Caught Between Teeth</b><br>  Try to gently remove the object with dental floss; avoid cutting the gums. Never use a sharp instrument to remove any object that is stuck between your teeth. If you can’t dislodge the object using dental floss, contact your dentist.</p>
+					  <p class="text-left"><b>Toothache</b><br>  Rinse your mouth with warm water to clean it out. Gently use dental floss or an interdental cleaner to ensure that there is no food or other debris caught between the teeth. Never put aspirin or any other painkiller against the gums near the aching tooth, because it may burn the gum tissue. If the pain persists, contact your dentist.</p>  
+					  <h2>What is a root canal?</h2>
+					  <p class="text-left">Your dentist uses root canal treatment to find the cause and then treat problems of the tooth's soft core, also called the dental pulp. Years ago, teeth with diseased or injured pulps were removed. Today, root canal treatment has given dentists a safe way to save teeth.</p>  
+					  <p class="text-left">Treatment often involves from one to three visits. During treatment, your general dentist or endodontist (a dentist who specializes in problems of the pulp) removes the diseased pulp. The pulp chamber and root canal(s) of the tooth are then cleaned and sealed.</p>  
+					  <b>Here's how your tooth is saved through treatment:</b>
+					  <ul style="text-align:left;">
+					  <li>First, an opening is made through the crown of the tooth into the pulp chamber.</li>
+					  <li>The pulp is then removed.</li>
+					  <li>The root canal is cleaned and shaped to a form that can be filled.</li>
+					  <li>Medications may be put in the pulp chamber and root canal to help get rid of germs and prevent infection.</li>
+					  <li>A temporary filling will be placed in the crown opening to protect the tooth between dental visits. Your dentist may leave the tooth open for a few days to drain. You might also be given medicine to help control infection that may have spread beyond the tooth.</li>
+					  <li>The temporary filling is removed, and the pulp chamber and root canal are cleaned and filled.</li>
+					  <li>In the final step, a gold or porcelain crown is usually placed over the tooth. If an endodontist performs the treatment, he or she will recommend that you return to your family dentist for this final step.</li>
+					  <li>The crown of the tooth is then restored.</li>
+					  </ul>
+					  </div>
+		    </div>
+{% endblock %}

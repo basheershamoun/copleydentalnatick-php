@@ -12,7 +12,7 @@ Dental practice marketing site. PHP/Slim 3 + Twig templates are the **source of 
 - Removed Flash `.swf` files (dead since 2020)
 - Removed 57MB `error_log` (8 years of deprecation warnings)
 - Removed cPanel artifacts (`ssl/`, `ssfm/`, `scctmp/`, `cgi-bin/`, `public_html/`, `.well-known/`, `.ftpquota`, `test.txt`, static `404.html`/`502.html`/`index.html`)
-- Switched asset URLs from absolute to relative (`/estatico/`) for host-agnostic output
+- Switched asset URLs from absolute to relative (`/static/`) for host-agnostic output
 - Added Docker dev environment (`Dockerfile` + `docker-compose.yml`)
 - Added Cloudflare Pages deploy config (`deploy/_headers`)
 
@@ -35,7 +35,7 @@ make shell       # Shell into container
    - Reads all routes from the Slim router
    - Expands dynamic params from `services.json` (15 services) and `gallery.json` (41 cases)
    - Dispatches each GET request in-process and writes the response to `dist/`
-   - Copies `estatico/` (CSS, JS, images, PDFs) and `site.js` into `dist/`
+   - Copies `static/` (CSS, JS, images, PDFs) and `site.js` into `dist/`
 3. `make preview` serves `dist/` locally for verification
 4. `make deploy` pushes `dist/` to Cloudflare Pages
 

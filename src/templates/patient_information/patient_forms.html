@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+{% block title %}Patient Forms{% endblock %} 
+{% block page_description %}We are devoted to making your first visit to Copley Dental Associates P.C. as comfortable and hassle-free as possible.{% endblock %} 
+
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-patient_information").addClass("active")
+    });
+</script>
+{% endblock %} 
+
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'patient_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('patient_forms') }}" class="activate">Patient Forms</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+             <h1>REQUIRED PATIENT FORMS</h1>
+        <p class="text-left">We are devoted to making your first visit to Copley Dental Associates P.C. as comfortable and hassle-free as possible.</p>
+        <p class="text-left">As with any doctor's office visit, you are required to fill in some patient information and medical and dental health history forms.</p>
+        <p class="text-left">In order to expedite this process and save you valuable time, we've made these forms available on-line. We have two options for your convenience:</p>
+        <!--<h2>Online Forms.</h2>
+        <p class="text-left">To serve you better and expedite your next visit to Copley Dental Associates P.C., please fill out our <b>patient forms</b> by <a href="http://www.thesecureformcenter.com/copley/" style="color:#5f6062;font-weight:bold;" target="_blank">clicking here.</a></p>-->
+        <h2>Downloadable Forms</h2>
+        <p class="text-left">You can download the forms in PDF format from our server, print them, fill them out and bring them with you on your first visit. Bringing the filled out forms with you on your first visit will expedite the registration process and will save you time.</p>
+        <p class="text-left">To download this form, the HIPAA Notice of Privacy Form, and the Financial Terms Formplease click on the icons or text links below:</p>
+        <ul>
+		  <li><a href="{{ static }}pdf/medical_form.pdf" target="_blank">Patient Information, Medical History and Dental History Form</a><br>This form contains two pages; please try to print it on both sides of a single sheet of paper.</li>
+		  <li><a href="{{ static }}pdf/hippa.pdf" target="_blank">HIPAA Notice of Privacy Practices Form</a></li>
+		  <li><a href="{{ static }}pdf/finance.pdf" target="_blank">Financial Terms Form</a></li>
+		</ul>
+        <p class="text-left">To view and print these forms, you'll need Adobe Reader installed on your computer. If you don't have it, you can download the free application by clicking on this icon:</p>
+        
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/patient-forms.jpg" alt="Copley Dental - Patient Forms" title="Patient Forms">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Patient Information</p>
+                    <ul>
+                        {% include 'patient_information/list_patient_information.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

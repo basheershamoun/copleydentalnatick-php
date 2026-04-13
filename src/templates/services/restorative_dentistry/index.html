@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block page_description %} {{ description }} {% endblock %}
+
+{% block javascript %} 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $("#menu-active-services").addClass("active");
+        });
+    </script>
+{% endblock %}
+
+{#{% block title %}Copley Dental  Boston Restorative Dental Services {% endblock %} #}
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/breadcrumb_services.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('service',{'service':slug }) }}" class="activate">Restorative Dentistry</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Restorative Dentistry</h1>
+            <p class="text-left">Restorative dentistry deals with the restoration or fixing of diseased, injured or abnormal teeth to normal function. It includes all aspects of endodontics, periodontics  and prosthodontics.</p>
+            <p class="text-left">For your convenience, we have an expert in this field:</p>
+            <p class="text-left"><a href="{{ path_for('our_team') }}#DrGraceJotikabhukkana" style="color:#5f6062;font-weight:bold;">Dr. Grace Jotikabhukkana</a></p> 
+            
+            <h2>Treatments</h2>
+            <ul>
+                {% include 'services/list_treatments.html' %}
+            </ul>
+            <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening and More</a>
+
+            
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/restorative-dentistry.png" alt="Restorative Dentistry" title="Restorative Dentistry">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+			<div id="secondary-service-menu">
+                <div class="fsclass">
+                     <p>Services</p>
+                        <ul>
+                            {% include 'services/list_services.html' %}
+						</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

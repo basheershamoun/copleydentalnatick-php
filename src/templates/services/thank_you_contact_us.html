@@ -1,0 +1,169 @@
+{% extends 'base.html' %} 
+{% block title %}Thank you for contacting Copley Dental{% endblock %} 
+{% block javascript %} 
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#main-menu-links li a[href='/Services/']").css("background", "#A1D783");
+        $("#main-menu-links li a[href='/Services/']").css("color", "white");
+    });
+</script>
+{% endblock %} 
+
+{% block styles %}
+
+    <style type="text/css">
+    #main-contents-inf,
+    #main-contents-sup {
+        width: 100%;
+        display: inline-block;
+        margin-top: 40px;
+        color: #5f6062;
+        padding: 0px;
+    }
+    #main-contents-inf {
+        text-align: left;
+    }
+    .content-photo-right img {
+        max-width: 100%;
+    }
+    #main-contents-inf h2 {
+        color: #A3D483;
+    }
+    .content-text-left {
+        width: 56%;
+        float: left;
+    }
+    .content-text-left ul {
+        text-align: left;
+        padding-left: 2.5%;
+        line-height: 26px;
+    }
+    .content-text-left ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #5f6062;
+    }
+    .content-photo-right {
+        width: 40%;
+        float: right;
+    }
+    .text-left {
+        text-align: left;
+        width: 98%;
+    }
+    .telf-inf {
+        text-align: left;
+    }
+    .content-text-left h2 {
+        color: #a3d483;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left
+    }
+    .content-text-left h1 {
+        text-align: left;
+        font-size: 40px;
+        color: #A3D483;
+        font-weight: bold;
+        margin-top: 0px;
+        width: 100%;
+    }
+    .boton {
+        display: block;
+        width: 150px;
+        margin: 0px;
+        background: #98CAED;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .boton:hover {
+        background: #A3D483;
+    }
+    #form-contact-page {
+        width: 100%;
+        margin: auto;
+        diplay: inline-block;
+        background: #98CAED;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    #form-contact-page h2 {
+        width: 100%;
+        text-align: left;
+        color: white;
+        padding: 20px 0px 0px 4%;
+    }
+    #form-contact-page input,
+    #form-contact-page textarea {
+        width: 85%;
+        margin-top: 8px;
+        border: none;
+        padding: 15px;
+    }
+    @media (max-width: 800px) {
+        .content-text-left ul {
+            padding-left: 6%;
+        }
+        .boton {
+            text-align: center;
+            margin: 0px auto;
+        }
+        .telf-inf {
+            text-align: center;
+        }
+        .content-text-left h2 {
+            text-align: center
+        }
+        .content-text-left h1 {
+            text-align: center
+        }
+        .content-photo-right img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        .content-text-left {
+            width: 100%;
+            float: none;
+        }
+        #main-contents-inf,
+        #main-contents-sup {
+            width: 95%;
+        }
+        #main-contents-sup {
+            margin-top: 0px
+        }
+        #main-contents-sup p {
+            padding: 0 0 0 10px;
+        }
+        #main-contents-inf h2 {
+            text-align: center;
+        }
+        .content-photo-right {
+            width: 100%;
+            float: none;
+        }
+    }
+    </style>
+
+{% endblock %} 
+
+{% block page_content %} 
+{#{{ render( app.request.baseUrl ~ '/Services/sidebar-menu') }}#}
+<div id="main-content">
+    
+    <div id="main-contents-inf">
+	    <div id="form-contact-page" >
+            <div style='width:100%;display:inline-block;text-align:center;margin-top: 50px;color:white;'>
+                <div>
+                    <img src='{{ static }}images/email.jpg'  alt="Thank you for contacting Copley Dental"/>
+                </div>
+                <div style='font-family:Arial;font-size:18px;margin:20px 0%;width:100%;text-align:center;color:white;font-weight:bold;'>Thank you for contacting Copley Dental.<br>We are processing your request and will contact you soon.</div>
+            </div>
+	    </div>
+    </div>
+</div>
+{% endblock %}

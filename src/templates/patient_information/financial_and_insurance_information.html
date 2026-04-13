@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+{% block title %}Financial and Insurance Information{% endblock %} 
+{% block page_description %}Our fees reflect our professional commitment to excellence.{% endblock %} 
+
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-patient_information").addClass("active")
+    });
+</script>
+{% endblock %} 
+
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'patient_information/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('financial_and_insurance_information') }}" class="activate">Financial and Insurance Information</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Financial and Insurance Information</h1>
+			<a href="{{ static }}pdf/finance.pdf" style="text-align:left;color:#5f6062;font-weight:bold;" target="_blank"><img src="{{ static }}images/pdficon_small.gif" alt="adobe reader Financial and Insurance Info"  title="adobe reader Financial and Insurance Info">Printable Financial Terms Form Click Here</a>
+            <h2>Financial Policy Summary</h2>
+			<p class="text-left">We are committed to providing you with the best possible treatment. Our fees reflect our professional commitment to excellence. However, in order to keep the cost of dental treatment to a minimum, we are implementing this financial policy effective January 1, 2006. If you have dental insurance, we are happy to help you receive the maximum allowable benefits. In order to achieve these goals, we need your assistance and understanding of our payment policy.</p>
+            <p class="text-left">Unless prior arrangements are made, all services performed are to be paid in full at the time of treatment. The only exception is for those patients covered by Delta Dental and Blue Cross Blue Shield. Delta Dental and BCBS patients will pay their copayments in full on the date of the service.</p>
+            <p class="text-left">We have implemented two payment options that are available to all our patients. Option #1 requires patients to pay in full at the time of performance for all services performed. Under this option, the patient is responsible for submitting all claims to the insurance company. The reimbursement checks in this case will be sent directly to the patient. It is important to realize that the dental benefit program under this option is a contract between you, your employer and the insurance company. We are not a party to that contract. Option #2 allows for us to submit all claims to the insurance company on behalf of the patient.  Under this method, the reimbursement checks will be mailed directly to our office. The patient is, however, responsible for the co-payment at the time of service and for all non covered services.</p>
+			<p class="text-left">For your convenience, our office accepts different methods of payment, including all major credit cards. In order to allow for timely processing of payments, we require that all patients leave a valid credit card on file. In the event of delinquent balances, we will notify you and automatically transfer any unpaid balances.</p>
+			<p class="text-left">As a courtesy, we call all our patients with a reminder one to two days prior to their scheduled appointments. We appreciate you providing us with two phone numbers to assure confirmation. If you are unavailable, we will leave a message asking you to return our call.</p>
+			<p class="text-left">Please take the time to carefully read the terms and conditions of our new policy. We will gladly answer any questions you may have. Thank you for taking the time to read this policy. Please sign below indicating that you have read all pages of the agreement and fully understand and agree to our office Financial Policy.</p>
+			<p class="text-left">To view and print this form, you'll need Adobe Reader installed on your computer. If you don't have it, you can download the free application by clicking on this icon:</p>
+			<a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank"><img src="{{ static }}images/get_adobe_reader.gif" alt="adobe reader Financial and Insurance Info"  title="adobe reader Financial and Insurance Info" width="112" height="33" border="0"></a>
+		</div>
+        <div class="content-photo-right">
+            <img src="{{ static }}images/Financial-and-Insurance-Info.jpg" alt="Financial and Insurance Information" title="Financial and Insurance Information">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Patient Information</p>
+                    <ul>
+                        {% include 'patient_information/list_patient_information.html' %}    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

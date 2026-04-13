@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+{% block title %}Corporate Social Responsibility{% endblock %} 
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-social-responsibility").addClass("active")
+        $("#breadcrumb-social-responsibility").addClass("activate")
+        
+
+    });
+</script>
+{% endblock %} 
+
+{% block page_content %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'social_responsibility/breadcrumb.html' %}
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Corporate Social Responsibility</h1>
+            <p class="text-left">We are proud to collaborate with Medical Missions for Children, an organization dedicated to providing free surgical and dental services to poor and under-privileged children and young adults in various countries throughout the world. The organization also facilitates the transfer of education, knowledge and recent innovations to local medical communities.</p>
+            <h2>QUITO - ECUADOR 2010</h2>
+            <div class="divcrs">
+                <div class="divcrs-left"><a href="{{ path_for('ecuador_humanitarian_mission_2010_video') }}" class="boton">VIEW VIDEO</a>
+                </div>
+                <div class="divcrs-left"><a href="{{ path_for('ecuador_humanitarian_mission_2010') }}" class="boton">VIEW PAGE</a>
+                </div>
+            </div>
+            <h2>QUITO - ECUADOR 2011</h2>
+            <div class="divcrs">
+                <div class="divcrs-left"><a href="{{ path_for('ecuador_medical_mission_for_children_2011_video') }}" class="boton">VIEW VIDEO</a>
+                </div>
+                <div class="divcrs-left"><a href="{{ path_for('ecuador_medical_mission_for_children_2011') }}" class="boton">VIEW PAGE</a>
+                </div>
+            </div>
+            <h2>GUATEMALA 2011</h2>
+            <div class="divcrs">
+                <div class="divcrs-left"><a href="{{ path_for('guatemala_humanitarian_mission_2011_video') }}" class="boton">VIEW VIDEO</a>
+                </div>
+                <div class="divcrs-left"><a href="{{ path_for('guatemala_humanitarian_mission_2011') }}" class="boton">VIEW PAGE</a>
+                </div>
+            </div>
+            <h2>GUATEMALA 2014</h2>
+            <div class="divcrs">
+                <div class="divcrs-left"><a href="{{ path_for('guatemala_humanitarian_mission_2014_video') }}" class="boton">VIEW VIDEO</a>
+                </div>
+                <div class="divcrs-left"><a href="{{ path_for('guatemala_humanitarian_mission_2014') }}" class="boton">VIEW PAGE</a>
+                </div>
+            </div>
+			<h2>GUATEMALA 2015</h2>
+            <div class="divcrs">
+                <div class="divcrs-left"><a href="{{ path_for('guatemala_humanitarian_mission_2015') }}" class="boton">VIEW PAGE</a>
+                </div>
+            </div>            
+			<h2>PHILIPPINES 2019</h2>			
+			<div class="divcrs">                
+			    <div class="divcrs-left"><a href="{{ path_for('philippines_humanitarian_mission_2019_video') }}" class="boton">VIEW VIDEO</a>               
+				</div>            
+			</div> 
+			<h2>103 MMFC</h2>			
+			<div class="divcrs">                
+				 <div class="divcrs-left"><a href="{{ path_for('medical_missions_103_MMFC_video') }}" class="boton">VIEW VIDEO</a>                
+				 </div>            
+			 </div>	
+		    <p class="text-left" style="margin-top:40px;">To learn more, please visit the <b><a href="http://mmfc.org/" target="_blank" style="color:#5f6062;">Medical Missions for Children website.</a></b>            </p> 
+        </div>
+        <div class="content-photo-right">
+            <div>
+                <img data-src="{{ static }}images/social-responsibility.png" alt="Corporate Social Responsibility" title="Corporate Social Responsibility">
+            </div>
+            <div style="margin:auto; width:100%; margin-top:20px;">
+                <iframe width="700" height="400" style="max-width:100%;" src="https://www.youtube.com/embed/vx9v7-uHpe8" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

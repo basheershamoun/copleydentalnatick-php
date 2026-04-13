@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block page_description %} {{ description }} {% endblock %}
+
+{# Bloque de javascript #}
+{% block javascript %} 
+    {#{{ parent() }}#}
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $("#main-menu-links li a[href='/Services/']").css("background", "#A1D783");
+            $("#main-menu-links li a[href='/Services/']").css("color", "white");
+
+        });
+    </script>
+{% endblock %} 
+{# Bloque de Css #}
+{% block styles %}
+    <style type="text/css">
+        /*Color al menu de los paginas*/
+
+        #menu-active-{{ page }}{
+            background-color: #A1D783;
+            color: white;
+        }
+        #main-contents-inf,
+        #main-contents-sup {
+            width: 100%;
+            display: inline-block;
+            margin-top: 40px;
+            color: #5f6062;
+            padding: 0px;
+        }
+        #main-contents-inf {
+            text-align: left;
+        }
+        .content-photo-right img {
+            max-width: 100%;
+        }
+        #main-contents-inf h2 {
+            color: #A3D483;
+        }
+        .content-text-left {
+            width: 56%;
+            float: left;
+        }
+        .content-photo-right {
+            width: 44%;
+            float: right;
+            text-align: right;
+        }
+        .text-left {
+            text-align: left;
+            width: 98%;
+        }
+        .telf-inf {
+            text-align: left;
+        }
+        .content-text-left h2 {
+            font-size: 30px;
+            color: #9BC8E7;
+            font-weight: bold;
+            text-align: left
+        }
+        .content-text-left h1 {
+            text-align: left;
+            font-size: 40px;
+            color: #A3D483;
+            font-weight: bold;
+            margin-top: 0px;
+            width: 100%;
+        }
+        @media (max-width: 800px) {
+            .telf-inf {
+                text-align: center;
+            }
+            .content-text-left h2 {
+                text-align: center
+            }
+            .content-text-left h1 {
+                text-align: center
+            }
+            .content-photo-right img {
+                max-width: 95%;
+            }
+            .content-text-left {
+                width: 100%;
+                float: none;
+            }
+            #main-contents-inf,
+            #main-contents-sup {
+                width: 95%;
+            }
+            #main-contents-sup {
+                margin-top: 0px
+            }
+            #main-contents-sup p {
+                padding: 0 0 0 10px;
+            }
+            #main-contents-inf h2 {
+                text-align: center;
+            }
+            .content-photo-right {
+                width: 100%;
+                float: none;
+            }
+        }
+        @media (max-width: 600px) {
+            
+        }
+    </style>
+{% endblock %} 
+
+{# Bloque de Contenido #}
+{% block page_content %}
+    {#{{ render( app.request.baseUrl ~ '/Services/sidebar-menu') }}#}
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% if page == "emergency-dentist" %}
+                {% include '/breadcrumb_inicio.html'%}
+                <li> > </li>
+                <li>
+                    <a href="{{ path_for('emergency_dental') }}" style="color:#A3D483;">Dental Emergencies</a>
+                </li>
+            {% else %}
+                {% include 'services/breadcrumb_services.html'%}
+                <li> > </li>
+                <li>
+                    <a href="{{ path_for('service', {'service': slug }) }}" style="color:#A3D483;">Dental Emergencies</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Natick Emergency Dentist for<br>Toothache and Pain Relief</h1>
+            <p style="text-align:left">A dental emergency can occur at any time. At Copley Dental Associates P.C., we are ready to help heal your toothache and provide pain relief at all times. </p>
+            <p style="text-align:left">Our experienced team of Natick dentists is here to provide you with dental emergency services 24 hours a day, 365 days a year.</p>
+            <h2>24-HOUR EMERGENCY DENTAL CARE</h2>
+            <p style="text-align:left;">If you have a dental emergency, contact our office at:</p>
+           <div style="text-align:center;">
+                <a href="tel://{{ phone_natick}}"><img src="{{ static }}images/boton-emergencia-natick.png" alt="Natick Emergency Dentist"></a>
+            </div>
+            <p class="telf-inf">
+                <font style="color:#5f6062;">DURING REGULAR BUSINESS HOURS:</font>
+                <br>
+                <font style="font-size:30px;color:#9BC8E7;">{{ phone_natick}}</font>
+            </p>
+            
+            <h2>Recommendations until you get to Copley Dental</h2>
+            <p style="text-align:left">Oil of cloves, which contains eugenol, is commonly used to treat toothaches. A drop of oil of cloves can be applied with a cotton swab to relieve pain from dental caries. After wisdom tooth extraction, a condition known as dry socket can develop when nerve endings are exposed to air. A piece of sterile gauze or cotton soaked in oil of cloves may be placed in the socket after careful cleaning with saline to achieve pain relief.</p>
+            <p style="text-align:left">Analgesics such as Tylenol (acetaminophen) and ibuprofen are recommended. Ibuprofen has the additional benefit of being anti-inflammatory. Ice and/or heat are also frequently recommended.</p>
+         <div class="smilemakeovergallerycontent">
+             <div class="smilemakeovergallerycontent-left" style="min-width:200px;">
+                <h2  style="text-align:center;">Fractured Tooth</h2>
+                {% set url_gallery = path_for('gallery') ~ "#main-contents-inf"  %}
+                <div>
+                    <div class="smileleft-left">
+                        <img data-src="{{ static }}images/emergency-treatment-fractured-tooth-before.jpg" alt="Fractured Tooth" title="Fractured Tooth" onclick="location.href='{{ url_gallery }}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery }}'" style="cursor:pointer;">Before</span><span>
+                    </div>
+                    <div class="smileleft-right">
+                        <img data-src="{{ static }}images/emergency-treatment-fractured-tooth-after.jpg" alt="Fractured Tooth" title="Fractured Tooth" onclick="location.href='{{ url_gallery }}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery }}'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+             </div>
+             <div class="smilemakeovergallerycontent-right" style="min-width:200px;">
+                <h2  style="text-align:center;  margin-left: 0;">Fractured or Broken Tooth</h2>
+                <div>
+                    <div class="smileleft-left">
+                        <img data-src="{{ static }}images/pho_broken_tooth_04bef.jpg" alt="Fractured or Broken Tooth" title="Fractured or Broken Tooth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">Before</span><span>
+                    </div>
+                    <div class="smileleft-right">
+                        <img data-src="{{ static }}images/pho_broken_tooth_04aft.jpg" alt="Fractured or Broken Tooth" title="Fractured or Broken Tooth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			<div class="smilemakeovergallerycontent-left" style="min-width:200px;">
+                <h2  style="text-align:center;">Fractured Tooth</h2>
+                <div>
+                    <div class="smileleft-left">
+                        <img data-src="{{ static }}images/pho_broken_tooth_07bef.jpg" alt="Fractured Tooth" title="Fractured Tooth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">Before</span>
+                    </div>
+                    <div class="smileleft-right">
+                        <img data-src="{{ static }}images/pho_broken_tooth_07aft.jpg" alt="Fractured Tooth" title="Fractured Tooth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			<div class="smilemakeovergallerycontent-right" style="min-width:200px;">
+                <h2  style="text-align:center;">Broken Teeth</h2>
+                <div>
+                    <div class="smileleft-left">
+                        <img data-src="{{ static }}images/pho_chipped_tooth_10before.jpg" alt="Broken Teeth" title="Broken Teeth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">Before</span><span>
+                    </div>
+                    <div class="smileleft-right">
+                        <img data-src="{{ static }}images/pho_chipped_tooth_10aft.jpg" alt="Broken Teeth" title="Broken Teeth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+			<div class="smilemakeovergallerycontent-left" style="min-width:200px;">
+                <h2  style="text-align:center;  margin-left: 0;">Broken/Chipped Teeth</h2>
+                <div>
+                    <div class="smileleft-left"><img src="{{ static }}images/pho_galry11_bef.jpg" alt="Broken/Chipped Teeth" title="Broken/Chipped Teeth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">Before</span>
+                    </div>
+                    <div class="smileleft-right"><img src="{{ static }}images/pho_galry11_aft.jpg"  alt="Broken/Chipped Teeth" title="Broken/Chipped Teeth" onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">
+                        <br><span onclick="location.href='{{ url_gallery}}'" style="cursor:pointer;">After</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+		
+		
+		</div>
+        <div class="content-photo-right">
+				 <div id="google-maps">
+					<iframe width="100%" height="304" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.7845429061554!2d-71.3295417845454!3d42.30446257919069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ff63d88daf874e7!2sCopley+Dental+Natick!5e0!3m2!1ses-419!2s!4v1491605216753"></iframe>
+				 </div>
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}                
+            </div>
+			<div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p style="padding-left:0">Services</p>
+                    <ul>
+                        {% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

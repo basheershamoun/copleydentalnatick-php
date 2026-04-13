@@ -30,10 +30,10 @@ SITE_JS_SRC ?= ../copleydental/public/js/site.js
 build: clean
 	@echo "==> Prerendering Slim routes into dist/"
 	docker compose exec -T web php bin/prerender.php
-	@echo "==> Copying static assets into dist/estatico/"
-	cp -R estatico dist/estatico
+	@echo "==> Copying static assets into dist/static/"
+	cp -R static dist/static
 	@echo "==> Copying site.js from $(SITE_JS_SRC)"
-	cp "$(SITE_JS_SRC)" dist/estatico/js/site.js
+	cp "$(SITE_JS_SRC)" dist/static/js/site.js
 	@echo "==> Copying root files (sitemap, robots, _headers)"
 	cp sitemap.xml dist/sitemap.xml
 	cp robots.txt dist/robots.txt

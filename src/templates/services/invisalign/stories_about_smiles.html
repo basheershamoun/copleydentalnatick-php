@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+{% block title %}Invisalign - Stories About Smiles{% endblock %} 
+
+{% block page_content %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'services/invisalign/breadcrumb.html' %}
+            <li>></li>
+            <li>
+                <a href="{{ path_for('stories_about_smiles') }}" class="activate">Stories About Smiles</a>
+            </li>
+        </ul>
+    </div>
+	{% include 'services/invisalign/menu_invisalign.html'%}
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Stories About Smiles</h1>
+            <div>
+                <iframe width="700" style="max-width:100%;" height="400" src="//www.youtube.com/embed/BTuinj8TUOY" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/invisalign-results.jpg" alt="Copley Dental - Invisalign - Stories About Smiles" title="Invisalign - Stories About Smiles">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+             <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Invisalign</p>
+                    <ul>
+                        {% include 'services/invisalign/list_invisalign.html' %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

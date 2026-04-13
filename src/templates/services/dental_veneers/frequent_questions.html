@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Dental Veneers - Frequent Questions{% endblock %}
+{% block page_description %} Porcelain - Dental Veneers‏ are quick procedures that can solve a number of problems you may be having with your teeth. {% endblock %}
+
+
+{% block page_content %}
+
+
+			<div id="main-content">
+			<div id="breadcrumb">
+                <ul>
+                    {% include 'services/breadcrumb_services.html' %}
+                    <li> > </li>
+                    <li>
+                        <a href="{{ path_for('service',{'service':slug_dental_veneers})}}"> Dental Veneers</a>
+                    </li>
+                    <li> > </li>
+                    <li>
+                        <a href="{{ path_for('denta_veneers_faq') }}" class="activate">Frequent Questions</a>
+                    </li>
+                </ul>
+                </div>
+            	<div id="main-contents-sup">
+					  <div class="content-text-left">
+						<h1>Dental Veneers, Frequent Questions</h1>
+						<p class="text-left">Porcelain - Dental Veneers‏ are quick procedures that can solve a number of problems you may be having with your teeth. Take a look at the answers to these frequently asked questions about porcelain veneers, and contact our Back Bay Copley Sq. Boston, Massachussetts practice for more information. Our Dentist at Copley Dental can give you beautiful, natural-looking porcelain veneers to improve the appearance of your smile for years to come!.</p>
+						<h2>What are porcelain veneers?</h2>
+						<p class="text-left">Porcelain veneers are thin, ceramic shells that are affixed to teeth to lengthen worn teeth, close gaps, and restore smile symmetry. Unlike dental crowns, they cover only the most visible portion of the affected tooth and are designed to look like your natural tooth.</p>
+					    <h2>Do they look like natural teeth?</h2>
+						<p class="text-left">Yes! Porcelain - Dental Veneers‏ are custom-designed to fit your tooth with the most comfortable, natural-looking results. Once a small amount of the existing tooth has been altered for the best fit, the veneer is color-tinted to match the surrounding teeth and firmly cemented in place for both functional and aesthetic benefits.</p>
+						<h2>What about maintenance of porcelain veneers?</h2>
+						<p class="text-left">You can maintain your porcelain veneers with regular brushing and flossing, and overall good oral hygiene.</p>
+						<h2>How long do they last?</h2>
+						<p class="text-left">Porcelain veneers can last for years, even decades. They do not change color and they are made with durable material designed for long-lasting results – lifetime results in many cases.</p>
+						<h2>Is the procedure painful?</h2>
+						<p class="text-left">No, this procedure is not considered painful. Patients can experience some sensitivity when the tooth is being prepared. Porcelain - Dental Veneers‏ can be applied with a local anesthetic or sedation dentistry techniques at our practice in BackBay Boston for a painless experience. Copley Dental Dentists utilize their considerable skills and experiences to give patients the most relaxing, comfortable office visit possible.</p>
+						<p class="text-left">For more information regarding this procedure visit our porcelain veneers page.</p>
+						    <ul>
+                                {% include 'services/list_treatments.html'%}
+                            </ul>
+						    <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening & more</a>
+						  
+					  </div>
+				       <div class="content-photo-right">
+								 <img src="{{ static }}images/generalcosmeticdentistry.png" alt="Dental Veneers, Frequent Questions" title="Dental Veneers, Frequent Questions">
+								 <div id="form-contact-page" >
+                                    {% include 'services/contact_form.html'%}
+							    </div>
+				                 <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    
+                       <ul>
+                           {% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+							
+					  </div>
+				</div>
+			</div>
+{% endblock %}

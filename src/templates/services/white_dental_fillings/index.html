@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}White Dental Fillings{% endblock %}
+{% block page_description %}White Filling is a tooth-colored plastic and glass mixture used to restore decayed teeth. {% endblock %}
+
+{% block javascript %}
+
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            $("#menu-active-services").addClass("active");
+            
+
+        });
+    </script>
+{% endblock %}
+
+
+{% block page_content %}
+
+
+			<div id="main-content">
+			<div id="breadcrumb">
+						<ul>
+							{% include 'services/breadcrumb_services.html'%}
+							<li> > </li>
+							<li>
+								<a href="{{ path_for('white_dental_fillings') }}" class="activate">White Dental Filings</a>
+							</li>
+						</ul>
+                </div>
+            	<div id="main-contents-sup">
+					  <div class="content-text-left">
+						  <h1>White Dental Fillings</h1>
+						  <p class="text-left">White Filling is a tooth-colored plastic and glass mixture used to restore decayed teeth. Composites are also used for cosmetic improvements of the smile by changing the color of the teeth or reshaping disfigured teeth.</p>
+					      <p class="text-left">The dentist places the composite in layers, typically using a light specialized to harden each layer. When the process is finished, the dentist will shape the composite to fit the tooth. The dentist then polishes the composite to prevent staining and early wear.</p>
+					     <h2>Treatments</h2>	
+						 <ul>
+                            {% include 'services/list_treatments.html' %}
+                        </ul>
+						 
+					     <a href="{{ path_for('gallery') }}" class="linksmilemake">See Our Smile Make over Gallery:Cosmetic Dental Procedures, Teeth Whitening & more</a>
+						  
+					  </div>
+				       <div class="content-photo-right">
+								 <img data-src="{{ static }}images/generalcosmeticdentistry.png" alt="White Dental Fillings" title="White Dental Fillings">
+								 <div id="form-contact-page" >
+                                    {% include 'services/contact_form.html' %}
+							    </div>
+				                 <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                    
+                     <ul>
+						{% include 'services/list_services.html'%}
+                    </ul>
+                </div>
+            </div>
+							
+					  </div>
+				</div>
+			</div>
+{% endblock %}

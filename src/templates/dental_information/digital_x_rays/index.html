@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+{% block title %}Digital X Rays{% endblock %}
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-dental-information").addClass("active");
+
+    });
+</script>
+{% endblock %} 
+{% block page_content %} 
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'dental_information/breadcrumb.html'%}
+            <li>></li>
+            <li>
+		        <a href="{{ path_for('digital_x_rays') }}" class="activate">Digital X Rays</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+        <h1>Digital X-Rays</h1>
+        <h2>What are digital x-rays?</h2>
+        <p class="text-left">Digital x-rays are the latest technology to be incorporated into dentistry and medicine.</p>
+        <h2>How does digital x-ray technology work?</h2>
+        <p class="text-left">The x-ray film is replaced with a sensor (either a plate or a video sensor) . These are linked to either a laser scanner or directly to a computer. In both cases, the image is processed by the computer and displayed on the screen.</p>
+        <h2>How does this benefit me?</h2>
+        <p class="text-left">The amount of radiation associated with digital x-rays is significantly lower than for traditional x-rays. Dosage reductions of up to 40 to 60 percent are achievable. As processing errors are reduced, repeat x-rays are required less often and the quality of the x-rays is more consistent. Reduction in processing time means that we can often discuss our findings with you at your first visit.</p>
+        <h2>What about children?</h2>
+        <p class="text-left">Because of the huge reduction in radiation exposure, we are quite happy to take x-rays for children when necessary.</p>
+        <h2>How does this benefit the dentist?</h2>
+        <p class="text-left">This clean technology makes it easier for the practice to store and retrieve x-rays. It is also possible to send images to other professionals over the Internet when necessary.</p>
+        <a href="{{ static }}pdf/x-rays.pdf" style="font-weight:bold;color:#5f6062;" target="_blank">More About X-Rays</a>
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/digital-x-rays.jpg" alt="Copley Dental - Dental Information - Digital X Rays" title="Digital X Rays">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                    <p>Services</p>
+                     <p>Dental Information</p>
+                    <ul>
+                        {% include 'dental_information/list_dental_information.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

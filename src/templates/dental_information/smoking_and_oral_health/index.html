@@ -1,0 +1,85 @@
+{% extends 'base.html' %} 
+{% block title %}Smoking and Oral Health{% endblock %} 
+{% block page_description %}Use of any tobacco product can increase your risk of developing oral cancer and periodontal (gum) disease.{% endblock %} 
+
+{% block javascript %}
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-dental-information").addClass("active");
+        
+    });
+</script>
+{% endblock %} 
+
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'dental_information/breadcrumb.html' %}
+            <li>></li>
+           <li>
+		        <a href="{{ path_for('smoking_and_oral_health') }}" class="activate">Smoking and Oral Health</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+            <h1>Smoking and Oral Health</h1>
+        <h2>What effects can smoking have on my oral health?</h2>
+		<ul style="text-align:left;">
+        <li>Use of any tobacco product can increase your risk of developing oral cancer and periodontal (gum) disease.</li>
+        <li>Tobacco products damage your gum tissue by affecting the attachment of bone and soft tissue to your teeth. An example of the effect is receding gums. A receding gum line exposes the tooth roots and increases your risk of developing sensitivity to heat and cold or tooth decay in these unprotected areas.</li>
+        <li>Smoking can delay healing after a tooth extraction or other oral surgery.</li>
+        <li>Smoking also can contribute to bad breath, stains on your teeth and tongue, and a build-up of tartar on your teeth.</li>
+        </ul>
+		<h2>Are smokeless tobacco products safe?</h2>
+		<p class="text-left">Like cigars and cigarettes, smokeless tobacco products contain a variety of toxins associated with cancer. At least 28 cancer-causing chemicals have been identified in smokeless tobacco products.</p>
+        <p class="text-left">Smokeless tobacco can irritate your gum tissue, causing it to recede or pull away from your teeth. Once this gum tissue recedes, the roots of your teeth are exposed, increasing your risk for tooth decay. The roots of your teeth also may become sensitive to heat and cold or other irritants, which means you could experience some discomfort when eating or drinking.Sugars, often added to enhance the flavor of smokeless tobacco, can increase your risk for tooth decay. Smokeless tobacco also typically contains sand and grit, which can wear down your teeth.</p>
+        <h2>What are some signs of oral cancer?</h2>
+        <p class="text-left">Signs and symptoms that could indicate oral cancer include: </p>
+		<ul style="text-align:left;">
+        <li>Any sign of irritation, such as tenderness, burning or a sore that will not heal.</li>
+        <li>Pain, tenderness or numbness anywhere in the mouth or lips.</li>
+        <li>Development of a lump or a leathery, wrinkled or bumpy patch inside your mouth.</li>
+        <li>Color changes to your oral soft tissues (gray, red or white spots or patches) rather than a healthy pink color.</li>
+        <li>Difficulty chewing, swallowing, speaking or moving the jaw or tongue.</li>
+        <li>Any change in the way your teeth fit together.</li>
+        <li>See your dentist or physician immediately if you notice any of these changes.</li>
+		</ul>
+        <h2>Resources to Help You Quit</h2>
+        <p class="text-left">The Oregon Tobacco Quit Line – Toll-Free 1-877-270-STOP</p>
+        <h2>What Is the Oregon Tobacco Quit Line?</h2>
+        <p class="text-left">The Quit Line offers you free quitting information, one-on-one telephone counseling, and referrals for you or for a loved one. The Quit Line is offered by the Oregon Health Division.</p>
+        <h2>How Telephone Counseling Works</h2>
+        <p class="text-left">You talk to a counselor when it’s convenient for you. You get the individual support you need — whether you have questions or concerns about quitting, need help to plan for your quit attempt, or want to know how to support someone who is trying to quit. Whatever it is you need, the Quit Line counselor is there for you.</p>
+        <h2>What the Quit Line Can Do</h2>
+        <p class="text-left">If you’re ready to quit, you can get a customized quitting plan, which includes a counseling session and a quit kit. If you’re not quite ready to quit, Quit Line staff can help you figure out what next steps you need to take and can send you the right information. You will also get the names of resources in your community, such as classes. If you’ve already quit but need some help to stay quit, Quit Line counselors can help you, too. If a friend or family member smokes, and you’d like some information for that person  or yourself, we can send you printed materials and the names of resources.</p>
+        <p class="text-left">Toll Free Quit Line Phone
+            <br>877-270-7867
+            <br>877-270-STOP
+            <br>Toll-Free Spanish Line</p>
+        <p class="text-left">877-266-3863
+            <br>877-2NO FUME
+            <br>Toll-Free TTY Number</p>
+        <p class="text-left">877-777-6534
+            <br>The Tobacco Prevention and Education Program is funded by tobacco taxes.</p>
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/smoking-and-oral-health.jpg" alt="Copley Dental - Dental Information - Smoking and Oral Health" title="Smoking and Oral Health">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html' %}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                      <p>Dental Information</p>
+                    <ul>
+                        {% include 'dental_information/list_dental_information.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

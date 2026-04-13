@@ -1,0 +1,73 @@
+{% extends 'base.html' %} 
+{% block title %}Healthy Gums{% endblock %}
+{% block page_description %}Periodontal disease, more commonly known as gum disease, is an infection of the tissues surrounding and supporting the teeth.{% endblock %}
+
+{% block javascript %} 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#menu-active-dental-information").addClass("active");
+
+    });
+</script>
+{% endblock %} 
+{% block page_content %} 
+
+<div id="main-content">
+    <div id="breadcrumb">
+        <ul>
+            {% include 'dental_information/breadcrumb.html' %}
+            <li>></li>
+           <li>
+		        <a href="{{ path_for('healthy_gums') }}" class="activate">Healthy Gums</a>
+            </li>
+		</ul>
+    </div>
+    <div id="main-contents-sup">
+        <div class="content-text-left">
+        <h1>Healthy Gums</h1>
+        <h2>What is periodontal disease?</h2>
+        <p class="text-left">Periodontal disease, more commonly known as gum disease, is an infection of the tissues surrounding and supporting the teeth. It is a major cause of tooth loss in adults. Because periodontal disease is usually painless, though, you may not know you have it. Periodontal disease is caused by plaque, a sticky film of bacteria that constantly forms on the teeth. These bacteria create toxins that can damage the gums.</p>
+        <p class="text-left">In the early stage of periodontal disease, called gingivitis, the gums can become red and swollen and may bleed easily. At this stage, the disease is still reversible and can usually be eliminated by daily brushing and flossing.In the more advanced stages of periodontal disease, called periodontitis, the gums and bone that support the teeth can become seriously damaged. The teeth can become loose or fall out or may have to be removed by a dentist.</p>
+        <h2>What are the signs of periodontal disease?</h2>
+        <p class="text-left">If you notice any of the following signs of periodontal disease, see your dentist immediately:</p>
+        <ul>
+            <li>Gums that bleed when you brush your teeth</li>
+            <li>Red, swollen or tender gums</li>
+            <li>Gums that have pulled away from the teeth</li>
+            <li>Bad breath that doesn't go away</li>
+            <li>Pus between your teeth and gums</li>
+            <li>Loose teeth</li>
+            <li>A change in the way your teeth fit together when you bite</li>
+            <li>A change in the fit of partial dentures</li>
+        </ul>
+        <h2>Normal, healthy gums</h2>
+        <p class="text-left">Healthy gums and bone anchor teeth firmly in place. Periodontitis Unremoved, plaque hardens into calculus (tartar). As plaque and calculus continue to build up, the gums begin to recede (pull away) from the teeth, and pockets form between the teeth and gums. Advanced periodontitis. The gums recede farther, destroying more bone and the periodontal ligament. Teeth — even healthy teeth — may become loose and need to be extracted.</p>
+        <h2>How can I prevent periodontal disease?</h2>
+        <p class="text-left">The good news is that you can help prevent periodontal disease by taking good care of your teeth every day and having regular dental checkups.</p>
+        <h2>Here's how to keep your teeth and gums healthy:</h2>
+		<ul style="teext-align:left;">
+        <li>Brush your teeth well twice a day. This removes the film of bacteria from the teeth. Be sure to use a soft-bristled toothbrush that is in good condition. Toothpastes and mouth rinses containing fluoride strengthen the teeth and help prevent decay. Choose products that bear the American Dental Association Seal of Acceptance, your assurance that they have met the ADA's standards for safety and effectiveness. The ADA reviews all advertising claims for any product bearing the seal. The seal on a product is an assurance for consumers and dentists against misleading or untrue statements concerning a product's safety and effectiveness.</li>
+        <li>Clean between your teeth every day. Cleaning between your teeth with floss or interdental cleaners removes bacteria and food particles from between the teeth, where a toothbrush can't reach. Early periodontal disease can often be reversed by daily brushing and flossing. If you use interdental cleaners, ask your dentist how to use them properly, to avoid injuring your gums.</li>
+        <li>Eat a balanced diet. Choose a variety of foods from the basic food groups, such as breads, cereals and other grain products; fruits; vegetables; meat, poultry and fish; and dairy products, such as milk, cheese and yogurt. Limit between-meal snacks.</li>
+        <li>Visit your dentist regularly. It is important to have regular dental checkups, and professional cleaning is essential to prevent periodontal disease.Information provided by the American Dental Association.</li>
+        </ul>   
+        </div>
+        <div class="content-photo-right">
+            <img data-src="{{ static }}images/healthy-gums.jpg" alt="Copley Dental - Dental Information - Healthy Gums" title="Healthy Gums">
+            <div id="form-contact-page" >
+                {% include 'services/contact_form.html'%}
+            </div>
+            <div id="secondary-service-menu">
+                <div class="fsclass">
+                     <p>Dental Information</p>
+                    <ul>
+                        {% include 'dental_information/list_dental_information.html' %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+</div>
+{% endblock %}

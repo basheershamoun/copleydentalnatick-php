@@ -6,52 +6,52 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/publico/datos/models.php';
-require __DIR__ . '/publico/forms.php';
-require __DIR__ . '/publico/controllers.php';
-require __DIR__ . '/publico/emails.php';
+require __DIR__ . '/src/data/models.php';
+require __DIR__ . '/src/forms.php';
+require __DIR__ . '/src/controllers.php';
+require __DIR__ . '/src/emails.php';
 
 
-$configuracion = parse_ini_file(__DIR__ . '/config.ini', true);
-$config = [
+$config = parse_ini_file(__DIR__ . '/config.ini', true);
+$settings = [
     'settings' => [
-        'displayErrorDetails' => $configuracion["configuracion"]["mostrar_error"]
+        'displayErrorDetails' => $config["config"]["show_errors"]
     ],
 ];
 
-$app = new \Slim\App($config);
-$contenedor = $app->getContainer();
-$contenedor["configuracion"] = function($contenedor){
+$app = new \Slim\App($settings);
+$container = $app->getContainer();
+$container["config"] = function($container){
     return parse_ini_file(__DIR__ . '/config.ini', true);
 };
 
 /*
-    Configuracion del motor de plantillas Twig
+    Twig template engine configuration
 */
-$contenedor['view'] = function($contenedor){
-    #Obtener configuracion
-    $configuracion = $contenedor->get("configuracion");
-    $dir_plantillas = $configuracion["motor_plantillas"]["dir_plantillas"];
-    $cache = $configuracion["motor_plantillas"]["cache"];
-    $view = new \Slim\Views\Twig($dir_plantillas, [
+$container['view'] = function($container){
+    #Get configuration
+    $config = $container->get("config");
+    $templates_dir = $config["template_engine"]["templates_dir"];
+    $cache = $config["template_engine"]["cache"];
+    $view = new \Slim\Views\Twig($templates_dir, [
         'cache' => false
     ]);
-    $services_model = new ServiceModel("publico/datos/services.json");
+    $services_model = new ServiceModel("src/data/services.json");
     $services = $services_model->get_services();
 
     // basePath is always empty — site is served from document root on Cloudflare Pages.
     $basePath = '';
-    $view->addExtension(new Slim\Views\TwigExtension($contenedor->get('router'), $basePath));
-    //Adicionar varible donde se encuentra los archivos estaticos
+    $view->addExtension(new Slim\Views\TwigExtension($container->get('router'), $basePath));
+    //Add global variable for static files location
     $enviroment = $view->getEnvironment();
-    //Direccion de archivos estaticos
-    $enviroment->addGlobal("static", $configuracion["configuracion"]["url_archivos_estaticos"]);
-    //Informacion de los servicios
+    //Static files URL
+    $enviroment->addGlobal("static", $config["config"]["static_url"]);
+    //Services data
     $enviroment->addGlobal("services", $services) ;
-    //Informacion de recaptcha
-    $enviroment->addGlobal("site_key", $configuracion["recaptcha"]["site_key"]) ;
-    $enviroment->addGlobal("secret_key", $configuracion["recaptcha"]["secret_key"]) ;
-    // Poner el slugs de los servicios
+    //reCAPTCHA keys
+    $enviroment->addGlobal("site_key", $config["recaptcha"]["site_key"]) ;
+    $enviroment->addGlobal("secret_key", $config["recaptcha"]["secret_key"]) ;
+    // Service slugs
     $enviroment->addGlobal("slug_services", ServicesController::SLUG_SERVICES) ;
     $enviroment->addGlobal("slug_invisalign", ServicesController::SLUG_INVISALIGN) ;
     $enviroment->addGlobal("slug_dental_veneers", ServicesController::SLUG_DENTAL_VENEERS) ;
@@ -60,112 +60,112 @@ $contenedor['view'] = function($contenedor){
 
     return $view;
 };
-// Manejador del error 404
-$contenedor["notFoundHandler"] = function($c){
+// 404 error handler
+$container["notFoundHandler"] = function($c){
     return function($request, $response) use($c){
         $view = $c->get("view");
         return ErrorController::error_404($request, $response, $view);
     };
 };
-// Manejador del error 500
-$contenedor["errorHandler"] = function($c){
+// 500 error handler
+$container["errorHandler"] = function($c){
     return function($request, $response) use($c){
         $view = $c->get("view");
         return ErrorController::error_500($request, $response, $view);
     };
 };
 
-// Manejador del error 405
-$contenedor["notAllowedHandler"] = function($c){
+// 405 error handler
+$container["notAllowedHandler"] = function($c){
     return function($request, $response) use($c){
         $view = $c->get("view");
         return ErrorController::error_405($request, $response, $view);
     };
 };
 
-//Controlador Home
-$contenedor["Home"] = function($c){
+// Home controller
+$container["Home"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
-    return new HomeControlador($view, $config, $router);
+    return new HomeController($view, $config, $router);
 };
-$contenedor["Services"] = function($c){
-    $config = $c->get("configuracion");
+$container["Services"] = function($c){
+    $config = $c->get("config");
     $view = $c->get("view");
     $router = $c->get("router");
     return new ServicesController($view, $config,$router);
 };
-$contenedor["RequestAppointment"] = function($c){
+$container["RequestAppointment"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new RequestAppointmentController($view, $config, $router);
 };
-$contenedor["DentalEmergency"] = function($c){
+$container["DentalEmergency"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new DentalEmergencyController($view, $config, $router);
 };
-$contenedor["OurTeam"] = function($c){
+$container["OurTeam"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new OurTeamController($view, $config, $router);
 };
-$contenedor["Invisalign"] = function($c){
+$container["Invisalign"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new InvisalignController($view, $config, $router);
 };
-$contenedor["ContactUs"] = function($c){
+$container["ContactUs"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new ContactUsController($view, $config, $router);
 };
-$contenedor["SocialResponsibility"] = function($c){
+$container["SocialResponsibility"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new SocialResponsibilityController($view, $config, $router);
 };
 
-$contenedor["Faqs"] = function($c){
+$container["Faqs"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new FaqsController($view, $config, $router);
 };
-$contenedor["DentalInformation"] = function($c){
+$container["DentalInformation"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new DentalInformationController($view, $config, $router);
 };
-$contenedor["Gallery"] = function($c){
+$container["Gallery"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new GalleryController($view, $config, $router);
 };
-$contenedor["PatientInformation"] = function($c){
+$container["PatientInformation"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new PatientInformationController($view, $config, $router);
 };
-$contenedor["AskDoctor"] = function($c){
+$container["AskDoctor"] = function($c){
     $view = $c->get("view");
-    $config = $c->get("configuracion");
+    $config = $c->get("config");
     $router = $c->get("router");
     return new AskDoctorController($view, $config, $router);
 };
-// Inicio
+// Home
 $app->get('/', \Home::class.":home")->setName("home");
-// Gracias de los servicios
+// Services thank you
 $app->get('/services/thank-you-contact-us/', \Services::class.":thank_you_contact_us")->setName("thank_you_contact_us_service");
 // Video Copley
 $app->map(["GET", "POST"],'/services/video/', \Services::class.":video_copley")->setName("video_copley");
@@ -180,7 +180,7 @@ $app->get( '/services/savings-plan/thank_you_savings_plan_family/', \Services::c
 // savings plan periodontal maintenance
 $app->map(["GET", "POST"],'/services/savings-plan/form/periodontal-maintenance/', \Services::class.":savings_plan_form_periodontal_maintenance")->setName("savings_plan_form_periodontal_maintenance");
 $app->get( '/services/savings-plan/thank_you_savings_plan_periodontal_maintenance/', \Services::class.":thank_you_savings_plan_periodontal_maintenance")->setName("thank_you_savings_plan_periodontal_maintenance");
-// Dental venner preguntas frecuentes
+// Dental veneers FAQ
 $app->map(["GET", "POST"],'/services/dental-veneers/frequent-questions/', \Services::class.":dental_veneers_faq")->setName("denta_veneers_faq");
 // Service zoom teeth whitening treatment
 $app->map(["GET", "POST"],'/services/zoom-teeth-whitening-treatment/', \Services::class.":zoom_teeth_whitening_treatment")->setName("zoom_teeth_whitening_treatment");
@@ -199,11 +199,11 @@ $app->map(["GET", "POST"],'/services/invisalign/what-is-invisalign/', \Invisalig
 $app->map(["GET", "POST"],'/services/invisalign/treatment-process/', \Invisalign::class.":treatment_process")->setName("treatment_process");
 // Invisalign treatment comparison
 $app->map(["GET", "POST"],'/services/invisalign/treatment-comparison/', \Invisalign::class.":treatment_comparison")->setName("treatment_comparison");
-// Invisalig for teenagers
+// Invisalign for teenagers
 $app->map(["GET", "POST"],'/services/invisalign/invisalign-for-teenagers/', \Invisalign::class.":invisalign_for_teenagers")->setName("invisalign_for_teenagers");
-// Invisalig viviera retainers
+// Invisalign viviera retainers
 $app->map(["GET", "POST"],'/services/invisalign/viviera-retainers/', \Invisalign::class.":viviera_retainers")->setName("viviera_retainers");
-// Invisalig can invisalign work for you
+// Invisalign: can it work for you
 $app->map(["GET", "POST"],'/services/invisalign/can-invisalign-work-for-you/', \Invisalign::class.":can_invisalign_work_for_you")->setName("can_invisalign_work_for_you");
 //Invisalign results
 $app->map(["GET", "POST"],'/services/invisalign/results/', \Invisalign::class.":results")->setName("invisalign_results");
@@ -211,7 +211,7 @@ $app->map(["GET", "POST"],'/services/invisalign/results/', \Invisalign::class.":
 $app->map(["GET", "POST"],'/services/invisalign/stories-about-smiles/', \Invisalign::class.":stories_about_smiles")->setName("stories_about_smiles");
 
 
-//Todos los servicios
+// All services (dynamic route)
 $app->get('/services/{service}/', \Services::class.":service_get")->setName("service");
 $app->post('/services/{service}/', \Services::class.":service_post")->setName("service_post");
 // Emergency dental
