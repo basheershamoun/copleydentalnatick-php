@@ -156,11 +156,14 @@
           data.lastName = data.lastName || '';
         }
 
-        // Prepare API data
+        // Prepare API data — prepend site location (e.g. "Natick: ") to firstName + fullName
+        // so the CRM notification (e.g. Telegram) shows which site the submission came from.
+        const loc = (typeof window !== 'undefined' && window.SITE_LOCATION) ? String(window.SITE_LOCATION).trim() : '';
+        const prefix = loc ? `${loc}: ` : '';
         const apiFormData = new FormData();
-        apiFormData.append('firstName', data.firstName || '');
+        apiFormData.append('firstName', prefix + (data.firstName || ''));
         apiFormData.append('lastName', data.lastName || '');
-        apiFormData.append('fullName', data.fullName || '');
+        apiFormData.append('fullName', prefix + (data.fullName || ''));
         apiFormData.append('mobile', data.phone || '');
         apiFormData.append('email', (data.email || '').toLowerCase());
         apiFormData.append('message', formatMessage(data));
@@ -268,6 +271,12 @@
 
   function formatMessage(data) {
     let message = data.message || '';
+
+    // Prepend site location (e.g. "Natick: ") when window.SITE_LOCATION is set
+    const location = (typeof window !== 'undefined' && window.SITE_LOCATION) ? String(window.SITE_LOCATION).trim() : '';
+    if (location) {
+      message = `${location}: ` + (message || '').replace(/^\s+/, '');
+    }
 
     // Core fields that shouldn't be concatenated (already sent separately to API)
     const coreFields = ['firstName', 'lastName', 'fullName', 'name', 'email', 'phone', 'mobile', 'message'];
