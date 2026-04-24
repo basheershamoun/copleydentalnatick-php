@@ -1,4 +1,4 @@
-.PHONY: up down restart logs shell build preview clean deploy docker-rebuild
+.PHONY: up down restart logs shell build preview clean deploy-cloudflare docker-rebuild
 
 # --- Dev container -------------------------------------------------------
 
@@ -47,5 +47,10 @@ preview:
 clean:
 	rm -rf dist
 
-deploy: build
-	wrangler pages deploy dist --project-name=copleydentalnatick
+# Cloudflare Pages is connected to this repo and auto-deploys on push.
+# This target builds, commits dist/, and pushes.
+deploy-cloudflare: build
+	@echo "==> Committing dist/ and pushing — Cloudflare Pages will auto-deploy"
+	git add dist
+	git diff --cached --quiet dist || git commit -m "Rebuild dist/"
+	git push

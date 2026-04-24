@@ -293,13 +293,12 @@
 			 <p>For your convenience, we are open six days a week, and provide 24-hour <b>emergency dental care.</b><br>
 			 Call us at {{ phone_natick }} to schedule your next appointment</p>
 			 <table>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Monday</td><td align="left" width="300">9 a.m. to 6 p.m.</td></tr>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Tuesday</td><td align="left" width="300">9 a.m. to 6 p.m.</td></tr>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Wednesday</td><td align="left" width="300">9 a.m. to 6 p.m.</td></tr>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Thursday</td><td align="left" width="300">9 a.m. to 6 p.m.</td></tr>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Friday</td><td align="left" width="300">9 a.m. to 6 p.m.</td></tr>
-				 <tr><td align="left" width="300" style="color:#98CAED;">Saturday</td><td align="left" width="300">9 a.m. to 1 p.m.</td></tr>
-				 
+				 <tr><td align="left">Monday</td><td align="left">9 a.m. to 6 p.m.</td></tr>
+				 <tr><td align="left">Tuesday</td><td align="left">9 a.m. to 6 p.m.</td></tr>
+				 <tr><td align="left">Wednesday</td><td align="left">9 a.m. to 6 p.m.</td></tr>
+				 <tr><td align="left">Thursday</td><td align="left">9 a.m. to 6 p.m.</td></tr>
+				 <tr><td align="left">Friday</td><td align="left">9 a.m. to 6 p.m.</td></tr>
+				 <tr><td align="left">Saturday</td><td align="left">9 a.m. to 1 p.m.</td></tr>
 			 </table>
 			 <br>
 			<div id="appt">
@@ -422,7 +421,7 @@
         {% endblock %}
     </div>
     <!-- Estilos del Sitio-->
-	<link rel="stylesheet" media="screen" href="{{ static }}css/style.19092018.min.css" />
+	<link rel="stylesheet" media="screen" href="{{ static }}css/style.css" />
     <!-- Jquery  -->
     <script type="text/javascript" src="{{ static }}js/jquery.min.js"></script>
     <!-- Menu Responsive  -->
@@ -601,6 +600,7 @@
 
 	{% endblock %}
 	<!-- Unified form handler + navbar + scroll + accordion -->
+	<script>window.SITE_LOCATION = 'Natick';</script>
 	<script src="{{ static }}js/site.js" defer></script>
 </body>
 
