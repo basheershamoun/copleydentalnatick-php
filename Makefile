@@ -47,10 +47,7 @@ preview:
 clean:
 	rm -rf dist
 
-# Cloudflare Pages is connected to this repo and auto-deploys on push.
-# This target builds, commits dist/, and pushes.
-deploy-cloudflare: build
-	@echo "==> Committing dist/ and pushing — Cloudflare Pages will auto-deploy"
-	git add dist
-	git diff --cached --quiet dist || git commit -m "Rebuild dist/"
-	git push
+# No-op placeholder. Cloudflare Pages serves committed dist/ directly.
+# Kept for future use if a build/deploy step is ever needed.
+deploy-cloudflare:
+	@echo "Nothing to do — Cloudflare Pages serves dist/ from the repo."
